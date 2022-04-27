@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="e1pHRc_" resname="Publié le">
+        <source>Publié le</source>
+        <target>Published at</target>
+      </trans-unit>
+      <trans-unit id="9516ize" resname="Commentaires">
+        <source>Commentaires</source>
+        <target>Comments</target>
+      </trans-unit>
+      <trans-unit id="R_Nbp1J" resname="Bon cadeaux">
+        <source>Bon cadeaux</source>
+        <target>Gifts Cards</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

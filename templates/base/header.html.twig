@@ -1,0 +1,36 @@
+<header role="banner">
+    <!--Menu de titre -->
+    <nav class="navbar d-flex justify-content-between">
+        <div class="share_icon">partager</div>
+        <div><h1>--Escape Game à Strasbourg--</h1></div>
+        <div class="d-flex">
+            {#Changement de langues#}
+            {% for locale in locales %}
+                {% if locale != app.request.locale %}
+                    <div class="nav-item">
+                        <a href="{{ path('change_locale', { 'locale': locale}) }}"><img src="{{ asset('img/base/languages/flag_'~locale~'.png') }}" alt="{{ locale }}"></a>
+                    </div>
+                {% endif %}
+            {% endfor %}            
+            <div>Résa</div>
+            <div>{% trans %}Bon cadeaux{% endtrans %}</div>
+        </div>
+    </nav>
+
+    <!--Menu de navigation-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="primary-menu" class="navbar-menu">
+            <div class="d-flex is-desktop">
+                <div class="navbar-item">
+                    ESCAPE GAME
+                </div>
+                <div class="navbar-item">
+                    DESTROY ROOM
+                </div>
+                <div class="navbar-item">
+                    BARS A JEUX
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
