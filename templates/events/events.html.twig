@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Evenements - Dooz Escape Game{% endblock %}
+{% block title_og %}Evenements{% endblock %}
+
+{% block body %}
+
+    <!--Carousel Events -->
+    <div id="carouselEvents" class="carousel slide carousel-fade carousel_dooz" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+        </div>
+
+        <h1 class="carousel_title">Nos Evenements</h1>
+
+        <div class="carousel-inner">
+            <div class="filter_carousel">
+                <div class="filter_carousel_1"></div>
+                <div class="filter_carousel_2"></div>
+            </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('upload/events/carousel/carousel_event_1.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('upload/events/carousel/carousel_event_2.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('upload/events/carousel/carousel_event_3.jpg') }}" class="d-block w-100" alt="...">
+                </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="py-5">
+        <h4 class="text-center">Nos évenements seront de nouveau consultable sur notre site très prochainement. En attendant vous pouvez les consultez sur notre page
+            <a href="https://www.facebook.com/DoOzEscape/" class="link_standard">FACEBOOK</a>. A très vite !</h4>
+    </div>
+
+
+{#    <div class="d-flex justify-content-center flex-wrap px-3 py-2">#}
+{#        {% for event in events %}#}
+{#            <div class="d-flex flex-column my-3">#}
+{#                <a href="">#}
+{#                    <div class="event_card">#}
+{#                        <h4 class="event_card_title">{{ event.name }}</h4>#}
+{#                        <img class="event_card_img" src="{{ asset('upload/events/2022/04/tournoi_pioneer.png') }}" alt="">#}
+{#                        <div class="d-flex flex-column align-items-center p-2">#}
+{#                            {{ event.beginDate|date("H") }}H{{ event.beginDate|date("i") }}-{{ event.endDate|date("H") }}H{{ event.endDate|date("H") }} | {{ event.beginDate|date('d/m/Y') }}#}
+{#                            <p class="event_card_location m-0">MALLEUS MALLEFICARUM</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </a>#}
+{#            </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

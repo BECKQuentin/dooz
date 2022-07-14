@@ -1,0 +1,67 @@
+
+<div id="bo_logo">
+    <a href="{{ path('rooms') }}"><- Retour vers le site</a>
+    <a href="{{ path('admin') }}">
+        <img src="{{ asset('img/base/logos/dooz.png') }}" alt="">
+    </a>
+</div>
+<div id="bo_nav" class="d-flex flex-column align-items-center">
+
+    <div class="dropdown dropend">
+        <button class="btn dropdown-toggle bo_nav_item" type="button" data-bs-toggle="dropdown">
+            Escape
+        </button>
+        <ul class="dropdown-menu">
+            <li class="d-flex">
+                <a class="dropdown-item bo_nav_item" href="{{ path('admin_room_add') }}" title="Ajouter une room"><i class="fa-solid fa-plus"></i></a>
+            </li>
+            {% for room in rooms %}
+                <li><a class="dropdown-item bo_nav_item link_underline" href="{{ path('admin_room', {id:room.id}) }}">{{ room.episode }} - {{ room.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <a class="bo_nav_item" href="">
+        <div>Destroy</div>
+    </a>
+    <div class="dropdown dropend">
+        <button class="btn dropdown-toggle bo_nav_item" type="button" data-bs-toggle="dropdown">
+            Bars
+        </button>
+        <ul class="dropdown-menu">
+            <li class="d-flex">
+                <a class="dropdown-item bo_nav_item" href="" title="Ajouter un bar"><i class="fa-solid fa-plus"></i></a>
+            </li>
+            {% for bar in bars %}
+                <li><a class="dropdown-item bo_nav_item link_underline" href="">{{ bar.name }}</a></li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    <a class="bo_nav_item" href="{{ path('admin_events') }}">
+        <div>Evenements</div>
+    </a>
+    <a class="bo_nav_item" href="{{ path('admin_partners') }}">
+        <div>Partenaires</div>
+    </a>
+    <div class="dropdown dropend">
+        <button class="btn dropdown-toggle bo_nav_item" type="button" data-bs-toggle="dropdown">
+            CGV
+        </button>
+        <ul class="dropdown-menu">
+            {% for cgv in cgvs %}
+                <li><a class="dropdown-item bo_nav_item" href="{{ path('admin_cgv', {id:cgv.id}) }}">{{ cgv.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <hr class="w-100">
+
+    <a class="bo_nav_item" href="{{ path('admin_dooz') }}">
+        <div>Dooz</div>
+    </a>
+
+
+
+</div>

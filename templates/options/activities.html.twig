@@ -1,0 +1,96 @@
+<div class="container-lg d-flex justify-content-center py-4">
+
+
+    <div class="cadre_margin d-flex flex-column justify-content-center align-items-center"
+    {% if metadata is defined %}
+        {% if metadata == 'malleus' %}
+            style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+        {% elseif metadata == 'episode0' %}
+            style="border-image: url('{{ asset('img/episode0/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+        {% elseif metadata == 'destroy' %}
+            style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
+        {% elseif metadata == 'vanaheim' %}
+            style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+        {% endif %}
+    {% else %}
+        ">
+    {% endif %}
+
+        <h4 class="title_presentation
+                {% if metadata is defined %}
+                    {% if metadata == 'malleus' %}
+                            font_malleus
+                    {% elseif metadata == 'episode0' %}
+                            font_episode0
+                    {% elseif metadata == 'destroy' %}
+                            font_destroy
+                    {% elseif metadata == 'vanaheim' %}
+                            font_vanaheim
+                    {% endif %}
+                {% else %}
+                        font_standard
+                {% endif %}">
+            {% trans %}DECOUVREZ NOS AUTRES ACTIVITEES{% endtrans %}
+        </h4>
+
+        <div class="activities_list d-flex justify-content-center flex-wrap">
+            <a target="_BLANK" class="activities_item" href="https://atelier-des-agents.com/">
+                <img src="{{ asset('img/base/logos/atelier.png') }}" alt="Atelier des Agents">
+                <p>L'atelier des Agents</p>
+            </a>
+            <a class="activities_item" href="{{ path('rooms') }}">
+                <img src="{{ asset('img/base/logos/dooz.png') }}" alt="Escape Game">
+                <p>Escape Game</p>
+            </a>
+
+            {% if metadata is defined %}
+                {% if metadata != 'destroy' %}
+                <a class="activities_item" href="{{ path('destroy') }}">
+                    <img src="{{ asset('img/base/logos/destroy.png') }}" alt="Destroy Room">
+                    <p>Destroy Room</p>
+                </a>
+                {% endif %}
+                {% if metadata != 'episode0' %}
+                    <a class="activities_item" href="{{ path('episode0') }}">
+                        <img src="{{ asset('img/base/logos/episode0.png') }}" alt="Bar Episode 0">
+                        <p>Episode 0</p>
+                    </a>
+                {% endif %}
+                {% if metadata != 'malleus' %}
+                <a class="activities_item" href="{{ path('malleus') }}">
+                    <img src="{{ asset('img/base/logos/malleus.png') }}" alt="Bar le Malleus">
+                    <p>Malleus Maleficarum</p>
+                </a>
+                {% endif %}
+                {% if metadata != 'vanaheim' %}
+                <a class="activities_item" href="{{ path('vanaheim') }}">
+                    <img src="{{ asset('img/base/logos/vanaheim.png') }}" alt="Bar Vanaheim">
+                    <p>Vanaheim</p>
+                </a>
+                {% endif %}
+            {% else %}
+                <a class="activities_item" href="{{ path('malleus') }}">
+                    <img src="{{ asset('img/base/logos/malleus.png') }}" alt="Bar le Malleus">
+                    <p>Malleus Maleficarum</p>
+                </a>
+                <a class="activities_item" href="{{ path('episode0') }}">
+                    <img src="{{ asset('img/base/logos/episode0.png') }}" alt="Bar Episode 0">
+                    <p>Episode 0</p>
+                </a>
+                <a class="activities_item" href="{{ path('destroy') }}">
+                    <img src="{{ asset('img/base/logos/destroy.png') }}" alt="Destroy Room">
+                    <p>Destroy Room</p>
+                </a>
+                <a class="activities_item" href="{{ path('vanaheim') }}">
+                    <img src="{{ asset('img/base/logos/vanaheim.png') }}" alt="Bar Vanaheim">
+                    <p>Vanaheim</p>
+                </a>
+            {% endif %}
+
+            <a target="_BLANK" class="activities_item" href="https://www.cardmarket.com/fr/Magic/Users/DoozEscape">
+                <img src="{{ asset('img/base/logos/tcg.png') }}" alt="Card Market Dooz">
+                <p>Card Market</p>
+            </a>
+        </div>
+    </div>
+</div>

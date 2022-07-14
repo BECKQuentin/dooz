@@ -1,0 +1,501 @@
+<header role="banner" id="header" class="fixed-top">
+
+
+    <a id="logo_mobile" class="m-0" href="{{ path('rooms') }}">
+        {% if metadata is defined %}
+            <img src="{{ asset('img/base/logos/'~metadata~'.png') }}" alt="Logo de dooz">
+        {% else %}
+            <img src="{{ asset('img/base/logos/dooz.png') }}" alt="Logo de dooz">
+        {% endif %}
+    </a>
+
+
+    <!--Menu de titre -->
+    <div id="top_header" class="d-flex justify-content-between p-0">
+        <!-- Bouton de partage -->
+        <div id="top_header_share">
+            <ul class="d-flex justify-content-center m-0 p-0">
+                {% include 'options/share_icons.html.twig' %}
+            </ul>
+        </div>
+
+        <!--Titre du centre haut -->
+        <div id="site_title_center">
+            <h1>{% trans %}Escape Game à Strasbourg & Vendenheim{% endtrans %}</h1>
+        </div>
+
+        <!--Bouton de droite langue & reservation-->
+        <div id="top_header_langue">
+            <!--Changement de langues-->
+            {% for locale in locales %}
+                {% if locale != app.request.locale %}
+                    <a href="{{ path('change_locale', { 'locale': locale}) }}">
+                        <img src="{{ asset('img/base/languages/flag_'~locale~'.png') }}" class="resa_gifts_icons mx-2" alt="{{ locale }}">
+                    </a>
+                {% endif %}
+            {% endfor %}
+            <div id="top_header_tickets">
+                {% include 'options/tickets_reservation.html.twig' %}
+                {% include 'options/tickets_gifts.html.twig' %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Menu de Navigation-->
+    <nav id="bot_header" class="navbar navbar-expand-lg navbar-light p-0
+        {% if metadata is defined %}
+            bg_{{ metadata }}
+        {% else %}
+            bg_standard
+        {% endif %}">
+
+        <div id="bot_header_container" class="container-fluid h-100 px-0">
+            <!--Reservation Ticket Mobile-->
+            <div class="navbar-brand d-flex align-items-center">
+                <div id="top_header_tickets_mobile">
+                    {% include 'options/tickets_reservation.html.twig' %}
+                    {% include 'options/tickets_gifts.html.twig' %}
+                </div>
+            </div>
+
+            <!--Menu Burger-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botHeaderMobile" aria-controls="botHeaderMobile" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Menu-->
+            <div class="collapse navbar-collapse m-0 h-100" id="botHeaderMobile" >
+
+                <ul class="navbar-nav h-100 w-100">
+
+                    <!-- Partie gauche du header de navigation -->
+                    <div id="bot_header_left" class="col
+                        {% if metadata is defined %}
+                            {{ metadata }}_background_left
+                        {% else %}
+                            standard_background_left
+                        {% endif %}
+                    ">
+                        <hr class="hr_mobile my-2">
+
+                        <div class="row h-100">
+
+                            <!--Escape Game-->
+                            <li class="nav-item dropdown col-lg-3 navbar_item_header">
+                                <a class="dropdown-link navbar_item_header_link" href="{{ path('rooms') }}">{%trans %}ESCAPE GAME{% endtrans%}</a>
+                                <div class="dropdown-toggle dropdown_hidden" id="dropdownHeaderEscape" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownHeaderEscape" style="background-color:
+                                {% if metadata is defined %}
+                        {% if metadata == 'malleus' %}
+                                var(--malleus);
+                        {% elseif metadata == 'episode0' %}
+                                var(--episode0)
+                        {% elseif metadata == 'destroy' %}
+                                var(--destroy)
+                        {% elseif metadata == 'vanaheim' %}
+                                var(--vanaheim)
+                        {% endif %}
+                    {% else %}
+                            var(--standard)
+                    {% endif %};">
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                        {% if metadata is defined %}
+                                            {% if metadata == 'malleus' %}
+                                                    var(--malleus_2);
+                                            {% elseif metadata == 'episode0' %}
+                                                    var(--episode0_2)
+                                            {% elseif metadata == 'destroy' %}
+                                                    var(--destroy_2)
+                                            {% elseif metadata == 'vanaheim' %}
+                                                    var(--vanaheim_2)
+                                            {% endif %}
+                                        {% else %}
+                                                var(--standard_2)
+                                        {% endif %};"
+                                       href="https://www.google.com/maps/place/19+Rue+des+Magasins,+67000+Strasbourg/@48.5907868,7.740175,17z/data=!3m1!4b1!4m5!3m4!1s0x4796c84634635945:0xc48d2f781fc7ba8!8m2!3d48.5907868!4d7.740175">
+                                        STRASBOURG 19 rue des Magasins
+                                    </a>
+                                    {% for room in rooms %}
+                                        {% if room.address.id is not null and room.address.id == 2 %}
+                                            <a class="link_underline dropdown-item" href="{{ path('room', {slug:room.slug}) }}">
+                                                {% if app.request.locale == 'fr' %}
+                                                    {{ room.name }}
+                                                {% elseif app.request.locale == 'en' %}
+                                                    {{ room.nameEn }}
+                                                {% endif %}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/12+Rue+des+Magasins,+67000+Strasbourg/@48.5895735,7.7390319,17.75z/data=!4m5!3m4!1s0x4796c84880507e2f:0x5adb72c0f85bf69e!8m2!3d48.5896953!4d7.7398768">
+                                        STRASBOURG 12 rue des Magasins
+                                    </a>
+                                    {% for room in rooms %}
+                                        {% if room.address.id is not null and room.address.id == 1 %}
+                                            <a class="link_underline dropdown-item" href="{{ path('room', {slug:room.slug}) }}">
+                                                {% if app.request.locale == 'fr' %}
+                                                    {{ room.name }}
+                                                {% elseif app.request.locale == 'en' %}
+                                                    {{ room.nameEn }}
+                                                {% endif %}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889">
+                                        VENDEHEIM 20 rue du commerce
+                                    </a>
+                                    <p class="pt-3">Bientôt de nouvelle salles !</p>
+                                </div>
+                            </li>
+
+                            <!--Destroy Room-->
+                            <li class="nav-item dropdown col-lg-3 navbar_item_header">
+                                <a class="dropdown-link navbar_item_header_link" href="{{ path('destroy') }}">{%trans %}DESTROY ROOM{% endtrans%}</a>
+                                <div class="dropdown-toggle dropdown_hidden" id="dropdownHeaderDestroy" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownHeaderDestroy" style="background-color:
+                                {% if metadata is defined %}
+                        {% if metadata == 'malleus' %}
+                                var(--malleus);
+                        {% elseif metadata == 'episode0' %}
+                                var(--episode0)
+                        {% elseif metadata == 'destroy' %}
+                                var(--destroy)
+                        {% elseif metadata == 'vanaheim' %}
+                                var(--vanaheim)
+                        {% endif %}
+                    {% else %}
+                            var(--standard)
+                    {% endif %};">
+
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/12+Rue+des+Magasins,+67000+Strasbourg/@48.5895735,7.7390319,17.75z/data=!4m5!3m4!1s0x4796c84880507e2f:0x5adb72c0f85bf69e!8m2!3d48.5896953!4d7.7398768">
+                                        STRASBOURG 12 rue des magasins
+                                    </a>
+                                    <a class="link_underline dropdown-item" href="{{ path('destroy') }}">
+                                        Destroy Room
+                                    </a>
+
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889">
+                                        VENDEHEIM 20 rue du commerce
+                                    </a>
+                                    <p class="pt-3">
+                                        Destroy Room très prochainement !
+                                    </p>
+                                </div>
+                            </li>
+
+                            <!--Lancer de Haches Menu Mobile-->
+                            <a class="col-lg-3 navbar_item_header navbar_item_header_link" href="{{ path('vanaheim_axe') }}">
+                                {%trans %}LANCER DE HACHES{% endtrans%}<span class="newest mobile_on">Nouveauté</span>
+                            </a>
+
+                            <!--Bars à Jeux-->
+                            <li class="nav-item dropdown col-lg-3 navbar_item_header">
+                                <a class="dropdown-link navbar_item_header_link" href="{{ path('bars') }}">{%trans %}BARS A JEUX{% endtrans%}</a>
+                                <div class="dropdown-toggle dropdown_hidden" id="dropdownHeaderBars" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                                <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownHeaderBars" style="background-color:
+                                {% if metadata is defined %}
+                            {% if metadata == 'malleus' %}
+                                    var(--malleus);
+                            {% elseif metadata == 'episode0' %}
+                                    var(--episode0)
+                            {% elseif metadata == 'destroy' %}
+                                    var(--destroy)
+                            {% elseif metadata == 'vanaheim' %}
+                                    var(--vanaheim)
+                            {% endif %}
+                        {% else %}
+                                var(--standard)
+                         {% endif %};">
+
+                                    <!--Malleus-->
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/19+Rue+des+Magasins,+67000+Strasbourg/@48.5907868,7.740175,17z/data=!3m1!4b1!4m5!3m4!1s0x4796c84634635945:0xc48d2f781fc7ba8!8m2!3d48.5907868!4d7.740175">
+                                        STRASBOURG 19 rue des Magasins
+                                    </a>
+                                    {% for bar in bars %}
+                                        {% if bar.address.id == 2 %}
+                                            <a class="dropdown-item link_underline" href="{{ path('episode0') }}">
+                                                {% if app.request.locale == 'fr' %}
+                                                    {{ bar.name }}
+                                                {% elseif app.request.locale == 'en' %}
+                                                    {{ bar.nameEn }}
+                                                {% endif %}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                    <!--Episode 0-->
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/12+Rue+des+Magasins,+67000+Strasbourg/@48.5907868,7.740175,17z/data=!3m1!4b1!4m5!3m4!1s0x4796c84634635945:0xc48d2f781fc7ba8!8m2!3d48.5907868!4d7.740175">
+                                        STRASBOURG 12 rue des Magasins
+                                    </a>
+                                    {% for bar in bars %}
+                                        {% if bar.address.id == 1 %}
+                                            <a class="dropdown-item link_underline" href="{{ path('malleus') }}">
+                                                {% if app.request.locale == 'fr' %}
+                                                    {{ bar.name }}
+                                                {% elseif app.request.locale == 'en' %}
+                                                    {{ bar.nameEn }}
+                                                {% endif %}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+
+
+                                    <!--Vanaheim-->
+                                    <a target="_blank"
+                                       class="dropdown_link_address_box"
+                                       style="background-color:
+                                       {% if metadata is defined %}
+                                {% if metadata == 'malleus' %}
+                                        var(--malleus_2);
+                                {% elseif metadata == 'episode0' %}
+                                        var(--episode0_2)
+                                {% elseif metadata == 'destroy' %}
+                                        var(--destroy_2)
+                                {% elseif metadata == 'vanaheim' %}
+                                        var(--vanaheim_2)
+                                {% endif %}
+                            {% else %}
+                                    var(--standard_2)
+                            {% endif %};"
+                                       href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889">
+                                        VENDENHEIM 20 RUE DU COMMERCE
+                                    </a>
+                                    {% for bar in bars %}
+                                        {% if bar.address.id == 3 %}
+                                            <a class="dropdown-item link_underline" href="{{ path('vanaheim') }}">
+                                                {% if app.request.locale == 'fr' %}
+                                                    {{ bar.name }} <span class="newest">Nouveauté</span>
+                                                {% elseif app.request.locale == 'en' %}
+                                                    {{ bar.nameEn }} <span class="newest">Nouveauté</span>
+                                                {% endif %}
+                                            </a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <!-- Logo du header du Millieu -->
+                    <div class="nav-item">
+                        <li id="bot_header_middle">
+                            {% if metadata is defined %}
+                                <div class="bot_header_middle_logo">
+                                    <a href="{{ path('rooms') }}">
+                                        <img src="{{ asset('img/base/logos/'~metadata~'.png') }}" alt="Logo de Dooz">
+                                    </a>
+                                </div>
+                            {% else %}
+                                <div class="bot_header_middle_logo">
+                                    <a href="{{ path('rooms') }}"><img src="{{ asset('img/base/logos/dooz.png') }}" alt="Logo de Dooz"></a>
+                                </div>
+                            {% endif %}
+                        </li>
+                    </div>
+
+
+                    <!-- Partie de droite du header de navigation -->
+                    <div id="bot_header_right" class="col
+                        {% if metadata is defined %}
+                            {{ metadata }}_background_right
+                        {% else %}
+                            standard_background_right
+                        {% endif %}
+                    ">
+                        <div class="row h-100">
+
+                            <!--Reservation-->
+                            <a class="col-lg-3 navbar_item_header navbar_item_header_link" href="{{ path('reservation') }}">
+                                {%trans %}RESERVER{% endtrans%}
+                            </a>
+
+                            <!--Evenements-->
+                            <a class="nav-item col-lg-3 navbar_item_header navbar_item_header_link" href="{{ path('events') }}">
+                                {%trans %}EVENEMENTS{% endtrans%}
+                            </a>
+
+                            <!--Entreprises-->
+                            <li class="nav-item dropdown col-lg-3 navbar_item_header">
+                                <a class="dropdown-link navbar_item_header_link" href="{{ path('companies') }}">{%trans %}ENTREPRISES{% endtrans%}</a>
+                                <div class="dropdown-toggle dropdown_hidden" id="dropdownHeaderCompanies" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownHeaderCompanies" style="background-color:
+                                {% if metadata is defined %}
+                            {% if metadata == 'malleus' %}
+                                    var(--malleus);
+                            {% elseif metadata == 'episode0' %}
+                                    var(--episode0)
+                            {% elseif metadata == 'destroy' %}
+                                    var(--destroy)
+                            {% elseif metadata == 'vanaheim' %}
+                                    var(--vanaheim)
+                            {% endif %}
+                        {% else %}
+                                var(--standard)
+                         {% endif %};">
+                                    <a class="dropdown-item link_underline" href="{{ path('companies_works') }}">{% trans %}Comité d'Entreprise{% endtrans %}</a>
+                                    <a class="dropdown-item link_underline" href="{{ path('companies_team') }}">{% trans %}Team Building{% endtrans %}</a>
+                                </div>
+                            </li>
+
+                            <!--Particuliers-->
+                            <li class="nav-item dropdown col-lg-3 navbar_item_header">
+                                <a class="dropdown-link navbar_item_header_link" href="{{ path('groups') }}">{%trans %}PARTICULIERS{% endtrans%}</a>
+                                <div class="dropdown-toggle dropdown_hidden" type="button" id="dropdownHeaderGroups" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownHeaderGroups" style="background-color:
+                                {% if metadata is defined %}
+                            {% if metadata == 'malleus' %}
+                                    var(--malleus);
+                            {% elseif metadata == 'episode0' %}
+                                    var(--episode0)
+                            {% elseif metadata == 'destroy' %}
+                                    var(--destroy)
+                            {% elseif metadata == 'vanaheim' %}
+                                    var(--vanaheim)
+                            {% endif %}
+                        {% else %}
+                                var(--standard)
+                         {% endif %};">
+                                    <a class="dropdown-item link_underline" href="{{ path('groups_edv') }}">{% trans %}EDV Jeune fille/homme{% endtrans %}</a>
+                                    <a class="dropdown-item link_underline" href="{{ path('groups_birthday') }}">{% trans %}Anniversaires{% endtrans %}</a>
+                                </div>
+                            </li>
+
+{#                            <!--Bon Cadeaux-->#}
+{#                            <a class="nav-item col-lg-3 navbar_item_header navbar_item_header_link"#}
+{#                               href="{{ path('gifts') }}">{%trans %}BON CADEAUX{% endtrans%}#}
+{#                            </a>#}
+                        </div>
+                        <hr class="hr_mobile my-1">
+                    </div>
+
+
+                    <!--Footer Menu Mobile-->
+                    <div id="bot_header_mobile_footer">
+                        <div class="d-flex justify-content-between">
+                            <div id="tickets_gifts_mobile">
+                                {% include 'options/tickets_reservation.html.twig' %}
+                                {% include 'options/tickets_gifts.html.twig' %}
+                            </div>
+                            <!--Changement de langues-->
+                            {% for locale in locales %}
+                                {% if locale != app.request.locale %}
+                                    <a href="{{ path('change_locale', { 'locale': locale}) }}">
+                                        <img src="{{ asset('img/base/languages/flag_'~locale~'.png') }}" class="resa_gifts_icons mx-2" alt="{{ locale }}">
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <hr class="my-1">
+                        <div class="d-flex align-items-center justify-content-evenly py-2">
+                            {% include 'options/share_icons.html.twig' %}
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</header>

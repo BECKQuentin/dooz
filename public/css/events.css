@@ -1,0 +1,45 @@
+/*PRESENTATION*/
+#event_presentation {
+    padding: 40px 18px;
+}
+
+/*Carousel*/
+#carouselEvents {
+    border-bottom: 1px solid var(--standard);
+}
+#carouselEvents h1 {
+    text-transform: uppercase;
+    font-family: "TarifArabic_Medium", "Volkhov";
+    font-weight: bold;
+    text-align: left;
+}
+#carouselEvents .carousel-item{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+#carouselEvents .carousel-caption h2 {
+    position: absolute;
+    left: 125px;
+    bottom: 25px;
+}
+
+
+
+
+#events {
+    position: relative;
+    width: 100%;
+}
+#events img{
+    height: 400px;
+}
+#events h2 {
+    font-size: 80px;
+    width: 40%;
+    position: absolute;
+    bottom: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 150;
+}

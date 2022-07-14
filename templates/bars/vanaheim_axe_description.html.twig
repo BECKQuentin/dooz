@@ -1,0 +1,175 @@
+
+<div class="vanaheim_axe_explication">
+    <!--Explication-->
+    <div class="vanaheim_axe_explication_box d-flex flex-column">
+        <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
+        {% if app.request.locale == 'fr' %}
+            <h4>Le lancer de haches c'est quoi ?</h4>
+            <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+            <p class="vanaheim_axe_text">
+                Le lancer de hache est une activité sportive consistant, comme son nom le laisse à penser, à lancer une hache au centre d’une cible avec le plus de précision possible.<br>
+                Mais cette pratique n’a pas toujours eu un aspect aussi ludique qu’aujourd’hui.
+            </p>
+        {% endif %}
+        {% if app.request.locale == 'en' %}
+            <h4>What is ax throwing?</h4>
+            <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+            <p class="vanaheim_axe_text">
+                Axe throwing is a sporting activity consisting, as its name suggests, of throwing an ax at the center of a target with as much precision as possible.<br>
+                But this practice has not always had as playful an aspect as it does today.
+            </p>
+        {% endif %}
+    </div>
+    <!--Widgets-->
+    <div class="vanaheim_axe_explication_box d-flex flex-wrap">
+        <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
+        <div class="vanaheim_axe_widgets">
+            <img src="{{ asset('img/base/icons/axe.png') }}" alt="Axe croisée">
+            <p class="vanaheim_axe_text">Choississez vos haches</p>
+        </div>
+        <div class="vanaheim_axe_widgets">
+            <img src="{{ asset('img/base/icons/head_viking.png') }}" alt="Tete viking">
+            <p class="vanaheim_axe_text">Choississez le nombre de Vikings</p>
+        </div>
+        <div class="vanaheim_axe_widgets">
+            <img src="{{ asset('img/base/icons/dialsun.png') }}" alt="Cadran solaire">
+            <p class="vanaheim_axe_text">Choississez l'heure et la date</p>
+        </div>
+        <div class="vanaheim_axe_widgets">
+            <img src="{{ asset('img/base/icons/gold_bag.png') }}" alt="Sac de pieces">
+            <p class="vanaheim_axe_text">Payez en ligne </p>
+        </div>
+    </div>
+</div>
+
+<div class="vanaheim_axe_shield">
+    <img src="{{ asset('img/base/icons/shield_viking.png') }}" alt="Bouclier viking">
+    <div class="vanaheim_axe_shield_text">
+        <h5 class="font_vanaheim">Nos Offres</h5>
+        <p class="font_vanaheim_2"><span>40€/piste</span> - 1 à 4 vikings pour 1 heure</p>
+    </div>
+</div>
+
+<!--Règles européennes-->
+<div class="vanaheim_axe_explication_box vanaheim_axe_explication_box_big d-flex flex-column">
+    <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
+    {% if app.request.locale == 'fr' %}
+        <h4>Quelques règles</h4>
+        <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+        <p class="vanaheim_axe_text">
+            A Vanaheim, nous jouons avec les règles européennes de la fédération de lancer de hache, à savoir 3 cibles, dont le centre se situe de 1.30m à 1.60m, vous disposez de 3 haches pour marquer le plus de points et être le meilleur viking !<br>
+            Une session dure 60 minutes. Les 15 premières sont dédiées aux règles de sécurité et la prise en main de vos haches. Les 45 minutes suivantes c'est vous qui décidez et qui choisissez votre mode de jeu pour le calcul des points !<br>
+            Merci de vous présenter 15 minutes avant le début de votre session afin que vous soyez pris en charge par l'un de nos agents qui se chargera de vous installer confortablement dans notre skali.<br>
+            Si l'horaire ne vous convient pas n'hésitez pas à nous contacter au 07.88.58.63.61
+        </p>
+    {% endif %}
+    {% if app.request.locale == 'en' %}
+        <h4>What is ax throwing?</h4>
+        <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+        <p class="">Axe throwing is a sporting activity consisting, as its name suggests, of throwing an ax at the center of a target with as much precision as possible. But this practice has not always had as playful an aspect as it does today.</p>
+    {% endif %}
+</div>
+
+
+{#<div class="bars_description_content_border vanaheim_axe_description" style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">#}
+
+{#    <h4 class="font_vanaheim_2 text-center">{% trans %}Séléctionnez votre date :{% endtrans %}</h4>#}
+{#    <div class="forescape" data-subdomain="doozdestroyroom" data-type="bookings" data-rooms="62cbfb1c1e9c82e2e8caabe7,62cc04201e9c82e2e8cabdcc,62cc0528336363e2ccd4e057,62cc05e4336363e2ccd50e62,62cc06c3336363e2ccd511af"></div>#}
+
+{#    <div class="bars_description">#}
+
+{#        <!--Vanaheim Description-->#}
+{#        {% if app.request.locale == 'fr' %}#}
+{#            <p class="font_vanaheim_2"></p>#}
+{#            <p class="text-center"></p>#}
+{#            <p class="text-justify">Enfin, Vanaheim vous propose bien évidemment de vous rafraîchir en terrasse, pouvant accueillir jusqu’à 50 personnes, ou dans son bar pouvant accueillir jusqu’à 80 personnes, le tout dans une ambiance Viking unique.<br>#}
+{#                <br>#}
+{#                Autour d’une bière, d’un cocktail ou d’une grand nombre de consommations diverses retrouvez vous entre amis ou en famille dans une ambiance d’époque prenante et transcendante grâce à un décor fait de bois, bouclier, haches, et bien plus encore...#}
+{#            </p>#}
+{#            <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">#}
+{#            <a target="_blank" href="{{ asset('upload/bars/vanaheim/menu/carte-vanaheim.pdf') }}">#}
+{#                <p class="text-center font_vanaheim_2 fs-3 link_underline">#}
+{#                    Voir notre carte#}
+{#                </p>#}
+{#            </a>#}
+{#        {% elseif app.request.locale == 'en' %}#}
+{#            <p class="text-justify">Finally, Vanaheim obviously offers you the opportunity to refresh yourself on the terrace, which can accommodate up to 50 people, or in its bar which can accommodate up to 80 people, all in a unique Viking atmosphere.<br>#}
+{#                <br>#}
+{#                Around a beer, a cocktail or a large number of various drinks, find yourself with friends or family in a fascinating and transcendent period atmosphere thanks to a decor made of wood, shields, axes, and much more. Again...</p>#}
+{#            <a target="_blank" href="{{ asset('upload/bars/vanaheim/menu/carte-vanaheim.pdf') }}">#}
+{#                <p class="text-center font_vanaheim_2 fs-3 link_underline">#}
+{#                    Look at our menu#}
+{#                </p>#}
+{#            </a>#}
+{#        {% endif %}#}
+
+{#        <!--Photo du bars-->#}
+{#        <div class="bars_description_thumbnails d-flex justify-content-center flex-wrap pb-2">#}
+{#            <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim1.jpg') }}" alt="Miniature du bar">#}
+{#            <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim4.jpg') }}" alt="Miniature du bar">#}
+{#            <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim3.jpg') }}" alt="Miniature du bar">#}
+{#        </div>#}
+
+{#        <!--Adresse-->#}
+{#        <a href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889">#}
+{#            <div class="d-flex justify-content-center align-items-center">#}
+{#                <h4 class="text-center font_vanaheim link_underline py-3">20 rue du commerce VENDENHEIM 67550</h4>#}
+{#            </div>#}
+{#        </a>#}
+{#    </div>#}
+{#</div>#}
+
+<!--Rservation 4escape-->
+<div>
+    <h4 class="font_vanaheim_2 text-center">{% trans %}Séléctionnez votre date :{% endtrans %}</h4>
+    <div class="forescape" data-subdomain="doozdestroyroom" data-type="bookings" data-rooms="62cbfb1c1e9c82e2e8caabe7,62cc04201e9c82e2e8cabdcc,62cc0528336363e2ccd4e057,62cc05e4336363e2ccd50e62,62cc06c3336363e2ccd511af"></div>
+</div>
+
+<!--Proposition Bar-->
+<div class="vanaheim_axe_explication_box vanaheim_axe_explication_box_big d-flex flex-column justify-content-evenly">
+    <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
+    {% if app.request.locale == 'fr' %}
+        <h4 class="m-0">Une soif du Nord ?</h4>
+        <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+        <p class="vanaheim_axe_text">
+            Enfin, Vanaheim vous propose bien évidemment de vous rafraîchir en terrasse, ou dans son bar, le tout dans une ambiance Viking unique.<br>
+            <br>
+            Autour d’une bière, d’un cocktail ou d’une grand nombre de consommations diverses retrouvez vous entre amis ou en famille dans une ambiance d’époque prenante et transcendante grâce à un décor fait de bois, bouclier, haches, et bien plus encore...
+        </p>
+        <a target="_blank" href="{{ asset('upload/bars/vanaheim/menu/carte-vanaheim.pdf') }}">
+            <p class="text-center font_vanaheim_2 fs-3 link_underline">
+                Voir notre carte
+            </p>
+        </a>
+    {% endif %}
+    {% if app.request.locale == 'en' %}
+    {% endif %}
+</div>
+
+
+<!--Horaires Bar-->
+<div class="vanaheim_axe_explication_box d-flex flex-column justify-content-evenly">
+    <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
+    {% if app.request.locale == 'fr' %}
+        <div class="vanaheim_axe_explication_box_horaries d-flex flex-column justify-content-center align-items-center pt-1">
+            <h5 class="font_vanaheim_2 text-center">Les horaires du bar</h5>
+            <ul class="my-3">
+                <li class="vanaheim_axe_text">Lundi : 14h - 23h30(sur réservation)</li>
+                <li class="vanaheim_axe_text">Mardi : 14h - 23h30(sur réservation)</li>
+                <li class="vanaheim_axe_text">Mercredi : 14h - 23h30</li>
+                <li class="vanaheim_axe_text">Jeudi : 14h - 23h30</li>
+                <li class="vanaheim_axe_text">Vendredi : 10h - 00h00</li>
+                <li class="vanaheim_axe_text">Samedi : 10h - 00h00</li>
+                <li class="vanaheim_axe_text">Dimanche : 10h - 20h00</li>
+            </ul>
+        </div>
+        <!--Photo du bars-->
+        <div class="bars_description_thumbnails d-flex justify-content-center flex-wrap pb-2">
+            <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim1.jpg') }}" alt="Miniature du bar">
+            <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim4.jpg') }}" alt="Miniature du bar">
+            <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim3.jpg') }}" alt="Miniature du bar">
+        </div>
+    {% endif %}
+    {% if app.request.locale == 'en' %}
+    {% endif %}
+</div>

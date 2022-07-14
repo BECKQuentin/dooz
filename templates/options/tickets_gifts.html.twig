@@ -1,0 +1,6 @@
+{% if app.request.locale == 'fr' %}
+    <a href="{{ path('gifts') }}"><img src="{{ asset('img/base/icons/bon-cadeau.png') }}" class="resa_gifts_icons mx-2" alt="Bon cadeaux"></a>
+{% endif %}
+{% if app.request.locale == 'en' %}
+    <a href="{{ path('gifts') }}"><img src="{{ asset('img/base/icons/gift-cards.png') }}" class="resa_gifts_icons mx-3" alt="Gift cards"></a>
+{% endif %}

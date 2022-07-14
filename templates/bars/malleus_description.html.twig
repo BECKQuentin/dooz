@@ -1,0 +1,29 @@
+
+<div class="bars_description_content_border" style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+
+        <div class="bars_description">
+
+                <!--Malleus Description-->
+                {% if app.request.locale == 'fr' %}
+                        <p>{{ bar.description|nl2br }}</p>
+                        <!--Carte des boissons-->
+                        <p>Sorciers, sorcières, passez les portes du Malleus et venez vous immerger au cœur de la magie noire. Jetez un coup d’œil à notre <a target="_blank" class="link_malleus" href="{{ asset('wp-content/uploads/2022/05/Nouvelle-carte-Malleus-Maleficarum-1.pdf') }}">notre carte</a>.</p>
+                {% elseif app.request.locale == 'en' %}
+                        <p>{{ bar.descriptionEn|nl2br }}</p>
+                        <!--Carte des boissons-->
+                        <p>Witches and warlocks, dare to cross the doors of the Malleus and look at <a target="_blank" class="link_malleus" href="{{ asset('wp-content/uploads/2022/05/Nouvelle-carte-Malleus-Maleficarum-1.pdf') }}">our Menu</a>.</p>
+                {% endif %}
+
+                <!--Photo du bars-->
+                <div class="bars_description_thumbnails d-flex justify-content-center flex-wrap">
+                        <img src="{{ asset('upload/bars/malleus/thumbnails/Malleus2.jpeg') }}" alt="Miniature du bar">
+                        <img src="{{ asset('upload/bars/malleus/thumbnails/Malleus5.jpeg') }}" alt="Miniature du bar">
+                        <img src="{{ asset('upload/bars/malleus/thumbnails/Malleus6.jpeg') }}" alt="Miniature du bar">
+                </div>
+
+                <div class="bars_horaries d-flex justify-content-center">
+                        <img src="{{ asset('upload/bars/malleus/horaires-malleus.png') }}" alt="Horaires Malleus">
+                </div>
+
+        </div>
+</div>

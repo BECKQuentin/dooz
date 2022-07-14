@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Back Office - Dooz Escape Game{% endblock %}
+
+{% block BO %}
+
+    <h2 class="text-center py-4">{{ cgv.name }}</h2>
+
+    <div class="row">
+        <div class="col-md-8 px-5 py-3">
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-6">{{ form_row(form.name) }}</div>
+                <div class="col-6">{{ form_row(form.name_en) }}</div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+
+
+{% endblock %}

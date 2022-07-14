@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ room.name }} - Dooz Escape Game{% endblock %}
+{% block title_og %}{{ room.name|capitalize }}{% endblock %}
+{% block description %}{{ room.shortName }}{% endblock %}
+{% block description_og %}{{ room.shortName }}{% endblock %}
+
+{% block body %}
+
+    <div id="single_escape">
+
+
+        <!--Banner Single Escape-->
+        <div id="single_escape_banner">
+            <div class="filter_carousel">
+                <div class="filter_carousel_1"></div>
+                <div class="filter_carousel_2"></div>
+                {% if room.isTextBanner %}
+                    <div class="filter_carousel_banner">
+                        {{ room.textBanner }}
+                    </div>
+                {% endif %}
+            </div>
+            <img src="{{ room.banner|bannerRoom }}" class="d-block w-100" alt="{{ room.name }}">
+
+            {% if app.request.locale == 'fr' %}
+                <h2 class="p-4">{{ room.name }}</h2>
+            {% elseif app.request.locale == 'en' %}
+                <h2 class="p-4">{{ room.nameEn }}</h2>
+            {% endif %}
+
+
+            {% include 'escape/room_feature.html.twig' %}
+
+        </div>
+
+
+        <div class="single_escape_reserve_button_mobile">
+            <a href="#anchor_single_escape">
+                <img src="{{ asset('img/base/icons/reserver.png') }}" alt="Reserver Escape">
+            </a>
+        </div>
+
+        <div id="single_escape_description">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                {% if app.request.locale == 'fr' %}
+                    {% if room.isWarningDescription == true %}
+                        <div class="warning_eighteen w-75">
+                            <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo interdit">
+                            <p>{{ room.warningDescription|nl2br }}</p>
+                            <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo interdit">
+                        </div>
+                    {% endif %}
+                    <p class="single_escape_description_text pt-2 px-3">
+                        {{ room.description|nl2br }}
+                    </p>
+                {% elseif app.request.locale == 'en' %}
+                    {% if room.warningDescriptionEn is defined %}
+                        <div class="d-flex">
+                            <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo interdit">
+                            {{ room.warningDescriptionEn|nl2br }}
+                            <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo interdit">
+                        </div>
+                    {% endif %}
+                    <p class="single_escape_description_text pt-2 px-3">
+                        {{ room.descriptionEn|nl2br }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!--Reservation Single Escape-->
+        <div class="d-flex justify-content-center"><hr class="w-75 hr_mobile"></div>
+        <h4 class="text-center fs-2 m-0">{% trans %}RESERVER VOS PLACES{% endtrans %}</h4>
+
+        <div id="anchor_single_escape" class="forescape_room_reservation">
+            {% if room.forescapeDataRoom is defined and room.forescapeDataRoom is not null %}
+                <div class="forescape" data-subdomain="doozescape" data-type="bookings" data-rooms="{{ room.forescapeDataRoom }}"></div>
+            {% else %}
+                <div class="text-center pb-5">Les reservations sont momentanément indisponibles pour cette salle. Vous pouvez nous joindre au <span class="dooz">03.90.41.77.17</span></div>
+            {% endif %}
+        </div>
+
+
+        <!--Autres Episodes-->
+        <div class="d-flex justify-content-center"><hr class="w-75 hr_mobile"></div>
+        <h4 class="text-center fs-2 pt-2 m-0">{% trans %}NOS AUTRES ESCAPE GAME{% endtrans %}</h4>
+
+        <div class="d-flex justify-content-center flex-wrap">
+
+            {% for room in arrRandRooms %}
+                {% if room.id is defined %}
+                    <div class="px-3 pt-3 pb-5">
+                        {% include 'escape/escape_thumbnail.html.twig' %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+{% endblock %}

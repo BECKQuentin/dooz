@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Back Office - Dooz Escape Game{% endblock %}
+
+{% block BO %}
+    <h2 class="title_admin text-left py-4 px-5">Partenaires</h2>
+
+    <div class="px-3">
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-3">{{ form_row(form.name) }}</div>
+            <div class="col-3">{{ form_row(form.thumbnail) }}</div>
+            <div class="col-5">{{ form_row(form.link) }}</div>
+            <div class="col-1">{{ form_row(form.submit) }}</div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+    <p class="px-3">Vous avez <span class="fs-4">{{ partners|length }}</span> partenaires.</p>
+    <hr>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Logo</th>
+                <th scope="col">Lien</th>
+                <th scope="col">Crée le</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+
+                {% for partner in partners %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <th>{{ partner.name }}</th>
+                        <th>
+                            <img class="admin_partner_thumbnail" src="{{ partner.thumbnail|partnerThumbnail }}" alt="Logo du partenaire">
+                        </th>
+                        <th>{{ partner.link }}</th>
+                        <th>{{ partner.createdAt|date("m/d/Y") }}</th>
+                        <th>
+                            <div class="d-flex">
+                                <a href="{{ path('admin_partner_update', {id:partner.id}) }}" title="Modifier">
+                                    <i class="fa-solid fa-pencil btn-admin-dooz mx-3"></i>
+                                </a>
+                                <a href="{{ path('admin_partner_delete', {id:partner.id}) }}" title="Supprimer" onclick="return confirm('Etes vous sûr de vouloir supprimer cet article ?')">
+                                    <i class="fa-solid fa-trash btn-admin-dooz mx-3"></i>
+                                </a>
+                            </div>
+                        </th>
+{#                        <td colspan="1">#}
+{#                            <div class="d-flex flex-wrap">#}
+{#                                <div>#}
+{#                                    <a class="btn btn-vodou" href="" title="Editer">#}
+{#                                        <i class="fa-solid fa-pen-nib"></i>#}
+{#                                    </a>#}
+{#                                </div>#}
+
+{#                            </div>#}
+{#                        </td>#}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,46 @@
+/*Carouosel*/
+#carouselEpisode0 h1 {
+    text-transform: uppercase;
+    font-family: "breamcatcher";
+    font-weight: bold;
+    text-align: left;
+}
+#carouselEpisode0 .carousel-item{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+#carouselEpisode0 .carousel-caption h2 {
+    font-family: 'breamcatcher', "Volkhov";
+    position: absolute;
+    left: 125px;
+    bottom: 25px;
+}
+
+
+
+/*Ronces*/
+#carouselEpisode0:after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    background: repeat-x url("../img/episode0/design/ligne_h.png");
+}
+.episode0_description_thumbnail {
+    display: flex;
+    margin: 25px 0;
+}
+.episode0_description_thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.episode0_description_liste li{
+    list-style: initial;
+}
+/*Content*/
+

@@ -1,0 +1,134 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Back Office - Dooz Escape Game{% endblock %}
+
+{% block BO %}
+
+    {% if isAddingRoom is defined %}
+        <h2 class="title_admin text-left py-4 px-5">Ajouter une nouvelle room</h2>
+    {% else %}
+        <h2 class="title_admin text-left py-4 px-5"><span>{{ room.episode }} - </span>{{ room.name }}</h2>
+    {% endif %}
+
+
+
+    <div class="row">
+
+        <!--Partie de gauche-->
+        <div class="col-md-8 px-5 py-3">
+            {{ form_start(form) }}
+            <div class="d-flex">
+                <div class="col-6 px-2">{{ form_row(form.name) }}</div>
+                <div class="col-6 px-2">{{ form_row(form.name_en) }}</div>
+            </div>
+            <div class="px-2">
+                {{ form_row(form.short_name) }}
+            </div>
+            <div class="px-2">
+                {{ form_row(form.short_name_en) }}
+            </div>
+            <div class="row px-2">
+                <div class="col-5 px-2">{{ form_row(form.thumbnail) }}</div>
+                <div class="col-7">
+                    <img class="admin_escape_thumbnail" src="{{ room.thumbnail|thumbnailRoom }}" alt="">
+                    <a class="admin_escape_thumbnail_delete" href="" title="Supprimer">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row px-2">
+                <div class="col-5 px-2">{{ form_row(form.banner) }}</div>
+                <div class="col-7">
+                    <img class="admin_escape_thumbnail" src="{{ room.banner|bannerRoom }}" alt="">
+                    <a class="admin_escape_thumbnail_delete" href="" title="Supprimer">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row px-2">
+                <div class="col-5 px-2">{{ form_row(form.clock_thumbnail) }}</div>
+                <div class="col-7">
+                    <img class="admin_escape_thumbnail" src="{{ room.clockThumbnail|clockRoom }}" alt="">
+                    <a class="admin_escape_thumbnail_delete" href="" title="Supprimer">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row px-2">
+                <div class="col-6">{{ form_row(form.forescape_data_room) }}</div>
+                <div class="col-4">{{ form_row(form.address) }}</div>
+                <div class="col-2">{{ form_row(form.episode) }}</div>
+            </div>
+            <hr>
+            <div class="px-2">
+                {{ form_row(form.description) }}
+            </div>
+            <div class="px-2">
+                {{ form_row(form.description_en) }}
+            </div>
+            <hr>
+            <div class="row">
+                <div class="d-flex align-items-center col-2 px-2">{{ form_row(form.isTextBanner) }}</div>
+                <div class="d-flex align-items-center col-10 px-2">{{ form_row(form.textBanner) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2">{{ form_row(form.isWarningDescription) }}</div>
+                <div class="col-5">{{ form_row(form.warningDescription) }}</div>
+                <div class="col-5">{{ form_row(form.warningDescriptionEn) }}</div>
+            </div>
+            <hr>
+            <div class="d-flex">
+                <div class="col-3 px-2">{{ form_row(form.difficulty) }}</div>
+                <div class="col-3 px-2">{{ form_row(form.stress) }}</div>
+                <div class="col-3 px-2">{{ form_row(form.fear) }}</div>
+                <div class="col-3 px-2">{{ form_row(form.duration) }}</div>
+            </div>
+            <div class="d-flex">
+                <div class="col-3 px-2">{{ form_row(form.min_players) }}</div>
+                <div class="col-3 px-2">{{ form_row(form.max_players) }}</div>
+                <div class="col-3 px-2">{{ form_row(form.record) }}</div>
+                <div class="col-3 px-2">{{ form_row(form.record_lost) }}</div>
+            </div>
+            <hr>
+            <div class="d-flex">
+                <div class="col-6 px-2">{{ form_row(form.main_mission) }}</div>
+                <div class="col-6 px-2">{{ form_row(form.main_mission_en) }}</div>
+            </div>
+            <div class="d-flex">
+                <div class="col-6 px-2">{{ form_row(form.side_mission) }}</div>
+                <div class="col-6 px-2">{{ form_row(form.side_mission_en) }}</div>
+            </div>
+            <div class="d-flex">
+                <div class="col-6 px-2">{{ form_row(form.additional_feature) }}</div>
+                <div class="col-6 px-2">{{ form_row(form.additional_feature_en) }}</div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <div>
+                    {{ form_row(form.submit) }}
+                </div>
+                {% if isAddingRoom is not defined %}
+                    <div>
+                        <a href="{{ path('admin_room_delete', {id:room.id}) }}" title="Supprimer" onclick="return confirm('Etes vous sûr de vouloir supprimer cette Room ?')">
+                            <i class="fa-solid fa-trash btn-admin-dooz px-4 py-3"></i>
+                        </a>
+                    </div>
+                {% endif %}
+
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+
+
+        <!--Partie de droite-->
+        <div class="col-md-4 p-2">
+            <h4 class="text-center">Aperçu</h4>
+
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

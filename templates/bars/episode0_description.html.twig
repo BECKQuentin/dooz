@@ -1,0 +1,93 @@
+<div class="bars_description_content_border" style="border-image: url('{{ asset('img/episode0/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+
+    <div class="bars_description">
+
+        <!--Episode 0-->
+        {% if app.request.locale == 'fr' %}
+            <p>
+                Vous n’avez pas encore découvert l’épisode 0, notre bar à jeux caché à l’arrière de l’escape game ? Ouvert depuis juillet 2017, notre bar est entièrement décoré dans un style unique : le Steampunk. Jetez un coup d’oeil à
+                <a target="_blank" class="link_dooz" href="{{ asset('wp-content/uploads/2022/05/Episode-0-Bar-a-Jeux_compressed.pdf') }}">notre carte</a> !
+            </p>
+            <p>
+                Vous voulez jeter un coup d’œil à notre ludothèque de plus de 250 jeux de société ? Nos jeux sont référencés par
+                <a target="_blank" class="link_dooz" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
+            </p>
+            {% include 'options/button_ludo.html.twig' %}
+
+            <div class="episode0_description_thumbnail d-flex justify-content-center flex-wrap">
+                <div>
+                    <img src="{{ asset('upload/bars/episode0/thumbnails/bar1.jpg') }}" alt="Miniature episode 0">
+                </div>
+                <div>
+                    <img src="{{ asset('upload/bars/episode0/thumbnails/bar2.jpg') }}" alt="Miniature episode 0">
+                </div>
+                <div>
+                    <img src="{{ asset('upload/bars/episode0/thumbnails/bar6.jpg') }}" alt="Miniature episode 0">
+                </div>
+            </div>
+            <p>Il vous offrira :</p>
+            <ul class="episode0_description_liste">
+                <li>Un espace de 80m² climatisé avec 10 tables de jeux pour 2 à 8 joueurs par table</li>
+                <li>Une sélection de plus de 200 jeux de société</li>
+                <li>Des agents du temps pour vous aider à choisir le jeu qui vous correspond</li>
+                <li>Une carte des boissons comprenant softs, bières, apéritifs, cocktails et milkshakes !</li>
+                <li>Des choses à grignoter : douceurs sucrées, planchettes de charcuterie, assortiment de fromages, croque-monsieurs, pizzas.</li>
+            </ul>
+
+            <p>
+                L’épisode 0 vous propose chaque semaine de nombreux événements : Murder party, Burger Quiz, blind tests, tournois magic, après-midi et soirées jeux de société, loup-garou…Jetez un coup d’oeil à l’agenda de nos événements !<br>
+
+                Nous proposons également pour les entreprises et les particuliers (hors samedi) de pouvoir privatiser le lieu pour proposer des après-midi jeux de société à leurs collaborateurs ou amis, ou simplement délocaliser une partie de notre ludothèque jusque chez vous (pour toutes demandes : devis.doozescape@gmail.com).
+            </p>
+
+        {% endif %}
+
+        {% if app.request.locale == 'en' %}
+            <p>
+
+                Haven't discovered episode 0 yet, our games bar hidden behind the escape game? Open since July 2017, our bar is entirely decorated in a unique style: Steampunk. Take a look at
+                <a target="_blank" class="link_dooz" href="{{ asset('wp-content/uploads/2022/05/Episode-0-Bar-a-Jeux_compressed.pdf') }}">our menu</a> !
+            </p>
+            <p>
+
+                Want to take a look at our toy library of over 250 board games? Our games are referenced
+                <a target="_blank" class="link_dooz" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">here</a>.
+            </p>
+            <div class="text-center">
+                <a class="btn-dooz-ludo" target="_blank" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">Our games boards library</a>
+            </div>
+            <p>It will offer you:</p>
+
+            <div class="episode0_description_thumbnail d-flex justify-content-center flex-wrap">
+                <div>
+                    <img src="{{ asset('upload/bars/episode0/thumbnails/bar1.jpg') }}" alt="Miniature episode 0">
+                </div>
+                <div>
+                    <img src="{{ asset('upload/bars/episode0/thumbnails/bar2.jpg') }}" alt="Miniature episode 0">
+                </div>
+                <div>
+                    <img src="{{ asset('upload/bars/episode0/thumbnails/bar6.jpg') }}" alt="Miniature episode 0">
+                </div>
+            </div>
+
+            <ul class="episode0_description_liste">
+                <li>An air-conditioned 80m² space with 10 game tables for 2 to 8 players per table</li>
+                <li>A selection of over 200 board games</li>
+                <li>Time agents to help you choose the game that suits you</li>
+                <li>A drinks menu including soft drinks, beers, aperitifs, cocktails and milkshakes!</li>
+                <li>Things to snack on: sweet treats, charcuterie platters, assorted cheeses, croque-monsieurs, pizzas.</li>
+            </ul>
+
+            <p>
+                Episode 0 offers you many events every week: Murder party, Burger Quiz, blind tests, magic tournaments, board game afternoons and evenings, werewolf... Take a look at our events calendar !<br>
+
+                We also propose for companies and individuals (except Saturdays) to be able to privatize the place to offer afternoon board games to their collaborators or friends, or simply to relocate part of our toy library to your home (for all requests: estimate .doozescape@gmail.com).
+            </p>
+        {% endif %}
+
+        <!--Horaires-->
+        <div class="bars_horaries d-flex justify-content-center">
+            <img src="{{ asset('upload/bars/episode0/horaires-episode0.png') }}" alt="Horaires Episode 0">
+        </div>
+    </div>
+</div>

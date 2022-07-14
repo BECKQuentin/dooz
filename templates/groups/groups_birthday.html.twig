@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Anniversaires{% endtrans%} - Dooz Escape Game{% endblock %}
+{% block title_og %}Anniversaires{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Escape-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/groups/birthday.jpg') }}" class="d-block w-100" alt="...">
+        <h2>{% trans %}Anniversaires{% endtrans%}</h2>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="companies_team_description">
+
+            <p>Envie de fêter un anniversaire de manière originale ?</p>
+            <p>Alors pourquoi ne pas vous laisser envoyer en mission dans l’appartement d’un tueur en série, au sein d’un laboratoire en quarantaine, dans une prison du 19e siècle, ou encore dans le bunker d’une unité ennemie ? Chez Dooz, nous vous faisons voyager dans le temps pour votre anniversaire ou celui de vos amis.</p>
+            <p>Et que diriez-vous de personnaliser cette expérience…Vous voulez cacher un cadeau dans la room ? Prévenez nos horlogers en amont et ils s’occuperont de faire voyager votre présent dans la timeline dans laquelle vous allez être envoyés.</p>
+            <p>Vous voulez surprendre davantage encore la personne qui fête son anniversaire ? Envoyez-nous à l’avance des anecdotes (par mail à contact.doozescape@gmail.com) et des photos (par courrier à Dooz Escape Game, 19 rue des magasins, 67000 Strasbourg) en nous précisant la mission réservée, nous ferons en sorte de les intégrer au scénario que vous choisirez.</p>
+            <p>Une fois votre mission terminée -et brillamment réussie, nous n’en doutons pas- faites un tour dans l’épisode 0, notre bar à jeux steampunk situé à l’arrière de l’escape game. Plus de 300 jeux de société vous attendent, ainsi que des boissons (softs, bières, boissons chaudes, milkshakes, cocktails,…) et de quoi grignoter (planchettes de charcuterie et de fromage, pizzas, snacks…)</p>
+
+
+            <div class="companies_team_img_multiple">
+                <img class="" src="{{ asset('upload/groups/other/birthday_1.jpg') }}" alt="Image anniversaire" >
+                <img class="" src="{{ asset('upload/groups/other/birthday_2.jpg') }}" alt="Image anniversaire" >
+                <img class="" src="{{ asset('upload/groups/other/birthday_3.jpg') }}" alt="Image anniversaire" >
+            </div>
+            <p>DoOz, vous permet de réaliser votre activité en groupe jusqu’à 38 personnes réparties dans 7 salles différentes et sur des créneaux simultanés.</p>
+
+            <p class="fst-italic">Attention pour les plus jeunes recrues, les scénarios 1, 3, 4 et 7 sont déconseillés aux moins de 16 ans. Pour toutes les recrues de moins de 16 ans qui souhaitent tout de même tenter l’aventure, nous demandons obligatoirement un adulte responsable du groupe d’accompagner les voyageurs dans le temps. Nous demandons également une autorisation parentale.</p>
+
+        </div>
+    </div>
+
+
+    <!--Formulaire de Contact-->
+    {% include 'options/contact_form.html.twig' %}
+
+
+{% endblock %}

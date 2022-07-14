@@ -1,0 +1,13 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Disallow: /a/
+Disallow: /a/admin/
+Disallow: /frdoozlogin67iwant/
+
+
+Sitemap: https://doozescape.com/sitemap.xml
+Sitemap: https://www.doozescape.com/sitemap.xml
+Sitemap: http://doozescape.com/sitemap.xml
+Sitemap: http://www.doozescape.com/sitemap.xml

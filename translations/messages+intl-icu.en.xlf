@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="R_Nbp1J" resname="Bon cadeaux">
+        <source>Bon cadeaux</source>
+        <target>Gifts Cards</target>
+      </trans-unit>
+      <trans-unit id="QPblr.N" resname="MENTIONS LEGALES">
+        <source>MENTIONS LEGALES</source>
+        <target>LEGAL NOTICE</target>
+      </trans-unit>
+      <trans-unit id="QyWie0W" resname="CREDITS">
+        <source>CREDITS</source>
+        <target>CREDITS</target>
+      </trans-unit>
+      <trans-unit id="4zW5mp7" resname="CGV ESCAPE GAME">
+        <source>CGV ESCAPE GAME</source>
+        <target>GTC ESCAPE GAME</target>
+      </trans-unit>
+      <trans-unit id="OgzM0u6" resname="CGV DESTROY ROOM">
+        <source>CGV DESTROY ROOM</source>
+        <target>GTC DESTROY ROOM</target>
+      </trans-unit>
+      <trans-unit id="o_diz3H" resname="PROTOCOLE COVID-19">
+        <source>PROTOCOLE COVID-19</source>
+        <target>COVID-19 PROTOCOL</target>
+      </trans-unit>
+      <trans-unit id="U_820l." resname="ESCAPE GAME">
+        <source>ESCAPE GAME</source>
+        <target>ESCAPE GAME</target>
+      </trans-unit>
+      <trans-unit id="ynpKSk0" resname="DESTROY ROOM">
+        <source>DESTROY ROOM</source>
+        <target>DESTROY ROOM</target>
+      </trans-unit>
+      <trans-unit id="SGQoJYu" resname="BARS A JEUX">
+        <source>BARS A JEUX</source>
+        <target>GAME BARS</target>
+      </trans-unit>
+      <trans-unit id="tzzIH.Q" resname="RESERVER">
+        <source>RESERVER</source>
+        <target>BOOKING</target>
+      </trans-unit>
+      <trans-unit id="EBKyScf" resname="EVENEMENTS">
+        <source>EVENEMENTS</source>
+        <target>EVENTS</target>
+      </trans-unit>
+      <trans-unit id="v5gR3IX" resname="ENTREPRISES">
+        <source>ENTREPRISES</source>
+        <target>COMPANIES</target>
+      </trans-unit>
+      <trans-unit id="7IFOeL2" resname="PARTICULIERS">
+        <source>PARTICULIERS</source>
+        <target>INDIVIDUALS</target>
+      </trans-unit>
+      <trans-unit id="U22DLw8" resname="CONNEXION">
+        <source>CONNEXION</source>
+        <target>LOGIN</target>
+      </trans-unit>
+      <trans-unit id="7d_QUjv" resname="NOS PARTENAIRES">
+        <source>NOS PARTENAIRES</source>
+        <target>OUR PARTNERS</target>
+      </trans-unit>
+      <trans-unit id="LEXaXFP" resname="Bienvenue Voyageur,">
+        <source>Bienvenue Voyageur,</source>
+        <target>Welcome Traveler,</target>
+      </trans-unit>
+      <trans-unit id="eV3tkag" resname="Prêts pour l'aventure ?">
+        <source>Prêts pour l'aventure ?</source>
+        <target>Ready for Adventure ?</target>
+      </trans-unit>
+      <trans-unit id="BRucep5" resname="Escape Game à Strasbourg">
+        <source>Escape Game à Strasbourg</source>
+        <target>Escape Game in Strasbourg</target>
+      </trans-unit>
+      <trans-unit id="Ts_Xc3u" resname="Selectionnez votre date :">
+        <source>Selectionnez votre date :</source>
+        <target>Select your date :</target>
+      </trans-unit>
+      <trans-unit id="roVdkuN" resname="En savoir plus -&gt;">
+        <source>En savoir plus -&gt;</source>
+        <target><![CDATA[See more ->]]></target>
+      </trans-unit>
+      <trans-unit id="uebZsw0" resname="RESERVER VOS PLACES">
+        <source>RESERVER VOS PLACES</source>
+        <target>RESERVE YOUR PLACES</target>
+      </trans-unit>
+      <trans-unit id="_C7i485" resname="NOS AUTRES ESCAPE GAME">
+        <source>NOS AUTRES ESCAPE GAME</source>
+        <target>OUR OTHER ESCAPE GAME</target>
+      </trans-unit>
+      <trans-unit id="cycpiEb" resname="Difficulté">
+        <source>Difficulté</source>
+        <target>Difficulty</target>
+      </trans-unit>
+      <trans-unit id="IxnNkPu" resname="Stress">
+        <source>Stress</source>
+        <target>Stress</target>
+      </trans-unit>
+      <trans-unit id="h9s1rKz" resname="Peur">
+        <source>Peur</source>
+        <target>Fear</target>
+      </trans-unit>
+      <trans-unit id="s.yd5Sb" resname="à">
+        <source>à</source>
+        <target>to</target>
+      </trans-unit>
+      <trans-unit id="tVBJvn8" resname="Joueurs">
+        <source>Joueurs</source>
+        <target>Players</target>
+      </trans-unit>
+      <trans-unit id="v91RBpj" resname="Record">
+        <source>Record</source>
+        <target>Record</target>
+      </trans-unit>
+      <trans-unit id="t4Ztpy0" resname="😱 Record d'abandon">
+        <source>😱 Record d'abandon</source>
+        <target>😱 Lost Record</target>
+      </trans-unit>
+      <trans-unit id="XMbhxYP" resname="Mission Principale">
+        <source>Mission Principale</source>
+        <target>Main Mission</target>
+      </trans-unit>
+      <trans-unit id="eSA.mtv" resname="Missison Secondaire">
+        <source>Missison Secondaire</source>
+        <target>Side Mission</target>
+      </trans-unit>
+      <trans-unit id="oDB7W3l" resname="Découvrez nos autres activités">
+        <source>Découvrez nos autres activités</source>
+        <target>Discover our other activities</target>
+      </trans-unit>
+      <trans-unit id="zBuIEdK" resname="Nos Partenaires">
+        <source>Nos Partenaires</source>
+        <target>Our partners</target>
+      </trans-unit>
+      <trans-unit id="0IOfRRu" resname="NOS BARS A JEUX">
+        <source>NOS BARS A JEUX</source>
+        <target>OUR GAMES BARS</target>
+      </trans-unit>
+      <trans-unit id="FlDTdyC" resname="Comité d'Entreprise">
+        <source>Comité d'Entreprise</source>
+        <target>Works Council</target>
+      </trans-unit>
+      <trans-unit id="cVzk1bi" resname="Team Building">
+        <source>Team Building</source>
+        <target>Team Building</target>
+      </trans-unit>
+      <trans-unit id="OfDI3p1" resname="EDV Jeune fille/homme">
+        <source>EDV Jeune fille/homme</source>
+        <target>Bachelor(ette) party</target>
+      </trans-unit>
+      <trans-unit id="gut3fxT" resname="Anniversaires">
+        <source>Anniversaires</source>
+        <target>Birthdays</target>
+      </trans-unit>
+      <trans-unit id="_C7LteU" resname="CONTACT">
+        <source>CONTACT</source>
+        <target>CONTACT</target>
+      </trans-unit>
+      <trans-unit id="RyU_SIr" resname="Page Introuvable">
+        <source>Page Introuvable</source>
+        <target>Page not found</target>
+      </trans-unit>
+      <trans-unit id="ikRI3yA" resname="Page Introuvable - Erreur">
+        <source>Page Introuvable - Erreur</source>
+        <target>Page not found - Error</target>
+      </trans-unit>
+      <trans-unit id="kBhX_mg" resname="Ooops, il semble que la page que vous cherchez n'existe pas.">
+        <source>Ooops, il semble que la page que vous cherchez n'existe pas.</source>
+        <target>Ooops, it looks like the page you're looking for doesn't exist.</target>
+      </trans-unit>
+      <trans-unit id="mQaVQdn" resname="Entreprises">
+        <source>Entreprises</source>
+        <target>Entreprises</target>
+      </trans-unit>
+      <trans-unit id="zA3zkPa" resname="Comité d'entreprises">
+        <source>Comité d'entreprises</source>
+        <target>Works Councils</target>
+      </trans-unit>
+      <trans-unit id="wKbavyS" resname="Construction d'équipe">
+        <source>Construction d'équipe</source>
+        <target>Team Building</target>
+      </trans-unit>
+      <trans-unit id="ZTbnqlq" resname="Nous Contacter">
+        <source>Nous Contacter</source>
+        <target>Contact Us</target>
+      </trans-unit>
+      <trans-unit id="MeGyphe" resname="NOS AUTRES ACTIVITÉS">
+        <source>NOS AUTRES ACTIVITÉS</source>
+        <target>OUR OTHER ACTIVITIES</target>
+      </trans-unit>
+      <trans-unit id="a_kpMGs" resname="Particuliers">
+        <source>Particuliers</source>
+        <target>Individuals</target>
+      </trans-unit>
+      <trans-unit id="aCucmO7" resname="EDV DE JEUNE FILLE/HOMME">
+        <source>EDV DE JEUNE FILLE/HOMME</source>
+        <target>BACHELOR(ETTE) PARTY</target>
+      </trans-unit>
+      <trans-unit id="yzMfaDi" resname="Escape Game à Strasbourg &amp; Vendenheim">
+        <source>Escape Game à Strasbourg &amp; Vendenheim</source>
+        <target>Escape Game in Strasbourg &amp; Vendenheim</target>
+      </trans-unit>
+      <trans-unit id="CG7g_wq" resname="Bon cadeau">
+        <source>Bon cadeau</source>
+        <target>Gift Cards</target>
+      </trans-unit>
+      <trans-unit id="GgiI30u" resname="+ Bon cadeau Escape Game">
+        <source>+ Bon cadeau Escape Game</source>
+        <target>+ Gift Cards Escape Game</target>
+      </trans-unit>
+      <trans-unit id="5g541RW" resname="+ Bon cadeau Destroy Room">
+        <source>+ Bon cadeau Destroy Room</source>
+        <target>+ Gift Cards Destroy Room</target>
+      </trans-unit>
+      <trans-unit id="QkAhlMY" resname="+ Bon cadeau Bar à Jeux">
+        <source>+ Bon cadeau Bar à Jeux</source>
+        <target>+ Gift Cards Games Bars</target>
+      </trans-unit>
+      <trans-unit id="u0wr_oI" resname="DECOUVREZ NOS AUTRES ACTIVITEES">
+        <source>DECOUVREZ NOS AUTRES ACTIVITEES</source>
+        <target>DISCOVER OUR OTHERS ACTIVITIES</target>
+      </trans-unit>
+      <trans-unit id="HX91IEF" resname="Formulaire de Contact">
+        <source>Formulaire de Contact</source>
+        <target>Contact Form</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

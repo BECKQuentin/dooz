@@ -1,0 +1,115 @@
+<div class="room_feature">
+    <div class="d-flex">
+        <div class="room_feature_widget">
+            <img src="{{ asset('upload/escape/widget/difficulty.png') }}" alt="">
+        </div>
+        <div class="room_feature_widget_title">
+            <span>{% trans %}Difficulté{% endtrans %}</span>
+            <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: {{ room.difficulty }}%" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="room_feature_widget">
+            <img src="{{ asset('upload/escape/widget/stress.png') }}" alt="">
+        </div>
+        <div class="room_feature_widget_title">
+            <span>{% trans %}Stress{% endtrans %}</span>
+            <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: {{ room.stress }}%" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="room_feature_widget">
+            <img src="{{ asset('upload/escape/widget/fear.png') }}" alt="">
+        </div>
+        <div class="room_feature_widget_title">
+            <span>{% trans %}Peur{% endtrans %}</span>
+            <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: {{ room.fear }}%" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-wrap">
+        <!--Nombre Joueurs-->
+        <div class="d-flex">
+            <div class="room_feature_widget">
+                <img src="{{ asset('upload/escape/widget/players.png') }}" alt="">
+            </div>
+            <div class="room_feature_widget_title">
+                <span>{{ room.minPlayers }} {% trans %}à{% endtrans%} {{ room.maxPlayers}} {% trans %}Joueurs{% endtrans %}</span>
+            </div>
+        </div>
+        <!--Temps-->
+        <div class="d-flex">
+            <div class="room_feature_widget">
+                <img src="{{ asset('upload/escape/widget/time.png') }}" alt="">
+            </div>
+            <div class="room_feature_widget_title">
+                <span>{{ room.duration}} minutes</span>
+            </div>
+        </div>
+
+    </div>
+    <!--Record-->
+    {% if room.record is defined and room.record is not null %}
+        <div class="d-flex">
+            <div class="room_feature_widget">
+                <img src="{{ asset('upload/escape/widget/record.png') }}" alt="">
+            </div>
+            <div class="room_feature_widget_title">
+                <span>{% trans %}Record{% endtrans %} - {{ room.record }} minutes</span>
+            </div>
+        </div>
+    {% endif %}
+    <!--Abandon-->
+    {% if room.recordLost is defined and room.recordLost is not null %}
+        <div class="d-flex">
+            <div class="room_feature_widget">
+                <img src="{{ asset('upload/escape/widget/stress.png') }}" alt="">
+            </div>
+            <div class="room_feature_widget_title">
+                <span>{% trans %}Record d'abandon{% endtrans %} - {{ room.recordLost }} minutes</span>
+            </div>
+        </div>
+    {% endif %}
+    <!--Mission principale-->
+    {% if room.mainMission is defined and room.mainMission is not null %}
+        <div class="d-flex">
+            <div class="room_feature_widget">
+                <img src="{{ asset('upload/escape/widget/main_mission.png') }}" alt="">
+            </div>
+            <div class="room_feature_widget_title">
+                <div class="d-flex">
+                    {% trans %}Mission Principale{% endtrans %}
+                    {% if app.request.locale == 'fr' %}
+                        <span>: {{ room.mainMission }}</span>
+                    {% elseif app.request.locale == 'en' %}
+                        <span>: {{ room.mainMissionEn }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <!--Mission secondaire-->
+    {% if room.sideMission is defined and room.sideMission is not null %}
+        <div class="d-flex">
+            <div class="room_feature_widget">
+                <img src="{{ asset('upload/escape/widget/side_mission.png') }}" alt="">
+            </div>
+            <div class="room_feature_widget_title">
+                <div class="d-flex">
+                    {% trans %}Missison Secondaire{% endtrans %}
+                    {% if app.request.locale == 'fr' %}
+                        <span>: {{ room.sideMission }}</span>
+                    {% elseif app.request.locale == 'en' %}
+                        <span>: {{ room.sideMissionEn }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,129 @@
+<div id="destroy_description" class="d-flex flex-column justify-content-center align-items-center">
+
+    <!--Banner explication destroy-->
+    <div class="destroy_description_explication">
+        <div class="cadre_margin flex-column m-4 p-4 mt-5"
+             style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
+
+            <h4 class="fs-1 font_destroy">Dooz Destroy c'est quoi</h4>
+
+            <p class="fs-5">Le concept de destroy room, ou rage room, est simple: c'est une méthode de lutte contre le stress par la catharsis. Vous êtes enfermé dans une pièce et avez 15 minutes pour TOUT DÉTRUIRE! Ce défouloir encadré et sécurisé vous permet de purger votre stress et vos frustrations via un effort interne et libératoire.</p>
+        </div>
+        <div class="cadre_margin d-flex justify-content-evenly align-items-start flex-wrap m-4 mb-5"
+             style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
+            <div class="rotating_gear">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/armes.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Choissez vos armes</p>
+            </div>
+            <div class="rotating_gear">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/joueurs.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Choissez le nombre de participants</p>
+            </div>
+            <div class="rotating_gear">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/date.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Choissez l'heure et la date</p>
+            </div>
+            <div class="rotating_gear">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/caisse.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Payez directement en ligne</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Bouton Reserver-->
+    <div id="button_reserver_destroy" class="cadre_margin d-flex justify-content-center">
+        <a href="#offer_anchor">
+            <img id="button_reserver_off" src="{{ asset('upload/destroy/reserver_destroy_off.png') }}" alt="Reserver Destroy Room">
+            <img id="button_reserver_on" src="{{ asset('upload/destroy/reserver_destroy_on.png') }}" alt="Reserver Destroy Room" style="display: none">
+        </a>
+    </div>
+
+    <div class="cadre_margin_short d-flex flex-column m-4" style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
+
+        <!--Recyclage-->
+        <h4 class="text-center font-weight-bold">Dooz va plus loin</h4>
+        <div id="destroy_recycle" class="d-flex">
+            <img class="p-3" src="{{ asset('upload/destroy/recyclage.png') }}" alt="Circuit de recyclage de la destroy room">
+        </div>
+        <div>
+            <p>
+                Dooz va plus loin et s’inscrit dans circuit de recyclage des déchets.
+                Via un accord avec une centrale de retraite, nous utilisons que des objets en fin de vie.
+                RIEN N’EST GASPILLÉ !!
+                Au contraire, nous offrons une vie supplémentaire aux meubles au pied de la broyeuse et nous passons après les œuvres sociales et de solidarité
+            </p>
+        </div>
+        <div id="offer_anchor"></div>
+        <h4 class="text-center font-weight-bold">Nos offres</h4>
+        <div>
+            <p>De 1 à 5 joueurs par salle, pour renforcer les liens avec votre compagne, souder une équipe ou éliminer les souvenirs d’un ex… jusqu’à 10 joueurs en simultané.</p>
+        </div>
+
+        <!--Offre et Pack disponible-->
+
+        <a class="destroy_offer" href="#destroy_reservation" style="background-image: url('{{ asset('upload/destroy/offer_background/destroy5.jpeg') }}')">
+            <div class="destroy_offer_text">
+                <span class="destroy_offer_title">🪓 PACK SURVIVANT :</span>
+                <ul>
+                    <li>1 à 5 joueurs par salle</li>
+                    <li>35€ par personne (20€ matériel à détruire, 5€ de protections, 10€ nettoyage)</li>
+                    <li>Matériel par personne : 30 objets et un meuble</li>
+                    <li>15 minutes d’efforts physiques intenses</li>
+                </ul>
+            </div>
+            <span class="destroy_offer_exemple">Exemple pour 2 joueurs</span>
+        </a>
+        <a class="destroy_offer" href="#destroy_reservation" style="background-image: url('{{ asset('upload/destroy/offer_background/destroy4.jpeg') }}')">
+            <div class="destroy_offer_text">
+                <span class="destroy_offer_title">🔨 PACK SURVIVANT STAGIAIRE :</span>
+                <ul>
+                    <li>1 à 5 étudiants par salle (sur présentation de la carte)</li>
+                    <li>25€ par personne</li>
+                    <li>Matériel par personne : 15 objets et un meuble</li>
+                    <li>15 minutes d’efforts physiques intenses</li>
+                </ul>
+            </div>
+            <span class="destroy_offer_exemple">Exemple pour 1 joueur</span>
+        </a>
+
+
+        <div class="warning_eighteen pt-5">
+            <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo Warning">
+            <p>
+                Cette activité n’est accessible qu’aux voyageurs de plus de 18 ans.<br>
+                Cette mission se déroulera au 12 rue des magasins.
+            </p>
+            <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo Warning">
+        </div>
+
+                <!--Reservation 4 Escape Destroy-->
+                <div id="destroy_reservation" class="pt-4">
+                    <h4 class="text-center">Les réservations des Destroy Room arrivent très bientôt sur Vendenheim !</h4>
+                    <p class="text-center">Vous pouvez cependant venir au 12 rue des magasins 67000 STRASBOURG</p>
+                    <h4 class ="text-center link_underline font_destroy btn-dooz"><a href="{{ path('destroy') }}">=> C'est par ICI <=</a></h4>
+                </div>
+
+{#        <!--Reservation 4 Escape Destroy-->#}
+{#        <div id="destroy_reservation" class="pt-4">#}
+{#            <h4 class="text-center">{% trans %}Selectionnez votre date :{%  endtrans %}</h4>#}
+{#            <div class="forescape_room_reservation">#}
+{#                <div class="forescape" data-subdomain="doozdestroyroom" data-type="bookings" data-classname="btn-custom-destroy"></div>#}
+{#            </div>#}
+{#        </div>#}
+
+    </div>
+
+
+</div>

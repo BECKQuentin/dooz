@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center pb-5">
+
+    <div id="contact_form">
+        <h5 class="contact_form_info_title">{% trans %}Contact{% endtrans %}</h5>
+{#        {{ form_start(form) }}#}
+{#            <div class="row">#}
+{#                <div class="col-12 col-sm-6">{{ form_row(form.firstname, {'label_attr': {'class': 'contact_form_label'}}) }}</div>#}
+{#                <div class="col-12 col-sm-6">{{ form_row(form.email, {'label_attr': {'class': 'contact_form_label'}}) }}</div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-12 col-sm-6">{{ form_row(form.subject, {'label_attr': {'class': 'contact_form_label'}}) }}</div>#}
+{#            </div>#}
+{#            <div class="row text_area">{{ form_row(form.message, {'label_attr': {'class': 'contact_form_label'}}) }}</div>#}
+{#        {{ form_end(form) }}#}
+        <hr class="bg_standard">
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="contact_form_info_item">
+                <p class="fs-5 px-2">Rencontrez-nous</p>
+                <div class="d-flex align-items-center">
+                    <div class="contact_form_info_icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <a href="tel:0390417717" class="link_underline_red">
+                        <p class="contact_form_info">03.90.41.77.17</p>
+                    </a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="contact_form_info_icon"><i class="fa-solid fa-map-location"></i></div>
+                    <a target="_blank" class="link_underline_red" href="https://www.google.com/maps/place/19+Rue+des+Magasins,+67000+Strasbourg/@48.5907868,7.740175,17z/data=!3m1!4b1!4m5!3m4!1s0x4796c84634635945:0xc48d2f781fc7ba8!8m2!3d48.5907868!4d7.740175">
+                        <p class="contact_form_info">
+                            19 rue des Magasins 67000 STRASBOURG
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="contact_form_info_item">
+                <p class="fs-5 px-2">Pour toute question :</p>
+                <div class="d-flex align-items-center">
+                    <div class="contact_form_info_icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    <a class="link_underline_red" href="mailto:contact.doozescape@gmail.com">
+                        <p class="contact_form_info">contact.doozescape@gmail.com</p>
+                    </a>
+                </div>
+            </div>
+            <div class="contact_form_info_item">
+                <p class="fs-5 px-2">Pour un devis :</p>
+                <div class="d-flex align-items-center">
+                    <div class="contact_form_info_icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    <a class="link_underline_red" href="mailto:devis.doozescape@gmail.com">
+                        <p class="contact_form_info">devis.doozescape@gmail.com</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <img src="{{ asset('upload/contact/parchement.jpg') }}" alt="">
+    </div>
+
+</div>

@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dooz Escape Game - Voyagez à travers le temps !{% endblock %}
+{% block title_og %}Dooz Escape Game{% endblock %}
+
+{% block homepage %}
+     <!--Changement de langue-->
+     <div id="home_shield_languages">
+          {% for locale in locales %}
+               {% if locale != app.request.locale %}
+                    <div class="nav-item">
+                         <a href="{{ path('change_locale', { 'locale': locale}) }}">
+                              <img src="{{ asset('img/base/languages/flag_'~locale~'.png') }}" class="resa_gifts_icons mx-2" alt="{{ locale }}">
+                         </a>
+                    </div>
+               {% endif %}
+          {% endfor %}
+     </div>
+
+     <!--Titre-->
+     <div id="home_shield_title">
+          <h1 class="text-center">
+               {% trans %}Bienvenue Voyageur,{% endtrans %}<br>
+               {% trans %}Prêts pour l'aventure ?{% endtrans %}
+          </h1>
+     </div>
+
+     <!--Blason-->
+
+     <div id="home_shield">
+          <!--Logo central-->
+          <a href="{{ path('rooms') }}">
+               <div id="home_shield_logo">
+                   <img src="{{ asset('img/base/logos/univers-dooz.png') }}" alt="Logo de Dooz">
+               </div>
+          </a>
+
+          <a href="{{ path('rooms') }}" id="home_shield_escape_box">
+               <div id="home_shield_escape" class="home_shield_items">
+                    <span>Escape Game</span>
+               </div>
+          </a>
+
+
+          <a href="{{ path('destroy') }}" id="home_shield_destroy_box">
+               <div id="home_shield_destroy" class="home_shield_items">
+                   <span>Destroy Room</span>
+               </div>
+          </a>
+
+          <a href="{{ path('companies') }}" id="home_shield_entreprises_box">
+               <div id="home_shield_entreprises" class="home_shield_items">
+                   <span>Entreprises</span>
+               </div>
+          </a>
+
+          <a href="{{ path('events') }}" id="home_shield_events_box">
+               <div id="home_shield_events" class="home_shield_items">
+                   <span>Evenements</span>
+               </div>
+          </a>
+
+
+               <a href="{{ path('vanaheim_axe') }}" id="home_shield_vanaheim_box">
+                    <div id="home_shield_vanaheim" class="home_shield_items">
+                         <span>Lancer de Haches</span>
+                    </div>
+               </a>
+
+
+
+          <a href="{{ path('bars') }}" id="home_shield_bars_box">
+               <div id="home_shield_bars" class="home_shield_items">
+                    <span>Bars à Jeux</span>
+               </div>
+          </a>
+
+     </div>
+
+
+     <div class="home_shield_others_activities_items_left">
+          <a target="_BLANK" href="https://atelier-des-agents.com/">
+               <img src="{{ asset('img/base/logos/atelier.png') }}" alt="Atelier des Agents">
+          </a>
+          <p>L'atelier des Agents</p>
+     </div>
+     <div class="home_shield_others_activities_items_right">
+          <a target="_BLANK" href="https://www.cardmarket.com/fr/Magic/Users/DoozEscape">
+               <img src="{{ asset('img/base/logos/tcg.png') }}" alt="Card Market Dooz">
+          </a>
+          <p>Card Market</p>
+     </div>
+
+{% endblock %}

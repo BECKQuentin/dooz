@@ -1,0 +1,42 @@
+/*Title*/
+#carouselMalleus h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+}
+
+/*Carousel*/
+#carouselMalleus .carousel-item{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+#carouselMalleus .carousel-caption h2 {
+    position: absolute;
+    left: 125px;
+    bottom: 25px;
+}
+
+/*Ronces*/
+#carouselMalleus:after {
+    content: '';
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    z-index: 50;
+    background: repeat-x url("../img/malleus/design/ronces_h.png");
+}
+/*Content*/
+#content_malleus {
+    background: #2b1b3d;
+}
+#content_malleus p {
+    font-size: 20px;
+    color: black;
+}
+
+
+

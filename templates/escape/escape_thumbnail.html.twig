@@ -1,0 +1,29 @@
+<div class="escape_thumbnail">
+    <a href="{{ path('room', {slug:room.slug}) }}">
+        <div class="escape_thumbnail_box"
+             style="background-image: url('{{ room.thumbnail|thumbnailRoom }}')">
+
+            <div class="escape_thumbnail_box_text">
+                {% if app.request.locale == 'fr' %}
+                    <h3 class="m-0 pt-3">{{ room.name }}</h3>
+                    <hr>
+                    <p class="w-75">{{ room.shortName|u.truncate(180, '...') }}</p>
+                {% elseif app.request.locale == 'en' %}
+                    <h3 class="m-0 pt-3">{{ room.nameEn }}</h3>
+                    <hr>
+                    <p class="w-75">{{ room.shortNameEn|u.truncate(180, '...') }}</p>
+                {% endif %}
+            </div>
+
+            <div class="filter_carousel">
+                <div class="filter_carousel_1"></div>
+            </div>
+
+            <div class="escape_thumbnail_box_more">
+                <p class="m-0 py-3">{% trans %}En savoir plus ->{% endtrans %}</p>
+            </div>
+
+            <img class="escape_thumbnail_clock" src="{{ room.clockThumbnail|clockRoom }}" alt="">
+        </div>
+    </a>
+</div>

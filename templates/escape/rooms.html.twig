@@ -1,0 +1,432 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Escape Game à Strasbourg{% endblock %}
+{% block title_og %}Escape Game{% endblock %}
+{% block description %}Venez voyager dans le temps avec nos scénarios intemporels{% endblock %}
+{% block description_og %}Venez voyager dans le temps avec nos scénarios intemporels{% endblock %}
+
+{% block body %}
+
+    <!--Carousel de toutes les rooms -->
+    <div id="carouselEscape" class="carousel slide carousel-fade carousel_dooz" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            {% for room in rooms %}
+                <button type="button" data-bs-target="#carouselEscape" data-bs-slide-to="{{ loop.index0 }}" class="{% if loop.first %}active{% endif %}"
+                        aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+            {% endfor %}
+        </div>
+        <div class="carousel-inner">
+            <div class="filter_carousel">
+                <div class="filter_carousel_1"></div>
+                <div class="filter_carousel_2"></div>
+            </div>
+            {% for room in rooms %}
+                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                    <img src="{{ room.banner|bannerRoom }}" class="d-block w-100" alt="{{ room.name }}">
+                    <div class="carousel-caption">
+                        {% if app.request.locale == 'fr' %}
+                            <h2 class="link_underline"><a href="{{ path('room', {slug: room.slug}) }}">{{ room.name }}</a></h2>
+                        {% elseif app.request.locale == 'en' %}
+                            <h2>{{ room.nameEn }}</h2>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEscape" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselEscape" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Explication DOOz-->
+    <div id="explication_dooz" class="position-relative w-100 d-flex justify-content-start">
+        <div class="block_info_features">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+            <div class="block_info_features_image" style="background-image: url('{{ asset('upload/activities/explication.jpg') }}')"></div>
+            <div class="block_info_features_box block_info_features_box_right">
+                <h2>Dooz escape, qu'est ce que c'est ?</h2>
+                <p>Dooz c'est d'abord l'horlogerie, une <a href="#notebook_presentation">agence temporelle</a> qui va vous envoyer en mission rétablir le cours normal de l'histoire.</p>
+            </div>
+        </div>
+
+        <div class="block_info_features_widgets_right">
+            <div class="d-flex flex-column w-100">
+                <h4 class="text-center">C'est aussi plein d'activités :</h4>
+                <div class="d-flex justify-content-evenly align-items-start">
+                    <a class=rotating_gear" href="#escape_explication">
+                        <div class="rotating_gear_icons">
+                            <img class="gear-icon" src="{{ asset('img/base/icons/gear/7_escapes.png') }}" alt="">
+                            <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                        </div>
+                        <p class="text-center my-2">7 salles d'escape</p>
+                    </a>
+                    <a class="rotating_gear" href="{{ path('destroy') }}">
+                        <div class="rotating_gear_icons">
+                            <img class="gear-icon" src="{{ asset('img/base/icons/gear/2_destroy_room.png') }}" alt="">
+                            <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                        </div>
+                        <p class="text-center my-2">2 destroy room</p>
+                    </a>
+                    <a class="rotating_gear" href="{{ path('episode0') }}">
+                        <div class="rotating_gear_icons">
+                            <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_jeu.png') }}" alt="">
+                            <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                        </div>
+                        <p class="text-center my-2">Bar à jeux</p>
+                    </a>
+                    <a class="rotating_gear" href="{{ path('malleus') }}">
+                        <div class="rotating_gear_icons">
+                            <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_ambiance.png') }}" alt="">
+                            <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                        </div>
+                        <p class="text-center my-2">Bar à ambiance</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--Events réguliers-->
+    <div id="events_regular">
+        <h4 class="text-center">C'est aussi des <a class="events_regular_link" href="{{ path('events') }}">des évenements réguliers</a> :</h4>
+        <div class="d-flex flex-wrap justify-content-evenly align-items-start">
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/murder_party.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Murder Party</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/burger_quiz.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Burger Quiz</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/loup_garou.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Loup-Garou</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/tournois_magic.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Tournois Magic</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/blind_test.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Blind test</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/jeu_de_role.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Jeu de rôle</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/soiree_impro.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Soirées Impro</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('events') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/et_bien_plus.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Et bien plus!</p>
+            </a>
+        </div>
+    </div>
+
+    <!--Bouton Reserver-->
+    <div id="button_reserver" class="d-flex justify-content-center">
+        <a href="#forescape_reservation">
+            <img id="button_reserver_off" src="{{ asset('img/base/icons/reserver_off.png') }}" alt="Reserver">
+            <img id="button_reserver_on" src="{{ asset('img/base/icons/reserver_on.png') }}" alt="Reserver" style="display: none">
+        </a>
+    </div>
+
+    <!--Escape Explication-->
+    <div id="escape_explication" class="d-flex flex-wrap justify-content-center align-items-start pt-2 m-lg-5">
+        <div class="rotating_gear">
+            <div class="rotating_gear_icons">
+                <img class="gear-icon" src="{{ asset('img/base/icons/gear/des.png') }}" alt="">
+                <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+            </div>
+            <p class="text-center my-2">Choissiez l'enigme que vous voulez résoudre</p>
+        </div>
+        <div class="rotating_gear">
+            <div class="rotating_gear_icons">
+                <img class="gear-icon" src="{{ asset('img/base/icons/gear/joueurs.png') }}" alt="">
+                <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+            </div>
+            <p class="text-center my-2">Choissiez le nombre de participants</p>
+        </div>
+        <div class="rotating_gear">
+            <div class="rotating_gear_icons">
+                <img class="gear-icon" src="{{ asset('img/base/icons/gear/date.png') }}" alt="">
+                <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+            </div>
+            <p class="text-center my-2">Choissiez la date, l'heure et le défi</p>
+        </div>
+        <div class="rotating_gear">
+            <div class="rotating_gear_icons">
+                <img class="gear-icon" src="{{ asset('img/base/icons/gear/caisse.png') }}" alt="">
+                <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+            </div>
+            <p class="text-center my-2">Payez directement en ligne</p>
+        </div>
+        <hr class="w-75 hr_mobile">
+    </div>
+
+
+
+
+    <!--Liste des miniatures de tous les escape -->
+        <!--19 RUE DES MAGASINS-->
+        <div class="d-flex justify-content-center">
+            <img src="{{ asset('img/base/icons/address_19.png') }}" alt="">
+        </div>
+        <div class="pb-5 d-flex flex-wrap justify-content-center">
+            {% for room in rooms %}
+                {% if room.address.id is not null and room.address.id == 2 %}
+                    {% include 'escape/escape_thumbnail.html.twig' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <!--12 RUE DES MAGASINS-->
+        <div class="d-flex justify-content-center">
+            <img src="{{ asset('img/base/icons/address_12.png') }}" alt="">
+        </div>
+        <div class="pb-5 d-flex flex-wrap justify-content-center">
+            {% for room in rooms %}
+                {% if room.address.id is not null and room.address.id == 1 %}
+                    {% include 'escape/escape_thumbnail.html.twig' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="hr_desktop">
+    <!--Fin liste des escapes-->
+
+
+
+    <!--Reservation 4Escape toutes les rooms-->
+    {% include 'options/all_rooms_4escape.html.twig' %}
+
+    <!--Reservation 4 Escape Destroy-->
+    {% include 'options/destroy_4escape.html.twig' %}
+
+    <h4 class="title_presentation">{% trans %}NOS AUTRES ACTIVITÉS{% endtrans %}</h4>
+
+    <!--Episode0 Bannière-->
+    <div class="position-relative w-100 d-flex justify-content-start">
+        <div class="block_info_features">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+            <div class="block_info_features_image" style="background-image: url('{{ asset('upload/activities/episode0.jpg') }}')"></div>
+            <div class="block_info_features_box block_info_features_box_right">
+                <a href="{{ path('episode0') }}"><h2>L'Episode 0</h2></a>
+                <div class="block_info_features_dot"></div>
+                <h4>Bar à jeux et salle de séminaire</h4>
+                <p>Dooz est également un bar à jeux qui vous propose plus de 200 jeux de plateau, le tout dans un espace climatisé de 80m² où vous pourrez partager un moment ludique et convivial autour d’une boisson (bières, shooters, soft, etc...) et de petite restauration. Et le tout dans un décor steampunk ! Nous organisons régulièrement des événements : Murder Party, Burger Quiz, loup-garou, tournois de cartes Magic, soirées jeux de plateau, soirées improvisation. Faites un tour dans notre agenda pour en savoir plus ! A bientôt voyageurs !</p>
+            </div>
+        </div>
+        <div class="block_info_features_widgets_right">
+            <a class=rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/evj.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">EVJF-EVG</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/anniversaire.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Anniversaires</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/ce.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Comité d'entreprises</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/teambuilding.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Team Building</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_jeu.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Bar à jeux</p>
+            </a>
+        </div>
+    </div>
+
+    <!--Malleus Bannière-->
+    <div class="position-relative w-100 d-flex justify-content-end">
+        <div class="block_info_features d-flex justify-content-end">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+            <div class="block_info_features_image" style="background-image: url('{{ asset('upload/activities/malleus.jpg') }}')"></div>
+            <div class="block_info_features_box block_info_features_box_left">
+                <a href="{{ path('malleus') }}"><h2>Malleus Malleficarum</h2></a>
+                <div class="block_info_features_dot"></div>
+                <h4>Bar à jeux</h4>
+                <p>Oubliez Salem, le nouveau lieu de rendez-vous des initiés à la magie noire se situe au 12 rue des magasins. Entrez dans ce bar teinté d'étrange et de surprenant, avec une pointe d'angoissant. Les agents au service vous serviront des breuvages et autres potions, dans une ambiances rock. Ici peu de jeux de plateau : l’accent est mis sur les flippers, billard et les Jeux de Rôle. Pensez à réserver votre table.</p>
+            </div>
+        </div>
+        <div class="block_info_features_widgets_left">
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/evj.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">EVJF-EVG</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/anniversaire.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Anniversaires</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/ce.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Comité d'entreprises</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/teambuilding.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Team Building</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('malleus') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_ambiance.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Bar à ambiance</p>
+            </a>
+        </div>
+    </div>
+
+    <!--Destroy Room bannière-->
+    <div class="position-relative w-100 d-flex justify-content-start">
+        <div class="block_info_features block_info_features_destroy">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+            <div class="block_info_features_image" style="background-image: url('{{ asset('upload/activities/destroy.jpg') }}')"></div>
+            <div class="block_info_features_box block_info_features_box_right">
+
+                <a href="{{ path('destroy') }}"><h2>Destroy Room</h2></a>
+                <div class="block_info_features_dot"></div>
+                <h4>Détruisez-tout</h4>
+                <p>
+                    La destroy room, c'est 15 minutes de défouloir intense sur des meubles destinés à la broyeuse, pour leur donner une dernière vie avant leur recyclage. <br>
+                    Prenez une tenue, choisisez parmi une multitude d'armes à votre disposition et anéantissez votre stress.
+                </p>
+            </div>
+        </div>
+        <div class="block_info_features_widgets_right">
+            <a class="rotating_gear" href="{{ path('destroy') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/temps.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">15 Minutes</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('destroy') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/armes.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Un grand choix d'armes</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('destroy') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/meubles.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Du mobilier à détruire</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('destroy') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/joueurs.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">5 joueurs en simultanés</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('destroy') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/evj.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">EVJF-EVG</p>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!--Carnet du voyageur-->
+    <!--Logo-->
+    <div id="notebook_presentation">
+        <img class="notebook_presentation_logo" src="{{ asset('img/base/logos/univers-dooz.png') }}" alt="Logo de dooz">
+        <h4 class="py-2">Découvrez l'univers de DOOZ</h4>
+        <p>------</p>
+        <h2>Un agence temporelle</h2>
+        <h4 class="py-3 m-0 text-center">Les carnets des voyageurs seront de nouveau consultable sur notre site très prochainement. A très vite !
+        </h4>
+    </div>
+
+    <hr class="my-5">
+
+    <!--AGENDA-->
+    <div id="event_presentation">
+        <h2 class="title_presentation">AGENDA</h2>
+        <div class="py-4 m-0">
+            <h4 class="text-center">Nos évenements seront de nouveau consultable sur notre site très prochainement. En attendant vous pouvez les consultez sur notre page
+                <a target="_blank" href="https://www.facebook.com/DoOzEscape/" class="link_standard">FACEBOOK</a>. A très vite !
+            </h4>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <!--Nos partenaires-->
+    {% include 'options/partners.html.twig' %}
+
+{% endblock %}

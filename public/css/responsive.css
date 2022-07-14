@@ -1,0 +1,875 @@
+/*PLUS PETIT QUE*/
+@media (max-width: 440px) {
+    #top_header_langue {
+        display: none !important;
+    }
+    #top_header_tickets_mobile {
+        display: none !important;
+    }
+    #site_title_center h1 {
+        font-size: 1.15rem !important;
+    }
+    #tickets_gifts_mobile {
+        display: flex;
+    }
+    /*ESCAPE*/
+    .escape_thumbnail_box_more p{
+        font-size: 20px !important;
+    }
+    .room_feature .progress {
+        width: 250px !important;
+    }
+    .room_feature {
+        font-size: initial !important;
+    }
+    #single_escape_banner h2 {
+        font-size: 50px !important;
+    }
+    .single_escape_reserve_button_mobile {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .single_escape_reserve_button_mobile img {
+        width: 150px;
+    }
+    #explication_dooz .block_info_features {
+        height: 450px !important;
+    }
+    .block_info_features {
+        height: 650px !important;
+    }
+    .block_info_features_destroy {
+        height: 400px !important;
+    }
+    /*BARS*/
+    .single_banner h2 {
+        left: 0 !important;
+        font-size: 40px !important;
+    }
+    .all_bars_card img {
+        height: 150px !important;
+        width: 310px !important;
+    }
+    .all_bars_card p {
+        width: 310px !important;
+    }
+    .all_bars_horaries img {
+        width: 300px !important;
+    }
+    /*VANAHEIM*/
+
+    .vanaheim_axe_explication {
+        width: 95% !important;
+    }
+    .vanaheim_axe_explication_box {
+     margin: 20px 5px !important;
+    }
+    .vanaheim_axe_description {
+        width: 95% !important;
+    }
+    /*PARTNERS*/
+    .partners_list {
+        width: 80vw !important;
+    }
+    /*RESERVATION*/
+    #button_reserver_on,
+    #button_reserver_off {
+        width: 330px !important;
+    }
+    #button_reserver_destroy_on,
+    #button_reserver_destroy_off {
+        width: 330px !important;
+    }
+
+    /*CONTACT FORM*/
+    .contact_form_info_title {
+        font-size: 22px !important;
+    }
+    .contact_form_info {
+        font-size: 16px !important;
+    }
+
+}
+
+/*PLUS GRAND QUE*/
+@media (min-width: 440px) {
+    #tickets_gifts_mobile {
+        display: none;
+    }
+    /*ESCAPE*/
+    .single_escape_reserve_button_mobile {
+        display: none;
+    }
+}
+
+
+/*PLUS PETIT QUE*/
+@media (max-width: 540px) {
+    #logo_mobile img{
+        height: 95px !important;
+        top: 15px !important;
+    }
+    #site_title_center {
+        top: 5px !important;
+        left: 120px !important;
+    }
+    #site_title_center h1 {
+        left: 0 !important;
+        white-space: normal !important;
+        text-align: end !important;
+    }
+
+    /*ESCAPE*/
+    .escape_thumbnail {
+        width: 280px !important;
+        height: 390px !important;
+    }
+    .escape_thumbnail_box_more p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .escape_thumbnail_clock {
+        height: 120px !important;
+        right: -30px !important;
+    }
+    /*DESTROY*/
+    #destroy_description .rotating_gear {
+        width: 120px !important;
+        margin: 0 !important;
+    }
+
+    /*VANAHEIM*/
+    .vanaheim_presentation_card img {
+        height: 100px !important;
+    }
+    .vanaheim_axe_explication_box {
+        height: 460px !important;
+        width: 350px !important;
+        padding: 20px 23px !important;
+    }
+    .vanaheim_axe_explication_box_big {
+        height: 720px !important;
+    }
+    .vanaheim_axe_explication_box h4 {
+        font-size: 22px !important;
+    }
+    .vanaheim_axe_explication_arrow {
+        height: 15px !important;
+        margin: 5px 0 !important;
+    }
+    .vanaheim_axe_widgets_box {
+        height: auto;
+        width: 100% !important;
+    }
+    .vanaheim_axe_widgets img {
+        width: 80px !important;
+    }
+    .vanaheim_axe_shield {
+        width: 320px !important;
+        height: 320px !important;
+    }
+    .vanaheim_axe_shield img {
+        width: 326px !important;
+    }
+    .vanaheim_axe_shield_text {
+        top: 5% !important;
+    }
+    .vanaheim_axe_shield_text h5 {
+        font-size: 50px !important;
+        padding: 30px 10px !important;
+    }
+    .vanaheim_axe_shield_text p {
+        font-size: 21px !important;
+    }
+    .vanaheim_axe_shield_text p span{
+        font-size: 27px !important;
+    }
+
+    /*PARTNERS*/
+    .partners_list a img {
+        max-width: 250px !important;
+    }
+
+}
+/*PLUS GRAND QUE*/
+@media (min-width: 540px) {
+
+
+    /*ESCAPE*/
+    .escape_thumbnail {
+        width: 350px;
+        height: 350px;
+    }
+    .escape_thumbnail_box_more p{
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    /*DESTROY*/
+    #destroy_description .rotating_gear {
+        width: 140px !important;
+        margin: 25px !important;
+    }
+
+}
+
+/*PLUS PETIT QUE*/
+@media(max-width: 666px){
+
+
+    #top_header_tickets {
+        display: none;
+    }
+    #top_header_langue {
+        display: flex;
+        justify-content: end !important;
+        width: 100%;
+        padding-left: 0 !important;
+    }
+
+    /*ESCAPE*/
+    .room_feature .progress {
+        width: 350px;
+    }
+    .single_escape_description_text {
+        width: 95% !important;
+    }
+    .block_info_features {
+        height: 550px;
+    }
+    .block_info_features_destroy {
+        height: 380px !important;
+    }
+    #explication_dooz .block_info_features {
+        height: 340px !important;
+    }
+
+    /*VANAHEIM*/
+    .vanaheim_axe_widgets_box {
+        padding: 10px !important;
+    }
+    .vanaheim_axe_widgets {
+        width: 130px !important;
+    }
+
+
+
+    /*COMPANIES*/
+    .companies_team_description {
+        padding: 15px !important;
+        width: 100% !important;
+    }
+    .all_bars_card {
+        align-items: center;
+    }
+    .all_bars_card img {
+        width: 350px !important;
+    }
+
+}
+/*PLUS GRAND QUE*/
+@media(min-width: 666px){
+    /*HOMEPAGE*/
+    #home_shield_languages {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+    }
+
+    /*HEADER*/
+    #top_header_tickets_mobile {
+        display: none;
+    }
+
+
+    /*ESCAPE*/
+    .room_feature .progress {
+        width: 500px;
+    }
+    .block_info_features {
+        height: 380px;
+    }
+    #explication_dooz .block_info_features {
+        height: 320px;
+    }
+}
+
+
+/* PLUS PETIT QUE TELEPHONE */
+@media(max-width:767px){
+    /*HEADER*/
+    #site_title_center {
+        left: auto !important;
+        right: 0 !important;
+    }
+    #site_title_center h1 {
+        left: 0 !important;
+    }
+    #top_header_langue {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 135px;
+    }
+
+    /*ESCAPE*/
+    .escape_thumbnail {
+        margin: 25px;
+    }
+
+    /*BARS*/
+    .episode0_description_thumbnail div {
+        height: 150px;
+        width: 150px;
+        padding: 10px 5px;
+    }
+    .episode0_description_thumbnail div:last-child {
+        height: 200px !important;
+        width: 300px !important;
+    }
+
+    /*COMPANIES*/
+    .companies_team_img {
+        height: 100% !important;
+        flex-wrap: wrap;
+    }
+    .companies_team_img {
+
+    }
+
+    /*FOOTER*/
+    #footer_map {
+        flex-direction: column;
+    }
+    #footer_map_left {
+        width: 100% !important;
+    }
+    #footer_map_right {
+        width: 100% !important;
+        height: 450px !important;
+    }
+}
+
+/* PLUS GRAND QUE TELEPHONE */
+@media(min-width: 768px) {
+    /*HEADER*/
+    #top_header_share {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #top_header_langue {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*BARS*/
+    .episode0_description_thumbnail div {
+        height: 300px;
+        width: 300px;
+        padding: 10px 5px;
+    }
+
+    /*ESCAPE*/
+    .escape_thumbnail {
+        margin: 40px;
+    }
+
+    /*COMPANIES*/
+    .companies_team_img {
+        flex-wrap: nowrap;
+    }
+
+}
+
+
+/* PLUS PETIT QUE TABLET*/
+/*Apparaition du Menu Burger*/
+@media(max-width:992px){
+    .mobile_on {
+        display: flex !important;
+    }
+    /*HEADER*/
+    #top_header_tickets_mobile {
+        display: flex;
+        padding: 0;
+    }
+    #top_header_share {
+        display: none;
+    }
+    #top_header_langue {
+        display: none;
+    }
+    .resa_gifts_icons {
+        margin: 0px 5px !important;
+    }
+    #bot_header {
+        overflow-y: auto;
+        max-height: 950px;
+    }
+    #bot_header ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #bot_header_container .navbar-brand{
+        margin-left: 150px;
+    }
+    #bot_header_middle {
+        display: none;
+    }
+
+    #logo_mobile {
+        width: 100px;
+        display: block !important;
+    }
+    #logo_mobile img {
+        height: 120px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+    }
+
+    #bot_header,
+    #bot_header_left,
+    #bot_header_right{
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+    #bot_header_left,
+    #bot_header_right {
+        background: inherit;
+    }
+    #bot_header_mobile_footer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column !important;
+        width: 100%;
+    }
+    .hr_mobile {
+        display: block;
+    }
+    .hr_desktop {
+        display: none;
+    }
+    .navbar_item_header {
+        padding: 20px 0 !important;
+    }
+    .dropdown_hidden {
+        display: none !important;
+    }
+    .dropdown_hidden .dropdown-menu {
+        display: none !important;
+    }
+
+    /*AURTES*/
+    .single_banner h2 {
+        font-size: 50px;
+        position: absolute;
+        left: 10%;
+        top: 0;
+        z-index: 150;
+        padding: 10px 5px;
+    }
+    .single_banner img {
+        height: 250px;
+    }
+
+    /*ESCAPE*/
+    #single_escape_banner h2 {
+        top: 50px;
+        left: 50px;
+        font-size: 60px;
+    }
+    #single_escape_banner img {
+        height: 800px;
+    }
+    #single_escape_description {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .single_escape_description_text {
+        width: 70%;
+    }
+    .room_feature {
+        bottom: 0 !important;
+        left: 0 !important;
+        right: initial !important;
+        top: initial !important;
+    }
+    #carouselEscape .carousel-caption {
+        left: 0 !important;
+    }
+    .block_info_features {
+        width: 100%;
+    }
+    .block_info_features_box {
+        width: 100%;
+    }
+    .block_info_features_widgets_right,
+    .block_info_features_widgets_left {
+        display: none;
+    }
+
+    /*DESTROY*/
+    #carouselDestroy .carousel-item{
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    /*BARS*/
+    #carouselMalleus h1,
+    #carouselEpisode0 h1,
+    #carouselDestroy h1,
+    #carouselVanaheim h1,
+    #carouselEvents h1 {
+        font-size: 40px;
+        line-height: 50px;
+        position: absolute;
+        top: 30px;
+        left: 10%;
+        z-index: 60;
+        overflow-wrap: normal !important;
+    }
+
+    /*VANAHEIM*/
+    .vanaheim_axe_description {
+        width: 80%;
+    }
+
+    /*COMPANIES*/
+    .companies_team_description {
+        width: 85%;
+        text-align: justify;
+    }
+    .companies_team_description_img {
+        width: 90%;
+    }
+    .companies_team_img_multiple {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .companies_team_img_multiple img {
+        height: initial;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /*PARTNERS*/
+    .partners_list {
+        display: flex;
+        justify-content: start;
+        width: 85vw;
+        overflow-x: scroll;
+    }
+
+    /*FOOTER*/
+    #footer_map_left {
+        width: 100% !important;
+    }
+    #footer_map_right {
+        width: 100% !important;
+        height: 450px !important;
+    }
+    /*RESERVATION*/
+    .reservation_description p {
+        width: 80% !important;
+    }
+
+}
+/*PLUS GRAND QUE TABLET*/
+/*Disparition Menu Burger*/
+@media(min-width: 992px) {
+    .mobile_on {
+        display: none !important;
+    }
+    /*HOME*/
+    #home_shield {
+        transform: scale(1.4) !important;
+    }
+    /*HEADER*/
+    .site_title_mobile {
+        display: none;
+    }
+    .dropdown:hover .dropdown-menu {
+        background-color: inherit;
+        display: block;
+    }
+    #bot_header {
+        height: 50px !important;
+    }
+    #bot_header_left {
+        padding-right: 50px;
+    }
+    #bot_header_right {
+        padding-left: 50px;
+    }
+    #bot_header_mobile_footer {
+        display: none;
+    }
+    .hr_mobile {
+        display: none;
+    }
+    .hr_desktop {
+        display: block;
+    }
+    #bot_header_container {
+        padding: 0 !important;
+    }
+
+    /*AUTRES*/
+    .cadre_margin {
+        width: 80%;
+    }
+    .cadre_margin_short {
+        width: 60%;
+    }
+    #errorPage .single_banner h2 {
+        width: 50% !important;
+        font-size: 60px !important;
+    }
+    .single_banner h2 {
+        font-size: 80px;
+        width: 40%;
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 150;
+    }
+    #single_escape_banner h2 {
+        width: 50%;
+        bottom: 0;
+        font-size: 60px;
+        padding: 20px 10px;
+    }
+    .single_banner img {
+        height: 400px;
+    }
+    /*ESCAPE*/
+    #single_escape_banner img {
+        height: 400px;
+    }
+    #single_escape_description {
+        display: flex;
+        justify-content: center;
+    }
+    .single_escape_description_text {
+        width: 50%;
+    }
+
+
+    /*DESTROY*/
+    #carouselDestroy .carousel-item{
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    /*BARS*/
+    #carouselMalleus h1,
+    #carouselDestroy h1,
+    #carouselVanaheim h1,
+    #carouselEvents h1 {
+        max-width: min-content;
+    }
+    #carouselMalleus h1,
+    #carouselEpisode0 h1,
+    #carouselDestroy h1,
+    #carouselVanaheim h1,
+    #carouselEvents h1 {
+        font-size: 70px;
+        line-height: 80px;
+        position: absolute;
+        top: 130px;
+        left: 20%;
+        z-index: 60;
+    }
+
+    /*VANAHEIM*/
+    .vanaheim_axe_description {
+        width: 70%;
+    }
+
+    /*COMPANIES*/
+    .companies_team_description {
+        width: 40% !important;
+        text-align: justify;
+    }
+    .companies_team_img_multiple {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .companies_team_img_multiple img {
+        padding: 10px;
+        height: 250px;
+    }
+
+    /*RESERVATION*/
+    .reservation_description p {
+        width: 40% !important;
+    }
+
+    /*PARTNERS*/
+    .partners_list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /*FOOTER*/
+    #footer_map {
+        display: flex;
+    }
+}
+/*PLUS PETIT QUE*/
+@media(max-width: 1200px){
+    .destroy_offer {
+        opacity: 1;
+    }
+    /*VANAHEIM*/
+    .vanaheim_axe_explication {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .vanaheim_axe_explication_box {
+        height: auto;
+        width: 80%;
+    }
+    .vanaheim_rope img {
+        display: none;
+    }
+}
+
+/* PLUS GRAND QUE DESKTOP*/
+@media(min-width:1200px){
+    /*HEADER*/
+    #bot_header {
+        height: 50px !important;
+    }
+    .forescape_room_reservation {
+        max-width: 800px;
+    }
+    .cadre_margin_short {
+        width: 50%;
+    }
+    .destroy_offer {
+        opacity: 0.5;
+    }
+    /*ESCAPE*/
+    .escape_thumbnail {
+        width: 450px !important;
+        height: 350px !important;
+    }
+    /*VANAHEIM*/
+    .vanaheim_axe_explication_box {
+        height: 420px;
+        width: 50%;
+    }
+}
+
+/*PLUS PETIT QUE*/
+@media(max-width: 1309px) {
+    /*HEADER*/
+    #bot_header_middle {
+        width: 120px !important;
+        top: -32px;
+    }
+    .bot_header_middle_logo {
+        background: radial-gradient(circle at center, #291f1a 43px, transparent 59px);
+    }
+    /*DESTROY*/
+    .destroy_widgets img {
+        width: 80px;
+    }
+    .destroy_description_explication {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*VANAHEIM*/
+    .vanaheim_rope img {
+        left: 45.5% !important;
+    }
+}
+/*PLUS GRAND QUE*/
+@media(min-width: 1309px) {
+    /*HEADER*/
+    #bot_header_left {
+        padding-right: 80px !important;
+    }
+    #bot_header_right {
+        padding-left: 80px !important;
+    }
+    #bot_header_middle {
+        width: 140px !important;
+        top: -42px;
+    }
+    .bot_header_middle_logo {
+        background: radial-gradient(circle at center, #291f1a 47px, transparent 70px);
+    }
+    /*DESTROY*/
+    .destroy_widgets img {
+        width: 150px;
+    }
+    .destroy_description_explication {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*VANAHEIM*/
+    .vanaheim_axe_description {
+        width: 50%;
+    }
+}
+/*PLUS PETIT QUE DESKTOP*/
+@media(max-width: 1536px) {
+    .vanaheim_rope img {
+        left: 46%;
+    }
+    #escape_explication .rotating_gear {
+        width: 140px !important;
+        margin: 0 15px !important;
+    }
+    #escape_explication .rotating_gear_icons {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+/*PLUS GRAND QUE DESKTOP*/
+@media(min-width: 1536px) {
+    .vanaheim_rope img {
+        left: 46.5%;
+    }
+    #events_regular .rotating_gear {
+        width: 140px !important;
+        margin: 0 15px !important;
+    }
+    #events_regular .rotating_gear_icons {
+        width: 140px !important;
+        height: 140px !important;
+    }
+    #escape_explication .rotating_gear {
+        width: 160px !important;
+        margin: 0 15px !important;
+    }
+    #escape_explication .rotating_gear_icons {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+}
+

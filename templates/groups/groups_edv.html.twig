@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bars à Jeux - Dooz Escape Game{% endblock %}
+{% block title_og %}Enterments de vie de Jeune Fille Garçon{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/groups/evj.png') }}" class="d-block w-100" alt="Bannière des bars à jeux">
+        <h2>{% trans %}EDV DE JEUNE FILLE/HOMME{% endtrans%}</h2>
+    </div>
+
+    <!--Description-->
+    <div class="d-flex justify-content-center">
+        <div class="companies_team_description">
+            <p>Envie d’enterrer une vie de célibataire de manière originale ?</p><br>
+            <p>
+                Alors pourquoi ne pas vous laisser envoyer en mission dans l’appartement d’un tueur en série, au sein d’un laboratoire en quarantaine, dans une prison du 19e siècle, ou encore dans le bunker d’une unité ennemie ? Chez Dooz, nous vous faisons voyager dans le temps. Et nous vous proposons également des missions originales et sportives dans notre destroy room : jetez un coup d’œil à
+                <a href="{{ asset('upload/pdf/faireface-dooz-entreprises.pdf') }}" target="_blank" class="link_standard"> cette offre</a> !
+            </p>
+            <div class="companies_team_img">
+                <img src="{{ asset('upload/groups/evj.png') }}" alt="">
+            </div>
+            <p>Dooz, vous permet de réaliser votre activité en groupe jusqu’à 38 personnes réparties dans 7 salles différentes et sur des créneaux simultanés.</p>
+            <p>Vous vous sentez l’âme d’un(e) romantique ? Nos horlogers vous offrent également la possibilité de dissimuler un présent dans l’une de nos pièces. (Mais nous vous rassurons, nous pouvons cacher votre cadeau même si vous n’êtes pas romantique)</p>
+        </div>
+    </div>
+
+
+    <!--Formulaire de contact-->
+    {% include 'options/contact_form.html.twig' %}
+
+
+    <!--Nos Activités-->
+    {% include 'options/activities.html.twig' %}
+
+
+    <!--Nos partenaires-->
+    {% include 'options/partners.html.twig' %}
+
+
+
+
+{% endblock %}
+

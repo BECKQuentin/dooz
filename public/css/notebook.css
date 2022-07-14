@@ -1,0 +1,12 @@
+/*PRESENTATION*/
+#notebook_presentation {
+    padding: 40px 18px;
+    background-color: #281E1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.notebook_presentation_logo {
+    height: 350px;
+}

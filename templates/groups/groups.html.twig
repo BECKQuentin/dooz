@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Particuliers{% endtrans%} - Dooz Escape Game{% endblock %}
+{% block title_og %}Particuliers{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/groups/groups.jpg') }}" class="d-block w-100" alt="Bannière du comité d'entreprise">
+        <h2>{% trans %}PARTICULIERS{% endtrans%}</h2>
+    </div>
+
+    <div id="all_bars">
+
+        <div class="all_bars_card">
+            <h4 class="text-center pb-1">EVJ - EVG</h4>
+            <a href="{{ path('groups_edv') }}">
+                <img src="{{ asset('upload/groups/evj.png') }}" alt="Miniature du malleus">
+            </a>
+            <p class="text-center">Envie d’enterrer une vie de célibataire de manière originale ?</p>
+        </div>
+
+        <div class="all_bars_card">
+            <h4 class="text-center pb-1">Anniversaires</h4>
+            <a href="{{ path('groups_birthday') }}">
+                <img src="{{ asset('upload/groups/birthday.jpg') }}" alt="Miniature de l'episode 0">
+            </a>
+            <p class="text-center">Envie de fêter un anniversaire de manière originale ?</p>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center">
+        <p class="text-center">
+            Vous voulez en savoir plus ? Cliquez sur les images ci-dessus 😉 <br>
+
+            Vous voulez jeter un coup d’œil à notre ludothèque de plus de 300 jeux de société ? Une partie de nos jeux sont référencés par
+            <a target="_blank" class="link_standard" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
+        </p>
+        {% include 'options/button_ludo.html.twig' %}
+    </div>
+
+    <div class="all_bars_horaries">
+        <img src="{{ asset('upload/bars/malleus/horaires-malleus.png') }}" alt="Horaires Malleus">
+        <img src="{{ asset('upload/bars/episode0/horaires-episode0.png') }}" alt="Horaies Episode 0">
+    </div>
+
+    <!--Nos Activités-->
+    {% include 'options/activities.html.twig' %}
+
+
+    <!--Nos partenaires-->
+    {% include 'options/partners.html.twig' %}
+{% endblock %}
+
+
+
+

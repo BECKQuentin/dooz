@@ -1,0 +1,52 @@
+#all_bars{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.all_bars_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+}
+.all_bars_card h4 {
+    position: absolute;
+    z-index: 250;
+    right: 5%;
+    top: 10%;
+    font-size: 38px;
+}
+.all_bars_card img {
+    height: 200px;
+    width: 450px;
+    object-position: center;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.all_bars_card p {
+    width: 450px;
+}
+.all_bars_card a:hover {
+    -webkit-animation: growUp 1s forwards;
+    -moz-animation: growUp 1s forwards;
+    -ms-animation: growUp 1s forwards;
+    -o-animation: growUp 1s forwards;
+    animation: growUp 1s forwards;
+}
+.all_bars_card img:hover {
+    -webkit-animation: opacityIn 1s forwards;
+    -moz-animation: opacityIn 1s forwards;
+    -ms-animation: opacityIn 1s forwards;
+    -o-animation: opacityIn 1s forwards;
+    animation: opacityIn 1s forwards;
+}
+.all_bars_horaries {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.all_bars_horaries img {
+    width: 350px;
+}

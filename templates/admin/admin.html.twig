@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Back Office - Dooz Escape Game{% endblock %}
+
+{% block BO %}
+
+    <h1 class="text-center">Bienvenue sur le back office</h1>
+
+    <div class="d-flex flex-wrap">
+        {% for room in rooms %}
+            <a class="admin_escape_card" href="{{ path('admin_room', {id:room.id}) }}">
+                <h3>{{ room.name }}</h3>
+                <img src="{{ room.thumbnail|thumbnailRoom }}" alt="Miniature d'une room">
+            </a>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <div class="d-flex flex-column align-items-center justify-content-center">
+
+    </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Back Office - Dooz Escape Game{% endblock %}
+
+{% block BO %}
+    <h2 class="title_admin text-left py-4 px-5">Evenements</h2>
+
+
+    <div class="d-flex mx-3">
+        <div class="col-3">
+            {{ form_start(form) }}
+                {{ form_row(form.name) }}
+                {{ form_row(form.name_en) }}
+                {{ form_row(form.beginDate) }}
+                {{ form_row(form.endDate) }}
+                {{ form_row(form.description) }}
+                {{ form_row(form.description_en) }}
+            {{ form_end(form) }}
+        </div>
+
+        <div class="col-9 px-4">
+
+            <div class="d-flex flex-column align-items-center">
+                <h3>Carousel Evenements</h3>
+
+
+
+            </div>
+
+
+
+
+            <p class="fs-3 text-center px-3">Vous avez {{ events|length }} Evenements.</p>
+
+            <div class="d-flex flex-wrap px-3 py-2">
+                {% for event in events %}
+                    <div class="d-flex flex-column my-3">
+                        <a href="">
+                            <div class="event_card">
+                                <h4 class="event_card_title">{{ event.name }}</h4>
+                                <img class="event_card_img" src="{{ asset('upload/events/2022/04/tournoi_pioneer.png') }}" alt="">
+                                <div class="d-flex flex-column align-items-center p-2">
+                                    {{ event.beginDate|date("H") }}H{{ event.beginDate|date("i") }}-{{ event.endDate|date("H") }}H{{ event.endDate|date("H") }} | {{ event.beginDate|date('d/m/Y') }}
+                                    <p class="event_card_location m-0">MALLEUS MALLEFICARUM</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="d-flex justify-content-end mx-2">
+                            <a href="{{ path('admin_event_update', {id:event.id}) }}" title="Modifier">
+                                <i class="fa-solid fa-pencil btn-admin-dooz mx-2 m-0"></i>
+                            </a>
+                            <a href="{{ path('admin_event_delete', {id:event.id}) }}" title="Supprimer" onclick="return confirm('Etes vous sûr de vouloir supprimer cet article ?')">
+                                <i class="fa-solid fa-trash btn-admin-dooz mx-2 m-0"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

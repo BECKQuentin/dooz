@@ -1,0 +1,237 @@
+/*Title*/
+#carouselVanaheim h1 {
+    text-transform: uppercase;
+    font-family: "Viking";
+    font-weight: bold;
+    text-align: left;
+}
+
+/*Carousel*/
+#carouselVanaheim .carousel-item{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+#carouselVanaheim .carousel-item img {
+    object-position: center !important;
+}
+
+#carouselVanaheim .carousel-caption h2 {
+    position: absolute;
+    left: 125px;
+    bottom: 25px;
+}
+/*Ronces*/
+#carouselVanaheim:after {
+    content: '';
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    z-index: 50;
+    background: repeat-x url("../img/vanaheim/design/hr_triscel_2.png");
+}
+
+/*Content*/
+#content_vanaheim {
+    background: radial-gradient(circle, transparent 40%, black 75%), url("../img/base/background/temple.png");
+    background-color: #281E1A;
+    background-position: center center;
+    background-blend-mode: normal;
+    background-attachment: fixed;
+}
+
+/*PRESENTATION*/
+.vanaheim_presentation_card {
+    z-index: 150;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vanaheim_presentation_card:hover {
+    -webkit-animation: growUp 1s forwards;
+    -moz-animation: growUp 1s forwards;
+    -ms-animation: growUp 1s forwards;
+    -o-animation: growUp 1s forwards;
+    animation: growUp 1s forwards;
+}
+.vanaheim_presentation_card img {
+    z-index: 150;
+    border-radius: 3px;
+    height: 150px;
+}
+.vanaheim_presentation_card h5 {
+    z-index: 150;
+    font-family: Viking;
+    font-size: 25px;
+}
+.vanaheim_axe_text {
+    color: #eef1f2 !important;
+    text-align: justify !important;
+}
+/*AXE*/
+.vanaheim_axe_explication {
+    position: relative;
+    display: flex;
+}
+/*.vanaheim_axe_explication_box,*/
+/*.vanaheim_axe_widgets_box {*/
+/*    background-image: url("../img/vanaheim/design/fond_triscel.png");*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+.vanaheim_axe_explication_box {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    padding: 40px;
+    margin: 40px;
+}
+.vanaheim_axe_explication_box_big {
+    height: 600px;
+    width: 600px;
+}
+.vanaheim_axe_explication_box_presentation {
+    height: 600px;
+    width: 600px;
+}
+.vanaheim_axe_explication_box h4 {
+    font-family: Viking2;
+    font-size: 33px;
+    text-align: center;
+    z-index: 150;
+}
+.vanaheim_axe_explication_box_horaries {
+    z-index: 150;
+}
+.vanaheim_axe_explication_arrow {
+    height: 35px;
+    z-index: 150;
+    margin: 18px 0;
+}
+.vanaheim_axe_explication_box p {
+    margin: 10px 0;
+    z-index: 150;
+}
+.vanaheim_axe_explication_box_bkground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.vanaheim_axe_explication_box_widgets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 150;
+}
+.vanaheim_axe_explication_box_widgets_img {
+    width: 40px;
+    padding: 0 5px;
+}
+.vanaheim_axe_explication_box .bars_description_thumbnails img{
+    height: 100px !important;
+}
+.vanaheim_axe_widgets_box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    margin: 20px 35px;
+}
+.vanaheim_axe_widgets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 180px;
+    min-height: 160px;
+    padding: 0 20px;
+    margin: 0 5px;
+}
+.vanaheim_axe_widgets img {
+    width: 110px;
+    z-index: 150;
+}
+.vanaheim_axe_widgets p {
+    color: black;
+    text-align: center;
+    font-family: Viking2;
+}
+.vanaheim_rope img{
+    width: 120px;
+    position: absolute;
+    z-index: 150;
+    transform: rotate(180deg);
+}
+.vanaheim_rope_1 img {
+    top: 20px;
+}
+.vanaheim_rope_2 img{
+    bottom: 45px;
+}
+.vanaheim_axe_shield {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--vanaheim);
+    border-radius: 50%;
+    width: 430px;
+    height: 430px;
+    margin: 60px 0;
+}
+.vanaheim_axe_shield img {
+    opacity: 0.4;
+    box-shadow: 3px 3px 5px 6px var(--vanaheim);
+    border-radius: 50%;
+    width: 456px;
+}
+.vanaheim_axe_shield_text {
+    width: 400px;
+    margin: 25px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-55%);
+}
+.vanaheim_axe_shield_text h5,
+.vanaheim_axe_shield_text p {
+    color: white;
+    text-align: center;
+}
+.vanaheim_axe_shield_text h5 {
+    font-size: 58px;
+    margin: 0;
+    padding: 40px 10px;
+}
+.vanaheim_axe_shield_text p {
+    font-size: 29px;
+    font-weight: bold;
+    padding: 10px 5px;
+    margin: 0 8px;
+}
+.vanaheim_axe_shield_text p span{
+    font-size: 33px;
+}
+.vanaheim_axe_description .bars_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*.vanaheim_axe_description {*/
+/*    margin: 150px 0;*/
+/*    border-image: url('../img/vanaheim/design/fond_triscel.png');*/
+/*    border-image-slice: 0% 36% 100% 36%;*/
+/*    border-image-width: auto;*/
+/*    border-image-repeat: round;*/
+/*    border-image-outset: 50px;*/
+/*}*/

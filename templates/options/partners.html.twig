@@ -1,0 +1,43 @@
+<div class="container-lg d-flex justify-content-center py-4">
+
+    <div class="cadre_margin d-flex flex-column justify-content-center align-items-center"
+        {% if metadata is defined %}
+            {% if metadata == 'malleus' %}
+                style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+            {%elseif metadata == 'episode0' %}
+                style="border-image: url('{{ asset('img/episode0/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+            {%elseif metadata == 'destroy' %}
+                style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
+            {%elseif metadata == 'vanaheim' %}
+                style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+            {% endif %}
+        {% else %}
+            ">
+        {% endif %}
+
+
+        <h4 class="title_presentation
+                {% if metadata is defined %}
+                    {% if metadata == 'malleus' %}
+                            font_malleus
+                    {% elseif metadata == 'episode0' %}
+                            font_episode0
+                    {% elseif metadata == 'destroy' %}
+                            font_destroy
+                    {% elseif metadata == 'vanaheim' %}
+                            font_vanaheim
+                    {% endif %}
+                {% else %}
+                        font_standard
+                {% endif %}
+        ">{% trans %}NOS PARTENAIRES{% endtrans %}</h4>
+
+        <div class="partners_list">
+            {% for partner in partners %}
+                <a target="_BLANK" class="partner_item" href="{{ partner.link }}">
+                    <img src="{{ partner.thumbnail|partnerThumbnail }}" alt="{{ partner.name }}">
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

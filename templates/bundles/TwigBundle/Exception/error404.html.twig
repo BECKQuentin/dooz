@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Page Introuvable{% endtrans%} - Dooz Escape Game{% endblock %}
+
+{% block body %}
+
+<div id="errorPage">
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('img/base/background/standard.jpg') }}" class="d-block w-100" alt="Bannière des bars à jeux">
+        <h2>
+            {{ status_code }} - {% trans %}Erreur Serveur{% endtrans %}
+            <p class="fs-5">{% trans %}Ooops, il semble que la page que vous cherchez n'existe pas.{% endtrans %}</p>
+        </h2>
+    </div>
+
+    <!--Description-->
+    {% include 'options/contact_form.html.twig' %}
+
+    <!--Nos Activités-->
+    {% include 'options/activities.html.twig' %}
+
+</div>
+
+
+
+{% endblock %}

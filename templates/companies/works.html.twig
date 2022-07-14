@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Comité d'entreprises{% endtrans%} - Dooz Escape Game{% endblock %}
+{% block title_og %}Comité d'entreprises{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/companies/works_banner.jpg') }}" class="d-block w-100" alt="Bannière du comité d'entreprise">
+        <h2>{% trans %}Comité d'entreprises{% endtrans%}</h2>
+    </div>
+
+    <!--Options pour les entreprises-->
+    <div class="d-flex justify-content-center">
+        <div class="companies_team_description">
+
+            <h5 class="text-center mb-5">Sortez du cadre professionnel et rejoignez l'une de nos missions en l'année 1846, 2021, 2207 ou en 2208, ...</h5>
+            <p>Afin de souder vos équipes, quoi de mieux que de se retrouver dans un laboratoire en quarantaine, dans une prison, dans l’appartement d’un tueur en série ou au sein du bunker d’une unité ennemie pour apprendre à faire connaissance avec les autres membres de son équipe ?</p>
+
+            <div class="companies_team_description_img">
+                <img class="companies_works_description_img" src="{{ asset('upload/companies/works_thumbnail.jpg') }}" alt="Image du comité d'entreprise">
+            </div>
+
+
+            <h5 class="text-center mb-5">En plus de l’escape game, nous proposons tout un panel d’activité variées :</h5>
+            <ul>
+                <li class="li_yes">Murder Party</li>
+                <li class="li_yes">Jeux de rôle grandeur nature</li>
+                <li class="li_yes">Formations dynamiques et sportives pour souder les équipes</li>
+                <li class="li_yes">Location de notre espace séminaire</li>
+            </ul>
+
+            <p class="text-center">Nous pouvons également vous proposer notre formule tarte flambée + soft/bière à 10€/personne pour agrémenter votre moment de convivialité.</p>
+        </div>
+    </div>
+
+
+    <!--Formulaire de Contact-->
+    {% include 'options/contact_form.html.twig' %}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+

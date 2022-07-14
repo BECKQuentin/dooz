@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact - Dooz Escape Game{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/reservation/reservation.jpg') }}" class="d-block w-100" alt="reservation image">
+        <h2>{% trans %}Nous Contacter{% endtrans%}</h2>
+    </div>
+
+
+
+    <!--Formulaire de Contact-->
+    <div class="pt-4">
+        {% include 'options/contact_form.html.twig' %}
+    </div>
+
+    <!--Nos Activités-->
+    {% include 'options/activities.html.twig' %}
+
+
+    <!--Nos partenaires-->
+    {% include 'options/partners.html.twig' %}
+
+
+
+{% endblock %}

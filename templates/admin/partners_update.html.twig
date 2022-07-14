@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Back Office - Dooz Escape Game{% endblock %}
+
+{% block BO %}
+    <h2 class="title_admin text-left py-4 px-5">Modification</h2>
+
+
+    <div class="px-3">
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-3">{{ form_row(form.name) }}</div>
+            <div class="col-3">{{ form_row(form.thumbnail) }}</div>
+            <div class="col-5">{{ form_row(form.link) }}</div>
+            <div class="col-1">{{ form_row(form.submit) }}</div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+    <div><img class="m-4 admin_partner_thumbnail" src="{{ partner.thumbnail|partnerThumbnail }}" alt="Logo du partenaire"></div>
+
+
+
+
+{% endblock %}

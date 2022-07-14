@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Team Building{% endtrans%} - Dooz Escape Game{% endblock %}
+{% block title_og %}Team Building{% endblock %}
+
+{% block body %}
+
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/companies/team_banner.jpg') }}" class="d-block w-100" alt="Bannière du comité d'entreprise">
+        <h2>{% trans %}Team Building{% endtrans%}</h2>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <div class="companies_team_description">
+
+            <p>Le team building a fait ses preuves pour développer la cohésion d’équipe au sein d’une entreprise. Les bienfaits de cette pratique sont multiples du point de vue de : l’ambiance de travail, l’esprit d’équipe et l’intelligence collective, la gestion des conflits, la communication et la motivation, le sentiment d’appartenance, l’accompagnement à l’arrivée de nouveaux collaborateurs.</p>
+            <p>Chez Dooz, nous avons mis en place différentes formules qui sauront s’adapter à vos besoins et que vous pourrez vous-même construire sur-mesure. Que vous ayez besoin d’un moyen de transport ou d’un traiteur, que vous souhaitiez ajouter une visite guidée qui sorte de l’ordinaire ou une formation atypique ; il vous suffit de sélectionner, au choix, les options qui vous conviennent le mieux et nous nous chargeons du reste !</p>
+            <p>DoOz, vous permet de réaliser votre activité en groupe jusqu’à 38 personnes réparties dans 7 salles différentes.</p>
+
+            <div class="companies_team_description_img">
+                <img src="{{ asset('upload/companies/team_thumbnail.jpg') }}" alt="Image du Team building">
+            </div>
+
+            <p>Une fois votre mission terminée -et brillamment réussie, nous n’en doutons pas- faites un tour dans l’épisode 0, notre bar à jeux steampunk situé à l’arrière de l’escape game. Plus de 300 jeux de société vous attendent, ainsi que des boissons (softs, bières, boissons chaudes, milkshakes, cocktails,…) et de quoi grignoter (planchettes de charcuterie et de fromage, pizzas, snacks…)</p>
+            <p>Nous proposons également des forfaits jeux de société donnant accès à notre ludothèque et comprenant une boisson. Nous pouvons également vous proposer notre formule tarte flambée + soft/bière à 10€/personne pour agrémenter votre moment de convivialité.</p>
+            <p>Notre espace de séminaire de 80 m² peut être adapté pour vous permettre de mener vos réunions en toute tranquillité. Nous vous proposons plusieurs formules pour agrémenter vos réunions et nous nous occupons de réserver un service traiteur si vous en avez besoin.</p>
+
+    {#        <h4 class="text-center mt-5">ESCAPE GAME GRANDEUR NATURE</h4>#}
+
+    {#        <p>Dooz a également monté un partenariat avec Redbox Sécurité afin de vous offrir un stage sur le terrain, en milieu hostile et insolite, combiné à un escape game grandeur nature. Cette expérience, encadrée par des experts reconnus, peut se dérouler sur un ou plusieurs jours et fait la part belle aux activités physiques, au travail d’équipe, le tout dans la bonne humeur et dans un cadre atypique et décalé. Parfait pour le dépassement de soi, le teambuilding ou simplement le défoulement, le tout dans des sites exceptionnels. Pour plus d’informations, téléchargez notre#}
+    {#            <a class="link_blue" target="_blank" href="{{ asset('upload/pdf/Redbox-Dooz.pdf') }}">Flyer</a> !#}
+    {#        </p>#}
+    {#        <div class="companies_team_img">#}
+    {#            <img class="" src="{{ asset('upload/companies/other/escape_nature_1.jpg') }}" alt="Escape game grandeur nature" >#}
+    {#            <img class="" src="{{ asset('upload/companies/other/escape_nature_2.jpg') }}" alt="Escape game grandeur nature" >#}
+    {#            <img class="" src="{{ asset('upload/companies/other/escape_nature_3.jpg') }}" alt="Escape game grandeur nature" >#}
+    {#        </div>#}
+
+            <h4 class="text-center mt-5">FAIRE FACE FORMATIONS</h4>
+
+            <p>
+                Faire Face Formations propose des formations dynamiques et originales pour vos équipes. Le trait commun au combattant, au salarié et au dirigeant est qu’ils n’ont pas le choix de l’évitement. Leur statut leur impose de se confronter à des situations difficiles et de tenter de les résoudre. L’habitude de gérer des situations inconnues potentiellement risquées développe ainsi les traits de caractère tels que la détermination, l’imagination ou l’audace. Nos formations vous aident à prendre la bonne direction à des moment clés de la vie de votre organisation. Elles s’adressent à tous les niveaux de votre entreprise et sont réalisées par des formateurs expérimentés qui viennent du monde de l’entreprise et des milieux du sport et de l’outdoor. Elles ont pour dénominateur commun l’engagement physique (gestes, postures) et mental (courage, détermination). Vous voulez en savoir plus sur nos formules ?
+                <a class="link_standard" target="_blank" href="{{ asset('upload/pdf/faireface-dooz-entreprises.pdf') }}">Cliquez par là !</a>
+            </p>
+
+            <h4 class="text-center mt-5">MURDER PARTY</h4>
+
+            <p style="background: url('../../public/upload/contact/parchement.jpg')">
+                Une murder party est un jeu consistant à résoudre une énigme policière, en incarnant les protagonistes de l’histoire. Il s’agit d’une forme de jeu de rôle, en grandeur nature, un croisement entre théâtre d’improvisation, jeu d’enquête, aventure policière. L’un des intérêts principaux du jeu est de jouer les rôles des personnages d’une histoire le plus souvent criminelle. Sous un format de 20 à 30 participants, la murder pourra à la fois participer à la cohésion d’équipe mais permettra également de mieux connaître ses collègues. Nous proposons d’en animer soit directement dans notre bar à jeux ou simplement dans les locaux des entreprises.
+            </p>
+            <div class="companies_team_img_multiple">
+                <img class="" src="{{ asset('upload/companies/other/murder_1.jpg') }}" alt="Murder Party aux musées" >
+                <img class="" src="{{ asset('upload/companies/other/murder_2.jpg') }}" alt="Murder Party aux musées" >
+                <img class="" src="{{ asset('upload/companies/other/murder_3.jpg') }}" alt="Murder Party aux musées" >
+            </div>
+        </div>
+    </div>
+
+    <!--Formulaire de Contact-->
+    {% include 'options/contact_form.html.twig' %}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+

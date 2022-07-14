@@ -1,0 +1,57 @@
+
+
+<!--Style spécifique au Malleus-->
+{% if metadata is defined and metadata == 'malleus'%}
+        <div style="border-image: url('{{ asset('img/malleus/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+{% endif %}
+
+<!--Style spécifique à l'episode 0-->
+{% if metadata is defined and metadata == 'episode0'%}
+        <div style="border-image: url('{{ asset('img/episode0/design/cadre.png') }}') 15% 15% 15% 15% fill repeat repeat;">
+{% endif %}
+
+
+        <div class="bars_description">
+
+        <!--Malleus-->
+        {% if metadata is defined and metadata == 'malleus'%}
+                <p>Le Malleus Maleficarum (« Marteau des sorcières ») est un traité publié à Strasbourg au quinzième siècle. Ce texte a été utilisé dans le cadre de la chasse aux sorcières qui débuta au même moment en Europe.</p>
+                <p>Mais loin de s’être laissées piéger, les sorcières ont aujourd’hui décidé de se venger à leur façon en réutilisant ironiquement le nom de ce traité ayant échoué à les éliminer.</p>
+                <p>Oubliez Salem, le nouveau lieu de rendez-vous des initiés à la magie noire se situe bien au 12 rue des magasins à présent. Entrez dans ce bar teinté d’étrange et de surprenant, avec une pointe d’angoissant. Invoquez un serveur de l’au-delà à l’aide de notre planche de ouija, convoquez votre coven autour d’une table d’abbaye pour parler de vos prochains sortilèges, buvez potions et maléfices, divertissez-vous autour de flippers et de machines à coups de poing.</p>
+                <p>
+                        Sorciers, sorcières, passez les portes du Malleus et venez vous immerger au cœur de la magie noire. Jetez un coup d’œil à notre <a target="_blank" class="link_episode0" href="{{ asset('upload/malleus/pdf/MALLEUS-Carte-de-bar-version-2021-1.pdf') }}">notre carte</a>.
+                </p>
+
+                <!--Photo du bars-->
+                <div class="bars_description_thumbnails d-flex justify-content-center">
+                        <img src="{{ asset('upload/bars/malleus/thumbnails/Malleus2.jpeg') }}" alt="Miniature du bar">
+                        <img src="{{ asset('upload/bars/malleus/thumbnails/Malleus5.jpeg') }}" alt="Miniature du bar">
+                        <img src="{{ asset('upload/bars/malleus/thumbnails/Malleus6.jpeg') }}" alt="Miniature du bar">
+                </div>
+
+
+
+                <div class="bars_horaries d-flex justify-content-center">
+                        <img src="{{ asset('upload/bars/malleus/horaires-malleus.png') }}" alt="Horaires Malleus">
+                </div>
+        {% endif %}
+
+        <!--Episode 0-->
+        {% if metadata is defined and metadata == 'episode0'%}
+                <p>Vous n’avez pas encore découvert l’épisode 0, notre bar à jeux caché à l’arrière de l’escape game ? Ouvert depuis juillet 2017, notre bar est entièrement décoré dans un style unique : le Steampunk. Jetez un coup d’oeil à
+                        <a target="_blank" class="link_episode0" href="{{ asset('upload/bars/episode0/pdf/EPISODE-0-Carte-de-bar-version-2021-2-1.pdf') }}">notre carte</a> !
+                </p>
+                <p>
+                        Vous voulez jeter un coup d’œil à notre ludothèque de plus de 250 jeux de société ? Nos jeux sont référencés par
+                        <a target="_blank" class="link_episode0" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
+                </p>
+                {% include 'options/button_ludo.html.twig' %}
+
+                <!--Horaires-->
+                <div class="bars_horaries d-flex justify-content-center">
+                        <img src="{{ asset('upload/bars/episode0/horaires-episode0.png') }}" alt="Horaires Episode 0">
+                </div>
+        {% endif %}
+
+        </div>
+</div>

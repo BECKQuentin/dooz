@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservation - Dooz Escape Game{% endblock %}
+{% block title_og %}Reservation{% endblock %}
+
+{% block body %}
+
+    <div id="reservation">
+
+        <!--Banner Single Image-->
+        <div class="single_banner">
+            <div class="filter_carousel">
+                <div class="filter_carousel_1"></div>
+                <div class="filter_carousel_2"></div>
+            </div>
+            <img src="{{ asset('upload/reservation/reservation.jpg') }}" class="d-block w-100" alt="reservation image">
+            <h2>RÉSERVATION</h2>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+    <!--Options pour les entreprises-->
+    <div class="reservation_description">
+        <p>Bonjour voyageurs et merci de nous avoir choisi pour vous divertir.</p>
+        <p class="pb-3">Vous trouverez ici nos agendas, pour toute question, appelez nous au 03 90 41 77 17 et pour toute demande de devis, c’est par ici, par mail à devis.doozescape@gmail.com ou par téléphone.</p>
+        <p>Si vous voulez avoir plus d’informations sur le thème d’une de nos salles, vous pouvez cliquer sur le nom de la salle en question.</p>
+    </div>
+
+    <!--Reservation 4Escape toutes les rooms-->
+    {% include 'options/all_rooms_4escape.html.twig' %}
+
+    <!--Reservation 4 Escape Destroy-->
+    {% include 'options/destroy_4escape.html.twig' %}
+
+    <!--Reservation Vananheim lancer de haches-->
+    <h4 class="title_presentation">VANAHEIM - Lançer de Haches</h4>
+    <div class="forescape_room_reservation">
+        <div class="forescape" data-subdomain="doozdestroyroom" data-type="bookings" data-rooms="62cbfb1c1e9c82e2e8caabe7,62cc04201e9c82e2e8cabdcc,62cc0528336363e2ccd4e057,62cc05e4336363e2ccd50e62,62cc06c3336363e2ccd511af"></div>
+    </div>
+
+    <p class="px-4 text-center">Pour réserver nos évènement gratuits, ça se passe sur <a target="_blank" class="link_standard" href="https://www.facebook.com/DoOzEscape/">Facebook </a>ou directement par téléphone au 03 90 41 77 17, sinon le module de réservation est juste au dessus.</p>
+    <p class="px-4 text-center">Pour toute autres informations vous pouvez nous contacter aux adresses ci-dessous.</p>
+
+    <!--Formulaire de Contact-->
+    <div class="pt-4">
+        {% include 'options/contact_form.html.twig' %}
+    </div>
+
+    <!--Partenaires-->
+    {% include 'options/partners.html.twig' %}
+
+{% endblock %}

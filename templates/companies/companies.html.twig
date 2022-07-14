@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Entreprises{% endtrans%} - Dooz Escape Game{% endblock %}
+{% block title_og %}Entreprises{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Escape-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/companies/team_banner.jpg') }}" class="d-block w-100" alt="...">
+        <h2>{% trans %}Entreprises{% endtrans%}</h2>
+    </div>
+
+
+    <!--Companies-->
+
+    <div id="all_bars">
+
+
+        <div class="all_bars_card">
+            <a href="{{ path('companies_works') }}">
+                <h4 class="text-center pb-1">{% trans %}Comité d'entreprises{% endtrans %}</h4>
+                <img src="{{ asset('upload/companies/works_thumbnail.jpg') }}" alt="">
+            </a>
+            <p class="text-center">Sortez du cadre professionnel et rejoignez l'une de nos missions en l'année 1846, 2021, 2207 ou en 2208, ...</p>
+        </div>
+
+        <div class="all_bars_card">
+            <a href="{{ path('companies_team') }}">
+                <h4 class="text-center pb-1">{% trans %}Construction d'équipe{% endtrans %}</h4>
+                <img src="{{ asset('upload/companies/team_thumbnail.jpg') }}" alt="">
+            </a>
+            <p class="text-center">Chez Dooz, nous avons mis en place différentes formules qui sauront s’adapter à vos besoins et que vous pourrez vous-même construire sur-mesure.</p>
+        </div>
+
+    </div>
+
+
+
+    <div class="d-flex flex-column align-items-center">
+        <p class="text-center">
+            Vous voulez en savoir plus ? Cliquez sur les images ci-dessus 😉 <br>
+
+            Vous voulez jeter un coup d’œil à notre ludothèque de plus de 300 jeux de société ? Une partie de nos jeux sont référencés par
+            <a target="_blank" class="link_standard" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
+        </p>
+        {% include 'options/button_ludo.html.twig' %}
+    </div>
+
+    <div class="all_bars_horaries">
+        <img src="{{ asset('upload/bars/malleus/horaires-malleus.png') }}" alt="Horaires Malleus">
+        <img src="{{ asset('upload/bars/episode0/horaires-episode0.png') }}" alt="Horaies Episode 0">
+    </div>
+
+    <!--Nos Activités-->
+    {% include 'options/activities.html.twig' %}
+
+
+    <!--Nos partenaires-->
+    {% include 'options/partners.html.twig' %}
+{% endblock %}

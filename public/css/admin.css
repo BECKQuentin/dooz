@@ -1,0 +1,120 @@
+#login form input{
+    color: black;
+}
+#back_office_menu {
+    position: fixed;
+    z-index: 150;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: var(--standard);
+    height: 100vh;
+}
+#bo_nav .dropdown:hover .dropdown-menu {
+    background-color: var(--standard);
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+#bo_logo img {
+    height: 150px;
+
+}
+.bo_nav_item {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.bo_nav_item:hover {
+    color: black;
+}
+.title_admin {
+    font-size: 55px;
+}
+/*ROOM*/
+.admin_escape_card {
+    height: 200px;
+    width: 400px;
+    position: relative;
+    margin: 20px 20px;
+}
+.admin_escape_card h3 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.admin_escape_card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.admin_escape_card:hover {
+    cursor: pointer;
+    -webkit-animation: growUp 1s forwards;
+    -moz-animation: growUp 1s forwards;
+    -ms-animation: growUp 1s forwards;
+    -o-animation: growUp 1s forwards;
+    animation: growUp 1s forwards;
+}
+.admin_escape_thumbnail{
+    height: 100px !important;
+    padding: 10px 0;
+}
+.admin_escape_thumbnail_delete {
+    position: relative;
+}
+.admin_escape_thumbnail_delete i {
+    position: absolute;
+    z-index: 150;
+    right: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+/*EVENT*/
+.event_card {
+    position: relative;
+    border: 1px solid #fff;
+    height: 330px;
+    width: 270px;
+    margin: 10px 20px;
+    background-color: #3B2F2B;
+}
+.event_card_title {
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    z-index: 50;
+}
+.event_card_location {
+    color: #AF9991;
+}
+.event_card:hover {
+    background-color: black;
+    color: #fff;
+}
+.event_card_img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.4;
+    transition: opacity 5s;
+}
+.event_card:hover .event_card_img {
+    opacity: 1;
+}
+.event_card:hover {
+    -webkit-animation: growUp 1s forwards;
+    -moz-animation: growUp 1s forwards;
+    -ms-animation: growUp 1s forwards;
+    -o-animation: growUp 1s forwards;
+    animation: growUp 1s forwards;
+}
+
+/*PARTNERS*/
+
+.admin_partner_thumbnail {
+    height: 75px;
+    max-width: 400px;
+
+}

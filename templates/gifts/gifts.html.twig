@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Bon cadeau{% endtrans%} - Dooz Escape Game{% endblock %}
+{% block title_og %}Bon cadeau{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Escape-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('img/malleus/malleus1.jpeg') }}" class="d-block w-100" alt="Image bon cadeau">
+        <h2>{% trans %}Bon cadeau{% endtrans%}</h2>
+    </div>
+
+    <div id="gifts_cards_box">
+
+        <!--Bon Caddeaux Escaope Game-->
+{#        <div id="dropdownGiftsEscape_box" class="dropdown">#}
+{#            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownGiftsEscape" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#                Escape Game#}
+{#            </button>#}
+{#            <ul class="dropdown-menu" aria-labelledby="dropdownGiftsEscape">#}
+{#                <li><a class="dropdown-item" href="#"><div class="forescape" data-subdomain="doozescape" data-type="shop" data-products="5d94c5c4e94a6c561a589644,5d94cb1819e016563300e783,5d976416fbdab37d9179013a,5d9768b9fbdab37d9179014d,5d976e2bc46ad97d78023d8f,5d97712bc46ad97d78023e1b,60b8c352e35f520965812837,60b299053bb0b756e401571c,619b8812772b8de7208d89e8"></div></a></li>#}
+{#                <li><a class="dropdown-item" href="#">Another action</a></li>#}
+{#                <li><a class="dropdown-item" href="#">Something else here</a></li>#}
+
+{#            </ul>#}
+{#        </div>#}
+
+
+        <div class="accordion" id="accordionGiftsCard">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Bon Cadeaux Escape Game
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="forescape" data-subdomain="doozescape" data-type="shop" data-products="5d94c5c4e94a6c561a589644,5d94cb1819e016563300e783,5d976416fbdab37d9179013a,5d9768b9fbdab37d9179014d,5d976e2bc46ad97d78023d8f,5d97712bc46ad97d78023e1b,60b8c352e35f520965812837,60b299053bb0b756e401571c,619b8812772b8de7208d89e8">
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Bon Cadeaux Destroy Room
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="forescape" data-subdomain="doozdestroyroom" data-type="shop" data-product-categories="5dc485cb4aaeaf76215e3b24"><iframe id="forescape-55v41s" scrolling="no" frameborder="0" src="https://doozdestroyroom.4escape.io/shop?product-categories=5dc485cb4aaeaf76215e3b24&amp;iframe=1&amp;UID=e448f2f7-72ce-4f08-969e-8ca0a8ed162d"></iframe></div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Bon Cadeaux Bar à Jeux
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="forescape" data-subdomain="doozescape" data-type="shop" data-products="5e67bfa0fdc13e51578f68e8,5da4c37dcfd15031398837a2,62739c3311b5b7384f9eb274,5e67ab824e14bb513d2f962a,5e67bb354e14bb513d2f96d6,5e67be924e14bb513d2f970a,62291ba6df81cbe4332abc5f,620d39b2b3a5afedda5ffff6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+{#    <div class="d-flex flex-column justify-content-center flex-wrap">#}
+
+{#        <div class="gifts_items_box">#}
+{#           <h4>{% trans %} + Bon cadeau Escape Game{% endtrans %}</h4>#}
+
+{#            <div class="gifts_items">#}
+{#                <h5>Appprendre de ses erreurs</h5>#}
+{#                <p>...</p>#}
+{#            </div>#}
+{#       </div>#}
+
+{#        <div class="gifts_items_box">#}
+{#           <h4>{% trans %} + Bon cadeau Destroy Room{% endtrans %}</h4>#}
+{#       </div>#}
+
+{#        <div class="gifts_items_box">#}
+{#           <h4>{% trans %} + Bon cadeau Bar à Jeux{% endtrans %}</h4>#}
+{#       </div>#}
+
+
+
+{#    </div>#}
+
+{% endblock %}

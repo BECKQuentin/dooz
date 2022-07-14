@@ -1,0 +1,38 @@
+<section id="footer_cgv" class="d-flex justify-content-center px-2">
+    <p class="p-4 px-lg-4">© 2022 DoOz Escape Game</p>
+
+    {% for cgv in cgvs %}
+        <a href="#" class="p-4 px-lg-4" data-bs-toggle="modal" data-bs-target="#link_modal_{{ cgv.name|lower|replace({' ':''}) }}">
+            {% if app.request.locale == 'fr' %}
+                {{ cgv.name|upper }}
+            {% elseif app.request.locale == 'en' %}
+                {{ cgv.nameEn|upper }}
+            {% endif %}
+        </a>
+
+        {# Modal #}
+        <div class="modal fade" id="link_modal_{{ cgv.name|lower|replace({' ':''}) }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{{ cgv.name }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title w-100" id="cgvModalTitle">{{ cgv.titleModal }}</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ cgv.description|nl2br }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-dooz" data-bs-dismiss="modal">{% trans %}Fermer{% endtrans %}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+
+
+
+
+
+
+</section>

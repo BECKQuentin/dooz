@@ -1,0 +1,115 @@
+#top_header {
+    height: 50px !important;
+    width: 100% !important;
+    background-color: #281E1A;
+    background-image: url("../img/base/background/texture-header.png");
+    background-repeat: no-repeat;
+}
+#bot_header {
+    min-height: 50px;
+    width: 100% !important;
+}
+#top_header_share ul li a img,
+#bot_header_mobile_footer li a img {
+    height: 35px;
+    width: 35px;
+}
+.resa_gifts_icons {
+    height: 49px;
+}
+.resa_gifts_icons:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+#site_title_center {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    z-index: 50;
+}
+#site_title_center h1:after,
+#site_title_center h1:before {
+    content: '—';
+}
+#site_title_center h1 {
+    white-space: nowrap;
+    position: relative;
+    left: -50%;
+    font-size: 1.25rem;
+}
+
+/*Partie du bas*/
+#logo_mobile {
+    display: none;
+}
+/*Gauche en bas*/
+.dropdown_link_address_box {
+    background-color: var(--standard_2);
+    text-transform: uppercase;
+    padding: 10px 16px;
+    white-space: nowrap;
+}
+#bot_header .navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+/*Milieu en bas*/
+#bot_header_middle {
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#bot_header_middle img{
+    max-width: 100%;
+}
+
+/*Item du bas*/
+.navbar_item_header :not(.dropdown-menu){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar_item_header {
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_item_header_link {
+    font-size: 13px;
+    white-space: nowrap;
+}
+/*Dropdown*/
+.dropdown-menu-left {
+    top: 49px;
+    left: 10px;
+}
+.dropdown-menu-center {
+    top: 49px;
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.dropdown-item {
+    padding: 15px 40px !important;
+}
+.dropdown-item,
+.dropdown-item:hover,
+.dropdown-item:active{
+    color: #fff;
+    background-color: inherit;
+}
+#bot_header .dropdown-toggle {
+    background-color: inherit;
+}
+.dropdown-link {
+    padding: 0px 5px;
+}
+.dropdown-toggle {
+    vertical-align: middle !important;
+    height: 100% !important;
+}

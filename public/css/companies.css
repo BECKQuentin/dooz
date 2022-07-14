@@ -1,0 +1,65 @@
+.companies_thumbnail {
+    margin: 20px;
+    height: 250px;
+    width: 400px;
+    position: relative;
+}
+.companies_thumbnail:hover {
+    -webkit-animation: growUp 1s forwards;
+    -moz-animation: growUp 1s forwards;
+    -ms-animation: growUp 1s forwards;
+    -o-animation: growUp 1s forwards;
+    animation: growUp 1s forwards;
+}
+.companies_thumbnail:hover img {
+    opacity: 1;
+}
+.companies_thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 0.8s;
+}
+.companies_thumbnail h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+}
+
+/*Works*/
+.companies_works_description {
+    padding: 40px;
+}
+.companies_works_description_img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/*Team*/
+.companies_team_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+.companies_team_description_img img {
+    object-fit: cover;
+    object-position: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.companies_team_img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.companies_team_img img {
+    padding: 10px;
+    width: 100%;
+}
+

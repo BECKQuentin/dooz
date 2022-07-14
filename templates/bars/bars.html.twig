@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bars à Jeux - Dooz Escape Game{% endblock %}
+{% block title_og %}Bars à Jeux{% endblock %}
+{% block description %}Venez découvrir nos bars à jeux aux multiples facettes{% endblock %}
+{% block description_og %}Venez découvrir nos bars à jeux aux multiples facettes{% endblock %}
+
+{% block body %}
+
+    <!--Banner Single Image-->
+    <div class="single_banner">
+        <div class="filter_carousel">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+        </div>
+        <img src="{{ asset('upload/bars/episode0/thumbnails/bar7.jpg') }}" class="d-block w-100" alt="Bannière des bars à jeux">
+        <h2>{% trans %}NOS BARS A JEUX{% endtrans%}</h2>
+    </div>
+
+    <div id="all_bars">
+
+        <div class="all_bars_card">
+
+            <a class="position-relative" href="{{ path('malleus') }}">
+                <h4 class="font_malleus">Malleus Malleficarum</h4>
+                <img src="{{ asset('upload/bars/malleus/thumbnails/malleus-scaled.jpeg') }}" alt="Miniature du malleus">
+            </a>
+            <p class="text-center">Le 1er bar à thème magie noire de Strasbourg</p>
+        </div>
+
+        <div class="all_bars_card">
+
+            <a class="position-relative" href="{{ path('episode0') }}">
+                <h4 class="font_episode0">Episode 0</h4>
+                <img src="{{ asset('upload/bars/episode0/banner/episode0-scaled.jpeg') }}" alt="Miniature de l'episode 0">
+            </a>
+            <p class="text-center">Notre bar à jeux à l'ambiance SteamPunk</p>
+        </div>
+
+        <div class="all_bars_card">
+
+            <a class="position-relative" href="{{ path('vanaheim') }}">
+                <h4 class="font_vanaheim">Vanaheim</h4>
+                <img src="{{ asset('img/vanaheim/carousel/vanaheim1.png') }}" alt="Miniature de Vanaheim">
+            </a>    
+            <p class="text-center">Notre bar Viking avec lancer de haches</p>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column align-items-center">
+        <p class="text-center">
+            Vous voulez en savoir plus sur l’épisode 0, le Malleus, ou Vanaheim notre tout nouveau bar Viking ? Cliquez sur les images ci-dessus 😉 <br>
+
+            Vous voulez jeter un coup d’œil à notre ludothèque de plus de 300 jeux de société ? Une partie de nos jeux sont référencés par
+            <a target="_blank" class="link_standard" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
+        </p>
+        {% include 'options/button_ludo.html.twig' %}
+    </div>
+
+    <div class="all_bars_horaries">
+        <img src="{{ asset('upload/bars/malleus/horaires-malleus.png') }}" alt="Horaires Malleus">
+        <img src="{{ asset('upload/bars/episode0/horaires-episode0.png') }}" alt="Horaies Episode 0">
+    </div>
+
+    <!--Nos Activités-->
+    {% include 'options/activities.html.twig' %}
+
+    <!--Nos partenaires-->
+    {% include 'options/partners.html.twig' %}
+
+
+{% endblock %}
