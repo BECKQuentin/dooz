@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fad16a5-afc2-4d38-8c6a-7a8d732e97c1" name="Default Changelist" comment="" />
+    <list default="true" id="7fad16a5-afc2-4d38-8c6a-7a8d732e97c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dooz-local.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dooz-local.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +31,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -169,6 +193,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
     </include_path>
   </component>
   <component name="ProjectId" id="2Bsnk0u46Ck73njgbh0petmMvdr" />
@@ -179,7 +204,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img/vanaheim/design" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/upload/events/design" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,11 +217,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\dooz-local\public\upload\events\design" />
+      <recent name="C:\wamp64\www\dooz-local\public\img\base\icons\gear" />
       <recent name="C:\wamp64\www\dooz-local\public\img\vanaheim\design" />
-      <recent name="C:\wamp64\www\dooz-local\public\img\vanaheim\carousel" />
-      <recent name="C:\wamp64\www\dooz-local\public\upload\bars\vanaheim\menu" />
-      <recent name="C:\wamp64\www\dooz-local\public\upload\bars\vanaheim\thumbnails" />
-      <recent name="C:\wamp64\www\dooz-local\public\upload\destroy" />
+      <recent name="C:\wamp64\www\dooz-local\public\upload\activities" />
+      <recent name="C:\wamp64\www\dooz-local\public\upload\travelogue\base" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,29 +240,86 @@
       <updated>1657703799667</updated>
       <workItem from="1657703800706" duration="15239000" />
       <workItem from="1657722073341" duration="6159000" />
-      <workItem from="1657784029262" duration="23794000" />
+      <workItem from="1657784029262" duration="24035000" />
+      <workItem from="1657888560419" duration="9696000" />
+      <workItem from="1658129806358" duration="72994000" />
     </task>
+    <task id="LOCAL-00001" summary="event">
+      <created>1658333436265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658333436275</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="event" />
+    <option name="LAST_COMMIT_MESSAGE" value="event" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1657787455087">
+    <state x="565" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1658231535668">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1657787455087" />
+    <state x="565" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658231535668" />
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1658146502494">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658146502494" />
+    <state x="530" y="185" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1658238655876">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="185" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658238655876" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1658322556806">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658322556806" />
+    <state x="632" y="132" key="RollbackChangesDialog" timestamp="1658315677047">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="632" y="132" key="RollbackChangesDialog/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658315677047" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1657715556156">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="75" key="SettingsEditor/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1657715556156" />
-    <state x="507" y="163" width="585" height="534" key="find.popup" timestamp="1657806686412">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1658236173278">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="507" y="163" width="585" height="534" key="find.popup/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1657806686412" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1657805194366">
+    <state width="498" height="446" key="SwitcherDM/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658236173278" />
+    <state x="411" y="87" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1658131043848">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1657805194366" />
+    <state x="411" y="87" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658131043847" />
+    <state x="0" y="0" width="1156" height="847" key="dock-window-1" timestamp="1658150425636">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="0" y="0" width="1156" height="847" key="dock-window-1/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658150425636" />
+    <state x="507" y="163" width="585" height="534" key="find.popup" timestamp="1658316582047">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="163" width="585" height="534" key="find.popup/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658316582047" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1658326262434">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658326262434" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1658326152288">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.1.1920.1040@0.0.1600.860" timestamp="1658326152288" />
   </component>
 </project>
