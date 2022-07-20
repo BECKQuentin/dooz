@@ -2,7 +2,7 @@
 
 {% block title %}{{ room.name }} - Dooz Escape Game{% endblock %}
 {% block title_og %}{{ room.name|capitalize }}{% endblock %}
-{% block description %}{{ room.shortName }}{% endblock %}
+{% block description %}{{ room.shortName }}, {{ room.minPlayers }} à {{ room.maxPlayers}} Joueurs{% endblock %}
 {% block description_og %}{{ room.shortName }}{% endblock %}
 
 {% block body %}
@@ -55,10 +55,10 @@
                         {{ room.description|nl2br }}
                     </p>
                 {% elseif app.request.locale == 'en' %}
-                    {% if room.warningDescriptionEn is defined %}
-                        <div class="d-flex">
+                    {% if room.warningDescriptionEn == true %}
+                        <div class="warning_eighteen w-75">
                             <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo interdit">
-                            {{ room.warningDescriptionEn|nl2br }}
+                            <p>{{ room.warningDescriptionEn|nl2br }}</p>
                             <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo interdit">
                         </div>
                     {% endif %}
@@ -77,7 +77,11 @@
             {% if room.forescapeDataRoom is defined and room.forescapeDataRoom is not null %}
                 <div class="forescape" data-subdomain="doozescape" data-type="bookings" data-rooms="{{ room.forescapeDataRoom }}"></div>
             {% else %}
-                <div class="text-center pb-5">Les reservations sont momentanément indisponibles pour cette salle. Vous pouvez nous joindre au <span class="dooz">03.90.41.77.17</span></div>
+                {% if app.request.locale == 'fr' %}
+                    <div class="text-center pb-5">Les reservations sont momentanément indisponibles pour cette salle. Vous pouvez nous joindre au <span class="dooz">03.90.41.77.17</span></div>
+                {% elseif app.request.locale == 'en' %}
+                    <div class="text-center pb-5">Reservations are temporarily unavailable for this room. You can reach us at <span class="dooz">03.90.41.77.17</span></div>
+                {% endif %}
             {% endif %}
         </div>
 

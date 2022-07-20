@@ -18,151 +18,40 @@ class Event
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="bigint")
      */
-    private $name;
+    private ?int $idAPI;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $name_en;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $description;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $description_en;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $beginDate;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $endDate;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Address::class, inversedBy="events")
-     */
-    private $address;
-
-    /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $createdAt;
-
-    public function __construct()
-    {
-        if ($this->getCreatedAt() === null) {
-            $this->setCreatedAt(new \DateTimeImmutable('now'));
-        }
-    }
+    private ?string $slug;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getIdAPI(): ?string
     {
-        return $this->name;
+        return $this->idAPI;
     }
 
-    public function setName(string $name): self
+    public function setIdAPI(?string $idAPI): self
     {
-        $this->name = $name;
+        $this->idAPI = $idAPI;
 
         return $this;
     }
-
-    public function getNameEn(): ?string
+    public function getSlug(): ?string
     {
-        return $this->name_en;
+        return $this->slug;
     }
 
-    public function setNameEn(?string $name_en): self
+    public function setSlug(string $slug): self
     {
-        $this->name_en = $name_en;
+        $this->slug = $slug;
 
         return $this;
     }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(?string $description): self
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    public function getDescriptionEn(): ?string
-    {
-        return $this->description_en;
-    }
-
-    public function setDescriptionEn(?string $description_en): self
-    {
-        $this->description_en = $description_en;
-
-        return $this;
-    }
-
-    public function getBeginDate(): ?\DateTimeInterface
-    {
-        return $this->beginDate;
-    }
-
-    public function setBeginDate(?\DateTimeInterface $beginDate): self
-    {
-        $this->beginDate = $beginDate;
-
-        return $this;
-    }
-
-    public function getEndDate(): ?\DateTimeInterface
-    {
-        return $this->endDate;
-    }
-
-    public function setEndDate(?\DateTimeInterface $endDate): self
-    {
-        $this->endDate = $endDate;
-
-        return $this;
-    }
-
-    public function getAddress(): ?Address
-    {
-        return $this->address;
-    }
-
-    public function setAddress(?Address $address): self
-    {
-        $this->address = $address;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
 }

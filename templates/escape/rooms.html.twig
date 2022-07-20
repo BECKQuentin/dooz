@@ -27,7 +27,7 @@
                         {% if app.request.locale == 'fr' %}
                             <h2 class="link_underline"><a href="{{ path('room', {slug: room.slug}) }}">{{ room.name }}</a></h2>
                         {% elseif app.request.locale == 'en' %}
-                            <h2>{{ room.nameEn }}</h2>
+                            <h2 class="link_underline"><a href="{{ path('room', {slug: room.slug}) }}">{{ room.nameEn }}</a></h2>
                         {% endif %}
                     </div>
                 </div>
@@ -50,42 +50,47 @@
             <div class="filter_carousel_2"></div>
             <div class="block_info_features_image" style="background-image: url('{{ asset('upload/activities/explication.jpg') }}')"></div>
             <div class="block_info_features_box block_info_features_box_right">
-                <h2>Dooz escape, qu'est ce que c'est ?</h2>
-                <p>Dooz c'est d'abord l'horlogerie, une <a href="#notebook_presentation">agence temporelle</a> qui va vous envoyer en mission rétablir le cours normal de l'histoire.</p>
+                {% if app.request.locale == 'fr' %}
+                    <h2>Dooz escape, qu'est ce que c'est ?</h2>
+                    <p>Dooz c'est d'abord l'horlogerie, une <a href="#notebook_presentation">agence temporelle</a> qui va vous envoyer en mission rétablir le cours normal de l'histoire.</p>
+                {% elseif app.request.locale == 'en' %}
+                    <h2>Dooz escape, what's is it ?</h2>
+                    <p>Dooz is first and foremost watchmaking, a <a href="#notebook_presentation">temporal agency</a> that will send you on a mission to restore the normal course of history.</p>
+                {% endif %}
             </div>
         </div>
 
         <div class="block_info_features_widgets_right">
             <div class="d-flex flex-column w-100">
-                <h4 class="text-center">C'est aussi plein d'activités :</h4>
+                <h4 class="text-center">{% trans %}C'est aussi plein d'activités :{% endtrans %}</h4>
                 <div class="d-flex justify-content-evenly align-items-start">
                     <a class=rotating_gear" href="#escape_explication">
                         <div class="rotating_gear_icons">
                             <img class="gear-icon" src="{{ asset('img/base/icons/gear/7_escapes.png') }}" alt="">
                             <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                         </div>
-                        <p class="text-center my-2">7 salles d'escape</p>
+                        <p class="text-center my-2">{% trans %}7 salles d'escape{% endtrans %}</p>
                     </a>
                     <a class="rotating_gear" href="{{ path('destroy') }}">
                         <div class="rotating_gear_icons">
                             <img class="gear-icon" src="{{ asset('img/base/icons/gear/2_destroy_room.png') }}" alt="">
                             <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                         </div>
-                        <p class="text-center my-2">2 destroy room</p>
+                        <p class="text-center my-2">{% trans %}2 destroy room{% endtrans %}</p>
                     </a>
                     <a class="rotating_gear" href="{{ path('episode0') }}">
                         <div class="rotating_gear_icons">
                             <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_jeu.png') }}" alt="">
                             <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                         </div>
-                        <p class="text-center my-2">Bar à jeux</p>
+                        <p class="text-center my-2">{% trans %}Bar à jeux{% endtrans %}</p>
                     </a>
                     <a class="rotating_gear" href="{{ path('malleus') }}">
                         <div class="rotating_gear_icons">
                             <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_ambiance.png') }}" alt="">
                             <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                         </div>
-                        <p class="text-center my-2">Bar à ambiance</p>
+                        <p class="text-center my-2">{% trans %}Bar à ambiance{% endtrans %}</p>
                     </a>
                 </div>
 
@@ -96,35 +101,40 @@
 
     <!--Events réguliers-->
     <div id="events_regular">
-        <h4 class="text-center">C'est aussi des <a class="events_regular_link" href="{{ path('events') }}">des évenements réguliers</a> :</h4>
+        {% if app.request.locale == 'fr' %}
+            <h4 class="text-center">C'est aussi des <strong><a class="events_regular_link" href="{{ path('events') }}">des évenements réguliers</a></strong> :</h4>
+        {% elseif app.request.locale == 'en' %}
+            <h4 class="text-center">It is also <strong><a class="events_regular_link" href="{{ path('events') }}">regular events</a></strong> :</h4>
+        {% endif %}
+
         <div class="d-flex flex-wrap justify-content-evenly align-items-start">
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/murder_party.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Murder Party</p>
+                <p class="text-center my-2">{% trans %}Murder Party{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/burger_quiz.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Burger Quiz</p>
+                <p class="text-center my-2">{% trans %}Burger Quiz{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/loup_garou.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Loup-Garou</p>
+                <p class="text-center my-2">{% trans %}Loup-Garou{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/tournois_magic.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Tournois Magic</p>
+                <p class="text-center my-2">{% trans %}Tournois Magic{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
@@ -138,21 +148,21 @@
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/jeu_de_role.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Jeu de rôle</p>
+                <p class="text-center my-2">{% trans %}Jeu de rôle{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/soiree_impro.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Soirées Impro</p>
+                <p class="text-center my-2">{% trans %}Soirées Impro{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('events') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/et_bien_plus.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Et bien plus!</p>
+                <p class="text-center my-2">{% trans %}Et bien plus!{% endtrans %}</p>
             </a>
         </div>
     </div>
@@ -172,28 +182,28 @@
                 <img class="gear-icon" src="{{ asset('img/base/icons/gear/des.png') }}" alt="">
                 <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
             </div>
-            <p class="text-center my-2">Choissiez l'enigme que vous voulez résoudre</p>
+            <p class="text-center my-2">{% trans %}Choissiez l'enigme que vous voulez résoudre{% endtrans %}</p>
         </div>
         <div class="rotating_gear">
             <div class="rotating_gear_icons">
                 <img class="gear-icon" src="{{ asset('img/base/icons/gear/joueurs.png') }}" alt="">
                 <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
             </div>
-            <p class="text-center my-2">Choissiez le nombre de participants</p>
+            <p class="text-center my-2">{% trans %}Choissiez le nombre de participants{% endtrans %}</p>
         </div>
         <div class="rotating_gear">
             <div class="rotating_gear_icons">
                 <img class="gear-icon" src="{{ asset('img/base/icons/gear/date.png') }}" alt="">
                 <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
             </div>
-            <p class="text-center my-2">Choissiez la date, l'heure et le défi</p>
+            <p class="text-center my-2">{% trans %}Choissiez la date, l'heure et le défi{% endtrans %}</p>
         </div>
         <div class="rotating_gear">
             <div class="rotating_gear_icons">
                 <img class="gear-icon" src="{{ asset('img/base/icons/gear/caisse.png') }}" alt="">
                 <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
             </div>
-            <p class="text-center my-2">Payez directement en ligne</p>
+            <p class="text-center my-2">{% trans %}Payez directement en ligne{% endtrans %}</p>
         </div>
         <hr class="w-75 hr_mobile">
     </div>
@@ -235,6 +245,9 @@
     <!--Reservation 4 Escape Destroy-->
     {% include 'options/destroy_4escape.html.twig' %}
 
+    <!--Reservation 4escape-->
+    {% include 'options/vanaheim_axe_4escape.html.twig' %}
+
     <h4 class="title_presentation">{% trans %}NOS AUTRES ACTIVITÉS{% endtrans %}</h4>
 
     <!--Episode0 Bannière-->
@@ -246,8 +259,14 @@
             <div class="block_info_features_box block_info_features_box_right">
                 <a href="{{ path('episode0') }}"><h2>L'Episode 0</h2></a>
                 <div class="block_info_features_dot"></div>
-                <h4>Bar à jeux et salle de séminaire</h4>
-                <p>Dooz est également un bar à jeux qui vous propose plus de 200 jeux de plateau, le tout dans un espace climatisé de 80m² où vous pourrez partager un moment ludique et convivial autour d’une boisson (bières, shooters, soft, etc...) et de petite restauration. Et le tout dans un décor steampunk ! Nous organisons régulièrement des événements : Murder Party, Burger Quiz, loup-garou, tournois de cartes Magic, soirées jeux de plateau, soirées improvisation. Faites un tour dans notre agenda pour en savoir plus ! A bientôt voyageurs !</p>
+                {% if app.request.locale == 'fr' %}
+                    <h4>Bar à jeux et salle de séminaire</h4>
+                    <p>Dooz est également un bar à jeux qui vous propose plus de 200 jeux de plateau, le tout dans un espace climatisé de 80m² où vous pourrez partager un moment ludique et convivial autour d’une boisson (bières, shooters, soft, etc...) et de petite restauration. Et le tout dans un décor steampunk ! Nous organisons régulièrement des événements : Murder Party, Burger Quiz, loup-garou, tournois de cartes Magic, soirées jeux de plateau, soirées improvisation. Faites un tour dans notre agenda pour en savoir plus ! A bientôt voyageurs !</p>
+                {% elseif app.request.locale == 'en' %}
+                    <h4>Games bar and seminar room</h4>
+                    <p>Dooz is also a games bar that offers more than 200 board games, all in an air-conditioned space of 80m² where you can share a fun and friendly moment over a drink (beers, shooters, soft, etc... ) and snacks. And all in a steampunk setting! We regularly organize events: Murder Party, Burger Quiz, werewolf, Magic card tournaments, board game evenings, improvisation evenings. Take a look in our calendar to find out more! See you soon travelers!</p>
+                {% endif %}
+
             </div>
         </div>
         <div class="block_info_features_widgets_right">
@@ -256,35 +275,35 @@
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/evj.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">EVJF-EVG</p>
+                <p class="text-center my-2">{% trans %}EVJF-EVG{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/anniversaire.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Anniversaires</p>
+                <p class="text-center my-2">{% trans %}Anniversaires{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/ce.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Comité d'entreprises</p>
+                <p class="text-center my-2">{% trans %}Comité d'entreprises{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/teambuilding.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Team Building</p>
+                <p class="text-center my-2">{% trans %}Team Building{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_jeu.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Bar à jeux</p>
+                <p class="text-center my-2">{% trans %}Bar à jeux{% endtrans %}</p>
             </a>
         </div>
     </div>
@@ -298,8 +317,14 @@
             <div class="block_info_features_box block_info_features_box_left">
                 <a href="{{ path('malleus') }}"><h2>Malleus Malleficarum</h2></a>
                 <div class="block_info_features_dot"></div>
-                <h4>Bar à jeux</h4>
-                <p>Oubliez Salem, le nouveau lieu de rendez-vous des initiés à la magie noire se situe au 12 rue des magasins. Entrez dans ce bar teinté d'étrange et de surprenant, avec une pointe d'angoissant. Les agents au service vous serviront des breuvages et autres potions, dans une ambiances rock. Ici peu de jeux de plateau : l’accent est mis sur les flippers, billard et les Jeux de Rôle. Pensez à réserver votre table.</p>
+                {% if app.request.locale == 'fr' %}
+                    <h4>Bar à jeux</h4>
+                    <p>Oubliez Salem, le nouveau lieu de rendez-vous des initiés à la magie noire se situe au 12 rue des magasins. Entrez dans ce bar teinté d'étrange et de surprenant, avec une pointe d'angoissant. Les agents au service vous serviront des breuvages et autres potions, dans une ambiances rock. Ici peu de jeux de plateau : l’accent est mis sur les flippers, billard et les Jeux de Rôle. Pensez à réserver votre table.</p>
+                {% elseif app.request.locale == 'en' %}
+                    <h4>Games bar</h4>
+                    <p>Forget Salem, the new meeting place for black magic initiates is located at 12 rue des Magasins. Enter this bar tinged with strange and surprising, with a touch of scary. The agents at the service will serve you beverages and other potions, in a rock atmosphere. Few board games here: the focus is on pinball machines, billiards and role-playing games. Think about reserving your table.</p>
+                {% endif %}
+
             </div>
         </div>
         <div class="block_info_features_widgets_left">
@@ -308,21 +333,21 @@
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/evj.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">EVJF-EVG</p>
+                <p class="text-center my-2">{% trans %}EVJF-EVG{% endtrans%}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/anniversaire.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Anniversaires</p>
+                <p class="text-center my-2">{% trans %}Anniversaires{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/ce.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Comité d'entreprises</p>
+                <p class="text-center my-2">{% trans %}Comité d'entreprises{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('malleus') }}">
                 <div class="rotating_gear_icons">
@@ -336,7 +361,7 @@
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_a_ambiance.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Bar à ambiance</p>
+                <p class="text-center my-2">{% trans %}Bar à ambiance{% endtrans %}</p>
             </a>
         </div>
     </div>
@@ -351,11 +376,14 @@
 
                 <a href="{{ path('destroy') }}"><h2>Destroy Room</h2></a>
                 <div class="block_info_features_dot"></div>
-                <h4>Détruisez-tout</h4>
-                <p>
-                    La destroy room, c'est 15 minutes de défouloir intense sur des meubles destinés à la broyeuse, pour leur donner une dernière vie avant leur recyclage. <br>
-                    Prenez une tenue, choisisez parmi une multitude d'armes à votre disposition et anéantissez votre stress.
-                </p>
+                {% if app.request.locale == 'fr' %}
+                    <h4>Détruisez-tout !</h4>
+                    <p>La destroy room, c'est 15 minutes de défouloir intense sur des meubles destinés à la broyeuse, pour leur donner une dernière vie avant leur recyclage. <br>Prenez une tenue, choisisez parmi une multitude d'armes à votre disposition et anéantissez votre stress.</p>
+                {% elseif app.request.locale == 'en' %}
+                    <h4>Destroy everything !</h4>
+                    <p>The destroy room is 15 minutes of intense stress relief on furniture intended for the shredder, to give them one last life before recycling. <br>Grab an outfit, choose from a multitude of weapons at your disposal and annihilate your stress.</p>
+                {% endif %}
+
             </div>
         </div>
         <div class="block_info_features_widgets_right">
@@ -371,28 +399,86 @@
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/armes.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Un grand choix d'armes</p>
+                <p class="text-center my-2">{% trans %}Un grand choix d'armes{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('destroy') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/meubles.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Du mobilier à détruire</p>
+                <p class="text-center my-2">{% trans %}Du mobilier à détruire{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('destroy') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/joueurs.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">5 joueurs en simultanés</p>
+                <p class="text-center my-2">{% trans %}5 joueurs en simultanés{% endtrans %}</p>
             </a>
             <a class="rotating_gear" href="{{ path('destroy') }}">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/evj.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">EVJF-EVG</p>
+                <p class="text-center my-2">{% trans %}EVJF-EVG{% endtrans %}</p>
+            </a>
+        </div>
+    </div>
+
+
+    <!--Vanaheim Bannière-->
+    <div class="position-relative w-100 d-flex justify-content-end">
+        <div class="block_info_features d-flex justify-content-end">
+            <div class="filter_carousel_1"></div>
+            <div class="filter_carousel_2"></div>
+            <div class="block_info_features_image" style="background-image: url('{{ asset('upload/activities/vanaheim.jpg') }}')"></div>
+            <div class="block_info_features_box block_info_features_box_left">
+                <a href="{{ path('vanaheim') }}"><h2>Vanaheim</h2></a>
+                <div class="block_info_features_dot"></div>
+                {% if app.request.locale == 'fr' %}
+                    <h4>Bar Vikings & lançer de haches</h4>
+                    <p>Venez découvrir notre bar Viking au <a target="_blank" href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889"><u>20 rue du commerce 67550 VENDENHEIM</u></a>.
+                        En terrasse ou dans nos salles climatisées, profitez d'une ambiance inédite, de nombreux jeux de societés et des boissons dignes des plus grands Vikings. Nous proposons aussi des parties de lancer de haches avec les règles européennes de la fédération de lancer de haches.
+                        Très prochainement plusieurs salles de Destroy Room seront également disponible.
+                    </p>
+                {% elseif app.request.locale == 'en' %}
+                    <h4>Vikings Bar & Ax Throwing</h4>
+                    <p>Come and discover our Viking bar at <a target="_blank" href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889"><u>20 rue du commerce 67550 VENDENHEIM</u></a>.
+                        On the terrace or in our air-conditioned rooms, enjoy a unique atmosphere, many board games and drinks worthy of the greatest Vikings. We also offer ax throwing games with the European rules of the ax throwing federation.
+                        Very soon several rooms of Destroy Room will also be available.
+                    </p>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="block_info_features_widgets_left">
+            <a class="rotating_gear" href="{{ path('vanaheim') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/bar_viking.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">{% trans %}Bar à ambiance{% endtrans %}</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('vanaheim') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/crossed_axe.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">{% trans %}Lancer de Haches{% endtrans %}</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('vanaheim') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/des.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">{% trans %}Jeux de sociétes{% endtrans %}</p>
+            </a>
+            <a class="rotating_gear" href="{{ path('vanaheim') }}">
+                <div class="rotating_gear_icons">
+                    <img class="gear-icon" src="{{ asset('img/base/icons/gear/2_destroy_room.png') }}" alt="">
+                    <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
+                </div>
+                <p class="text-center my-2">Destroy Room</p>
             </a>
         </div>
     </div>

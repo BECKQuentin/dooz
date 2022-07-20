@@ -146,26 +146,26 @@ class AdminController extends AbstractController
     #[Route('/a/events', name: 'admin_events', options: ["sitemap" => false])]
     public function adminEvents(EventRepository $eventRepository, Request $request, ManagerRegistry $doctrine): Response
     {
-        $events = $eventRepository->findAll();
-
-        $event = new Event();
-        $form = $this->createForm(EventFormType::class, $event);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $em = $doctrine->getManager();
-            $em->persist($event);
-            $em->flush();
-
-            $this->addFlash('success', "Et hop un nouvel evenement !");
-            return $this->redirect($request->getUri());
-        }
+//        $events = $eventRepository->findAll();
+//
+//        $event = new Event();
+//        $form = $this->createForm(EventFormType::class, $event);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//
+//            $em = $doctrine->getManager();
+//            $em->persist($event);
+//            $em->flush();
+//
+//            $this->addFlash('success', "Et hop un nouvel evenement !");
+//            return $this->redirect($request->getUri());
+//        }
 
         return $this->render('admin/event/event.html.twig', [
             'isAdminPage'   => true,
-            'events'        => $events,
-            'form'          => $form->createView()
+//            'events'        => $events,
+//            'form'          => $form->createView()
         ]);
     }
 
@@ -174,26 +174,26 @@ class AdminController extends AbstractController
     public function adminEventUpdate(Event $event, EventRepository $eventRepository, Request $request, ManagerRegistry $doctrine): Response
     {
 
-        $events = $eventRepository->findAll();
-
-        $form = $this->createForm(EventFormType::class, $event);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $em = $doctrine->getManager();
-            $em->persist($event);
-            $em->flush();
-
-            $this->addFlash('success', "Bien modifié");
-            return $this->redirect($request->getUri());
-        }
+//        $events = $eventRepository->findAll();
+//
+//        $form = $this->createForm(EventFormType::class, $event);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//
+//            $em = $doctrine->getManager();
+//            $em->persist($event);
+//            $em->flush();
+//
+//            $this->addFlash('success', "Bien modifié");
+//            return $this->redirect($request->getUri());
+//        }
 
         return $this->render('admin/event/event.html.twig', [
             'isAdminPage'   => true,
-            'event'         => $event,
-            'events'        => $events,
-            'form'          => $form->createView(),
+//            'event'         => $event,
+//            'events'        => $events,
+//            'form'          => $form->createView(),
         ]);
     }
     //Suppression d'un event

@@ -2,10 +2,11 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <title>{% block title %}Dooz Escape Game - Voyagez à travers le temps !{% endblock %}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="keywords" content="{% block keywords %}Dooz Escape Game Strasbourg & Vendenheim Destroy Room{% endblock %}">
-        <meta name="description" content="{% block description %}Dooz Escape c'est une agence c'est d'abord l'horlogerie, une agence temporelle qui va vous envoyer en mission rétablir le cours normal de l'histoire{% endblock %}">
+        <meta name="keywords" content="{% include 'sitemap/keywords.html.twig' %}">
+        <meta name="description" content="{% block description %}Dooz Escape qu'est ce que c'est? C'est d'abord l'horlogerie, une agence temporelle qui va vous envoyer en mission rétablir le cours normal de l'histoire. Ensuite c'est aussi un nouveau lieu Viking, VANAHEIM, ou vous pourrez lançer des haches et profitez de destroy room pour vous divertir.{% endblock %}">
 
         <meta name="author" content="Quentin BECK">
 
@@ -14,12 +15,11 @@
         <meta name="twitter:image:alt" content="{{ asset('img/base/logos/dooz.png') }}">
 
         <meta property="og:type" content="website">
+        <meta property="og:locale" content="fr_FR" />
         <meta property="og:title" content="{% block title_og %}Dooz Escape Game - Voyagez à travers le temps !{% endblock %}">
-        <meta property="og:description" content="{% block description_og %}Dooz Escape est une agence temporelle qui vous envoie en mission pour rétablir le cours normal de l’histoire au travers de multiples missions{% endblock %}">
+        <meta property="og:description" content="{% block description_og %}Dooz Escape qu'est ce que c'est? C'est est une agence temporelle qui vous envoie en mission pour rétablir le cours normal de l’histoire au travers de multiples missions. C'est aussi plusieurs bars avec leurs ambiances, Malleus Malleficarum pour les sorcières, L'épisode 0 pour l'ambiance steampunk, et Vanaheim pour des lançer de haches entre vikings.{% endblock %}">
         <meta property="og:url" content="https://www.doozescape.com">
         <meta property="og:image" content="{{ asset('img/base/logos/dooz.png') }}">
-
-        <title>{% block title %}{% endblock %}</title>
 
         <meta name="robots" content="index, follow, all">
 
@@ -75,6 +75,7 @@
 
                 gtag('config', 'G-X69XD7PCX4');
             </script>
+
         {% endblock %}
     </head>
 

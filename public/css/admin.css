@@ -70,46 +70,6 @@
     padding: 10px;
     font-size: 20px;
 }
-/*EVENT*/
-.event_card {
-    position: relative;
-    border: 1px solid #fff;
-    height: 330px;
-    width: 270px;
-    margin: 10px 20px;
-    background-color: #3B2F2B;
-}
-.event_card_title {
-    position: absolute;
-    top: 10px;
-    left: 3px;
-    z-index: 50;
-}
-.event_card_location {
-    color: #AF9991;
-}
-.event_card:hover {
-    background-color: black;
-    color: #fff;
-}
-.event_card_img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    object-position: top;
-    opacity: 0.4;
-    transition: opacity 5s;
-}
-.event_card:hover .event_card_img {
-    opacity: 1;
-}
-.event_card:hover {
-    -webkit-animation: growUp 1s forwards;
-    -moz-animation: growUp 1s forwards;
-    -ms-animation: growUp 1s forwards;
-    -o-animation: growUp 1s forwards;
-    animation: growUp 1s forwards;
-}
 
 /*PARTNERS*/
 

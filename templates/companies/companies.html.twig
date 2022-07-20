@@ -26,7 +26,12 @@
                 <h4 class="text-center pb-1">{% trans %}Comité d'entreprises{% endtrans %}</h4>
                 <img src="{{ asset('upload/companies/works_thumbnail.jpg') }}" alt="">
             </a>
-            <p class="text-center">Sortez du cadre professionnel et rejoignez l'une de nos missions en l'année 1846, 2021, 2207 ou en 2208, ...</p>
+            {% if app.request.locale == 'fr' %}
+                <p class="text-center">Sortez du cadre professionnel et rejoignez l'une de nos missions en l'année 1846, 2021, 2207 ou en 2208, ...</p>
+            {% elseif app.request.locale == 'en' %}
+                <p class="text-center">Leave the professional framework and join one of our missions in the year 1846, 2021, 2207 or in 2208, ...</p>
+            {% endif %}
+
         </div>
 
         <div class="all_bars_card">
@@ -34,7 +39,11 @@
                 <h4 class="text-center pb-1">{% trans %}Construction d'équipe{% endtrans %}</h4>
                 <img src="{{ asset('upload/companies/team_thumbnail.jpg') }}" alt="">
             </a>
+            {% if app.request.locale == 'fr' %}
             <p class="text-center">Chez Dooz, nous avons mis en place différentes formules qui sauront s’adapter à vos besoins et que vous pourrez vous-même construire sur-mesure.</p>
+            {% elseif app.request.locale == 'en' %}
+            <p class="text-center">At Dooz, we have put in place different formulas that will adapt to your needs and that you can build to measure yourself.</p>
+            {% endif %}
         </div>
 
     </div>
@@ -42,12 +51,22 @@
 
 
     <div class="d-flex flex-column align-items-center">
-        <p class="text-center">
-            Vous voulez en savoir plus ? Cliquez sur les images ci-dessus 😉 <br>
+        {% if app.request.locale == 'fr' %}
+            <p class="text-center">
+                Vous voulez en savoir plus ? Cliquez sur les images ci-dessus 😉 <br>
 
-            Vous voulez jeter un coup d’œil à notre ludothèque de plus de 300 jeux de société ? Une partie de nos jeux sont référencés par
-            <a target="_blank" class="link_standard" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
-        </p>
+                Vous voulez jeter un coup d’œil à notre ludothèque de plus de 300 jeux de société ? Une partie de nos jeux sont référencés par
+                <a target="_blank" class="link_standard" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">ici</a>.
+            </p>
+        {% elseif app.request.locale == 'en' %}
+            <p class="text-center">
+                You want to know more ? Click on the images above 😉 <br>
+
+                Want to take a look at our toy library of over 300 board games? Some of our games are referenced by
+                <a target="_blank" class="link_standard" href="https://www.myludo.fr/#!/profil/episode-0-bar-a-jeux-8253">here</a>.
+            </p>
+        {% endif %}
+
         {% include 'options/button_ludo.html.twig' %}
     </div>
 

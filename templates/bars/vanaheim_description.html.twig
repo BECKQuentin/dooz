@@ -7,64 +7,65 @@
         <p class="text-center my-0 px-2">Venez découvrir notre nouveau bar dédiés à l'ésprit Vikings qui vient d'ouvrir ses portes au <a href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889">
             <i>20 rue du commerce VENDENHEIM 67550 .</i></a> Profitez d'une terrasse, de salles climatisées, ou encore d'une multitude de jeux de sociétés à votre disposition.
         </p>
+    {% elseif app.request.locale == 'en' %}
+        <h4>Viking Bar</h4>
+        <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+        <p class="text-center my-0 px-2">Come and discover our new bar dedicated to the Vikings spirit which has just opened its doors at <a href="https://www.google.com/maps/place/20+Rue+du+Commerce,+67550+Vendenheim/@48.6611713,7.7265889,17z/data=!3m1!4b1!4m5!3m4!1s0x4796b87e1f972a91:0x287d9885794ff288!8m2!3d48.6611713!4d7.7265889">
+                <i>20 rue du commerce VENDENHEIM 67550 .</i></a> Enjoy a terrace, air-conditioned rooms, or a multitude of board games at your disposal.
+        </p>
+    {% endif %}
         <div class="d-flex">
             <div class="vanaheim_axe_explication_box_widgets">
                 <img class="vanaheim_axe_explication_box_widgets_img" src="{{ asset('img/vanaheim/design/terrasse.png') }}" alt="Flocon Viking">
-                <p class="px-2 text-center">Terrasse exterieur</p>
+                <p class="px-2 text-center">{% trans %}Terrasse exterieur{% endtrans %}</p>
             </div>
             <div class="vanaheim_axe_explication_box_widgets">
                 <img class="vanaheim_axe_explication_box_widgets_img" src="{{ asset('img/vanaheim/design/snow_viking.png') }}" alt="Flocon Viking">
-                <p class="px-2 text-center">Salle climatisée</p>
+                <p class="px-2 text-center">{% trans %}Salle climatisée{% endtrans %}</p>
             </div>
             <div class="vanaheim_axe_explication_box_widgets">
                 <img class="vanaheim_axe_explication_box_widgets_img" src="{{ asset('img/vanaheim/design/des.png') }}" alt="Flocon Viking">
-                <p class="px-2 text-center">Jeux de sociétés</p>
+                <p class="px-2 text-center">{% trans %}Jeux de sociétés{% endtrans %}</p>
             </div>
         </div>
         <a target="_blank" href="{{ asset('upload/bars/vanaheim/menu/carte-vanaheim.pdf') }}">
             <h3 class="text-center font_vanaheim_2 fs-3 link_underline my-0">
-                Voir notre carte
+                {% trans %}Voir notre carte{% endtrans %}
             </h3>
         </a>
-    {% endif %}
-    {% if app.request.locale == 'en' %}
-    {% endif %}
+
 </div>
 
 <!--Présentation Activités-->
 <div class="vanaheim_axe_explication_box vanaheim_axe_explication_box_presentation d-flex flex-column justify-content-evenly">
     <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
-    {% if app.request.locale == 'fr' %}
-        <!--Card de présentaion-->
-        <div class="d-flex flex-wrap justify-content-center">
-            <a href="{{ path('vanaheim_axe') }}">
-                <div class="vanaheim_presentation_card">
-                    <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim2.jpg') }}" alt="Miniature du bar">
-                    <h5 class="text-center mb-0">Lancer de haches</h5>
-                    <span class="text-center zi-150">Affrontez-vous entre amis sur 3 cibles pendant 1h !</span>
-                </div>
-            </a>
-            <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
-            <a href="{{ path('vanaheim_destroy') }}">
-                <div class="vanaheim_presentation_card">
-                    <img src="{{ asset('upload/destroy/carousel/destroy1.jpeg') }}" alt="Miniature du bar">
-                    <h5 class="text-center mb-0">Destroy Room</h5>
-                    <span class="text-center zi-150">Détruisez tout dans le temps imparti !</span>
-                </div>
-            </a>
-        </div>
-    {% endif %}
-    {% if app.request.locale == 'en' %}
-    {% endif %}
+    <!--Card de présentaion-->
+    <div class="d-flex flex-wrap justify-content-center">
+        <a href="{{ path('vanaheim_axe') }}">
+            <div class="vanaheim_presentation_card">
+                <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim2.jpg') }}" alt="Miniature du bar">
+                <h5 class="text-center mb-0">{% trans %}Lancer de haches{% endtrans %}</h5>
+                <span class="text-center zi-150">{% trans %}Affrontez-vous entre amis sur 3 cibles pendant 1h !{% endtrans %}</span>
+            </div>
+        </a>
+        <img class="vanaheim_axe_explication_arrow" src="{{ asset('img/vanaheim/design/arrow_viking.png') }}" alt="Fleche Viking">
+        <a href="{{ path('vanaheim_destroy') }}">
+            <div class="vanaheim_presentation_card">
+                <img src="{{ asset('upload/destroy/carousel/destroy1.jpeg') }}" alt="Miniature du bar">
+                <h5 class="text-center mb-0">Destroy Room</h5>
+                <span class="text-center zi-150">{% trans %}Détruisez tout dans le temps imparti !{% endtrans %}</span>
+            </div>
+        </a>
+    </div>
 </div>
 
 <!--Horaires Bar-->
 <div class="vanaheim_axe_explication_box d-flex flex-column justify-content-evenly">
     <img class="vanaheim_axe_explication_box_bkground" src="{{ asset('img/vanaheim/design/fond_triscel.png') }}" alt="Fond triscel">
-    {% if app.request.locale == 'fr' %}
         <div class="vanaheim_axe_explication_box_horaries d-flex flex-column justify-content-center align-items-center pt-1">
-            <h5 class="font_vanaheim_2 text-center">Les horaires du bar</h5>
+            <h5 class="font_vanaheim_2 text-center">{% trans %}Les horaires du bar{% endtrans %}</h5>
             <ul class="my-3">
+                {% if app.request.locale == 'fr' %}
                 <li>Lundi : 14h - 23h30(sur réservation)</li>
                 <li>Mardi : 14h - 23h30(sur réservation)</li>
                 <li>Mercredi : 14h - 23h30</li>
@@ -72,6 +73,14 @@
                 <li>Vendredi : 10h - 00h00</li>
                 <li>Samedi : 10h - 00h00</li>
                 <li>Dimanche : 10h - 20h00</li>
+                {% elseif app.request.locale == 'en' %}<li class="vanaheim_axe_text">Monday : 14h - 23h30(on reservation)</li>
+                <li class="vanaheim_axe_text">Tuesday : 14h - 23h30(on reservation)</li>
+                <li class="vanaheim_axe_text">Wednesday : 14h - 23h30</li>
+                <li class="vanaheim_axe_text">Thursday : 14h - 23h30</li>
+                <li class="vanaheim_axe_text">Friday : 10h - 00h00</li>
+                <li class="vanaheim_axe_text">Saturday : 10h - 00h00</li>
+                <li class="vanaheim_axe_text">Sunday : 10h - 20h00</li>
+                {% endif %}
             </ul>
         </div>
         <!--Photo du bars-->
@@ -79,8 +88,5 @@
             <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim1.jpg') }}" alt="Miniature du bar">
             <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim4.jpg') }}" alt="Miniature du bar">
             <img src="{{ asset('upload/bars/vanaheim/thumbnails/vanaheim3.jpg') }}" alt="Miniature du bar">
-    </div>
-    {% endif %}
-    {% if app.request.locale == 'en' %}
-    {% endif %}
+        </div>
 </div>

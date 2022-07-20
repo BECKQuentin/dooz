@@ -18,16 +18,31 @@
     <!--Description-->
     <div class="d-flex justify-content-center">
         <div class="companies_team_description">
-            <p>Envie d’enterrer une vie de célibataire de manière originale ?</p><br>
-            <p>
-                Alors pourquoi ne pas vous laisser envoyer en mission dans l’appartement d’un tueur en série, au sein d’un laboratoire en quarantaine, dans une prison du 19e siècle, ou encore dans le bunker d’une unité ennemie ? Chez Dooz, nous vous faisons voyager dans le temps. Et nous vous proposons également des missions originales et sportives dans notre destroy room : jetez un coup d’œil à
-                <a href="{{ asset('upload/pdf/faireface-dooz-entreprises.pdf') }}" target="_blank" class="link_standard"> cette offre</a> !
-            </p>
-            <div class="companies_team_img">
-                <img src="{{ asset('upload/groups/evj.png') }}" alt="">
-            </div>
-            <p>Dooz, vous permet de réaliser votre activité en groupe jusqu’à 38 personnes réparties dans 7 salles différentes et sur des créneaux simultanés.</p>
-            <p>Vous vous sentez l’âme d’un(e) romantique ? Nos horlogers vous offrent également la possibilité de dissimuler un présent dans l’une de nos pièces. (Mais nous vous rassurons, nous pouvons cacher votre cadeau même si vous n’êtes pas romantique)</p>
+            {% if app.request.locale == 'fr' %}
+                <p>Envie d’enterrer une vie de célibataire de manière originale ?</p><br>
+                <p>
+                    Alors pourquoi ne pas vous laisser envoyer en mission dans l’appartement d’un tueur en série, au sein d’un laboratoire en quarantaine, dans une prison du 19e siècle, ou encore dans le bunker d’une unité ennemie ? Chez Dooz, nous vous faisons voyager dans le temps. Et nous vous proposons également des missions originales et sportives dans notre destroy room : jetez un coup d’œil à
+                    <a href="{{ asset('upload/pdf/faireface-dooz-entreprises.pdf') }}" target="_blank" class="link_standard"> cette offre</a> !
+                </p>
+                <div class="companies_team_img">
+                    <img src="{{ asset('upload/groups/evj.png') }}" alt="">
+                </div>
+                <p>Dooz, vous permet de réaliser votre activité en groupe jusqu’à 38 personnes réparties dans 7 salles différentes et sur des créneaux simultanés.</p>
+                <p>Vous vous sentez l’âme d’un(e) romantique ? Nos horlogers vous offrent également la possibilité de dissimuler un présent dans l’une de nos pièces. (Mais nous vous rassurons, nous pouvons cacher votre cadeau même si vous n’êtes pas romantique)</p>
+            {% elseif app.request.locale == 'en' %}
+                <p>Want to bury a single life in an original way?</p><br>
+                <p>
+
+                    So why not let yourself be sent on a mission to the apartment of a serial killer, to a quarantined laboratory, to a 19th century prison, or even to the bunker of an enemy unit? At Dooz, we take you on a journey through time. And we also offer you original and sporty missions in our destroy room: take a look at
+                    <a href="{{ asset('upload/pdf/faireface-dooz-entreprises.pdf') }}" target="_blank" class="link_standard"> this offer</a> !
+                </p>
+                <div class="companies_team_img">
+                    <img src="{{ asset('upload/groups/evj.png') }}" alt="">
+                </div>
+                <p>Dooz, allows you to carry out your activity in a group of up to 38 people spread over 7 different rooms and on simultaneous slots.</p>
+                <p>Do you feel like a romantic? Our watchmakers also offer you the possibility of concealing a present in one of our pieces. (But we assure you, we can hide your gift even if you are not romantic)</p>
+            {% endif %}
+
         </div>
     </div>
 

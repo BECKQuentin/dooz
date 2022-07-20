@@ -68,6 +68,9 @@
     .vanaheim_axe_description {
         width: 95% !important;
     }
+    .vanaheim_axe_shield_text p {
+        margin: 0 50px !important;
+    }
     /*PARTNERS*/
     .partners_list {
         width: 80vw !important;
@@ -360,6 +363,7 @@
         align-items: center;
     }
     #top_header_langue {
+        z-index: 150;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -465,6 +469,12 @@
     }
     .dropdown_hidden .dropdown-menu {
         display: none !important;
+    }
+    /*TAGS*/
+    #bot_header .newest {
+        position: absolute;
+        right: 50%;
+        transform: translateX(210%);
     }
 
     /*AURTES*/

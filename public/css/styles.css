@@ -176,6 +176,36 @@ body {
 .btn-dooz-ludo:hover {
     background-color: var(--standard);
 }
+.btn-standard {
+    background-color: var(--standard);
+}
+.btn-episode0 {
+    background-color: var(--episode0_2);
+}
+.btn-malleus {
+    background-color: var(--malleus);
+}
+.btn-vanaheim {
+    background-color: var(--vanaheim);
+}
+.btn-standard,
+.btn-episode0,
+.btn-malleus,
+.btn-vanaheim {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 2px black;
+    color: white;
+    font-size: 18px;
+}
+.btn-standard:hover,
+.btn-episode0:hover,
+.btn-malleus:hover,
+.btn-vanaheim:hover {
+    color: black;
+    animation: growUp 1s forwards;
+}
 
 /*Color*/
 :root {

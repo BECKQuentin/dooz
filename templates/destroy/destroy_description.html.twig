@@ -4,10 +4,13 @@
     <div class="destroy_description_explication">
         <div class="cadre_margin flex-column m-4 p-4 mt-5"
              style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
-
-            <h4 class="fs-1 font_destroy">Dooz Destroy c'est quoi</h4>
-
-            <p class="fs-5">Le concept de destroy room, ou rage room, est simple: c'est une méthode de lutte contre le stress par la catharsis. Vous êtes enfermé dans une pièce et avez 15 minutes pour TOUT DÉTRUIRE! Ce défouloir encadré et sécurisé vous permet de purger votre stress et vos frustrations via un effort interne et libératoire.</p>
+            {% if app.request.locale == 'fr' %}
+                <h4 class="fs-1 font_destroy">Dooz Destroy c'est quoi</h4>
+                <p class="fs-5">Le concept de destroy room, ou rage room, est simple: c'est une méthode de lutte contre le stress par la catharsis. Vous êtes enfermé dans une pièce et avez 15 minutes pour TOUT DÉTRUIRE! Ce défouloir encadré et sécurisé vous permet de purger votre stress et vos frustrations via un effort interne et libératoire.</p>
+            {% elseif app.request.locale == 'en' %}
+                <h4 class="fs-1 font_destroy">What is Dooz Destroy</h4>
+                <p class="fs-5">The concept of the destroy room, or rage room, is simple: it is a method of combating stress through catharsis. You are locked in a room and have 15 minutes to DESTROY EVERYTHING! This supervised and secure release allows you to purge your stress and your frustrations through an internal and liberating effort.</p>
+            {% endif %}
         </div>
         <div class="cadre_margin d-flex justify-content-evenly align-items-start flex-wrap m-4 mb-5"
              style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
@@ -16,28 +19,28 @@
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/armes.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Choissez vos armes</p>
+                <p class="text-center my-2">{% trans %}Choissez vos armes{% endtrans %}</p>
             </div>
             <div class="rotating_gear">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/joueurs.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Choissez le nombre de participants</p>
+                <p class="text-center my-2">{% trans %}Choissez le nombre de participants{% endtrans %}</p>
             </div>
             <div class="rotating_gear">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/date.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Choissez l'heure et la date</p>
+                <p class="text-center my-2">{% trans %}Choissez l'heure et la date{% endtrans %}</p>
             </div>
             <div class="rotating_gear">
                 <div class="rotating_gear_icons">
                     <img class="gear-icon" src="{{ asset('img/base/icons/gear/caisse.png') }}" alt="">
                     <img class="gear" src="{{ asset('img/base/icons/gear/gear.png') }}" alt="">
                 </div>
-                <p class="text-center my-2">Payez directement en ligne</p>
+                <p class="text-center my-2">{% trans %}Payez directement en ligne{% endtrans %}</p>
             </div>
         </div>
     </div>
@@ -53,58 +56,77 @@
     <div class="cadre_margin_short d-flex flex-column m-4" style="border-image: url('{{ asset('img/destroy/design/cadre.png') }}') 23% 22% 31% 22% fill stretch stretch;">
 
         <!--Recyclage-->
-        <h4 class="text-center font-weight-bold">Dooz va plus loin</h4>
+        <h4 class="text-center font-weight-bold">{% trans %}Dooz va plus loin{% endtrans %}</h4>
         <div id="destroy_recycle" class="d-flex">
             <img class="p-3" src="{{ asset('upload/destroy/recyclage.png') }}" alt="Circuit de recyclage de la destroy room">
         </div>
         <div>
-            <p>
-                Dooz va plus loin et s’inscrit dans circuit de recyclage des déchets.
-                Via un accord avec une centrale de retraite, nous utilisons que des objets en fin de vie.
-                RIEN N’EST GASPILLÉ !!
-                Au contraire, nous offrons une vie supplémentaire aux meubles au pied de la broyeuse et nous passons après les œuvres sociales et de solidarité
-            </p>
+            {% if app.request.locale == 'fr' %}
+                <p>Dooz va plus loin et s’inscrit dans circuit de recyclage des déchets. Via un accord avec une centrale de retraite, nous utilisons que des objets en fin de vie. RIEN N’EST GASPILLÉ !! Au contraire, nous offrons une vie supplémentaire aux meubles au pied de la broyeuse et nous passons après les œuvres sociales et de solidarité.</p>
+            {% elseif app.request.locale == 'en' %}
+                <p>
+                    Dooz goes further and joins the waste recycling circuit. Through an agreement with a retirement centre, we only use end-of-life objects. NOTHING IS WASTED!! On the contrary, we give extra life to the furniture at the foot of the grinder and we go after social and solidarity works.</p>
+            {% endif %}
         </div>
         <div id="offer_anchor"></div>
-        <h4 class="text-center font-weight-bold">Nos offres</h4>
+        <h4 class="text-center font-weight-bold">{% trans %}Nos offres{% endtrans %}</h4>
         <div>
-            <p>De 1 à 5 joueurs par salle, pour renforcer les liens avec votre compagne, souder une équipe ou éliminer les souvenirs d’un ex… jusqu’à 10 joueurs en simultané.</p>
+            {% if app.request.locale == 'fr' %}
+                <p>De 1 à 5 joueurs par salle, pour renforcer les liens avec votre compagne, souder une équipe ou éliminer les souvenirs d’un ex… jusqu’à 10 joueurs en simultané.</p>
+            {% elseif app.request.locale == 'en' %}
+                <p>From 1 to 5 players per room, to strengthen ties with your partner, unite a team or eliminate the memories of an ex... up to 10 players simultaneously.</p>
+            {% endif %}
         </div>
 
         <!--Offre et Pack disponible-->
-
         <a class="destroy_offer" href="#destroy_reservation" style="background-image: url('{{ asset('upload/destroy/offer_background/destroy5.jpeg') }}')">
             <div class="destroy_offer_text">
                 <span class="destroy_offer_title">🪓 PACK SURVIVANT :</span>
                 <ul>
-                    <li>1 à 5 joueurs par salle</li>
-                    <li>35€ par personne (20€ matériel à détruire, 5€ de protections, 10€ nettoyage)</li>
-                    <li>Matériel par personne : 30 objets et un meuble</li>
-                    <li>15 minutes d’efforts physiques intenses</li>
+                    {% if app.request.locale == 'fr' %}
+                        <li>1 à 5 joueurs par salle</li>
+                        <li>35€ par personne (20€ matériel à détruire, 5€ de protections, 10€ nettoyage)</li>
+                        <li>Matériel par personne : 30 objets et un meuble</li>
+                        <li>15 minutes d’efforts physiques intenses</li>
+                    {% elseif app.request.locale == 'en' %}
+                        <li>1 to 5 players per room</li>
+                        <li>35€ per person (20€ material to be destroyed, 5€ protection, 10€ cleaning)</li>
+                        <li>Equipment per person: 30 objects and a piece of furniture</li>
+                        <li>15 minutes of intense physical effort</li>
+                    {% endif %}
+
                 </ul>
             </div>
-            <span class="destroy_offer_exemple">Exemple pour 2 joueurs</span>
+            <span class="destroy_offer_exemple">{% trans %}Exemple pour 2 joueurs{% endtrans %}</span>
         </a>
         <a class="destroy_offer" href="#destroy_reservation" style="background-image: url('{{ asset('upload/destroy/offer_background/destroy4.jpeg') }}')">
             <div class="destroy_offer_text">
                 <span class="destroy_offer_title">🔨 PACK SURVIVANT STAGIAIRE :</span>
                 <ul>
-                    <li>1 à 5 étudiants par salle (sur présentation de la carte)</li>
-                    <li>25€ par personne</li>
-                    <li>Matériel par personne : 15 objets et un meuble</li>
-                    <li>15 minutes d’efforts physiques intenses</li>
+                    {% if app.request.locale == 'fr' %}
+                        <li>1 à 5 étudiants par salle (sur présentation de la carte)</li>
+                        <li>25€ par personne</li>
+                        <li>Matériel par personne : 15 objets et un meuble</li>
+                        <li>15 minutes d’efforts physiques intenses</li>
+                    {% elseif app.request.locale == 'en' %}
+                        <li>1 to 5 students per room (on presentation of the card)</li>
+                        <li>25€ per person</li>
+                        <li>Equipment per person: 15 objects and a piece of furniture</li>
+                        <li>15 minutes of intense physical effort</li>
+                    {% endif %}
                 </ul>
             </div>
-            <span class="destroy_offer_exemple">Exemple pour 1 joueur</span>
+            <span class="destroy_offer_exemple">{% trans %}Exemple pour 1 joueur{% endtrans %}</span>
         </a>
 
 
         <div class="warning_eighteen pt-5">
             <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo Warning">
-            <p>
-                Cette activité n’est accessible qu’aux voyageurs de plus de 18 ans.<br>
-                Cette mission se déroulera au 12 rue des magasins.
-            </p>
+            {% if app.request.locale == 'fr' %}
+                <p>Cette activité n’est accessible qu’aux voyageurs de plus de 18 ans.<br>Cette mission se déroulera au 12 rue des magasins STRASBOURG.</p>
+            {% elseif app.request.locale == 'en' %}
+                <p>This activity is only accessible to travelers over 18 years old.<br>This mission will take place at 12 rue des magasins STRASBOURG.</p>
+            {% endif %}
             <img src="{{ asset('img/base/icons/warning.png') }}" alt="Logo Warning">
         </div>
 

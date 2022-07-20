@@ -25,7 +25,7 @@
 }
 
 
-
+/*ALL EVENTS*/
 
 #events {
     position: relative;
@@ -42,4 +42,97 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 150;
+}
+/*EVENT CARD*/
+.event_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    height: 430px;
+    width: 270px;
+    margin: 10px 20px;
+    background-color: #3B2F2B;
+}
+.event_card_title {
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    z-index: 50;
+}
+.event_card_img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0.4;
+    transition: opacity 5s;
+}
+.event_card_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 5px 15px;
+    height: auto;
+}
+.event_card_horaries {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.event_card_horaries_separator {
+    line-height: 0.2 !important;
+    text-align: center;
+    margin: 0;
+}
+.event_card_location {
+    padding: 10px 0;
+    color: #AF9991;
+}
+.event_card_facebook_info {
+    font-size: 12px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+}
+.event_card:hover {
+    background-color: black;
+    color: #fff;
+}
+.event_card:hover .event_card_img {
+    opacity: 1;
+}
+.event_card:hover {
+    -webkit-animation: growUp 1s forwards;
+    -moz-animation: growUp 1s forwards;
+    -ms-animation: growUp 1s forwards;
+    -o-animation: growUp 1s forwards;
+    animation: growUp 1s forwards;
+}
+.event_facebook_share_btn_episode0,
+.event_facebook_share_btn_malleus,
+.event_facebook_share_btn_vanaheim {
+    text-decoration: underline;
+    padding: 6px 12px;
+    margin: 3px;
+}
+.event_facebook_share_btn_episode0 img,
+.event_facebook_share_btn_malleus img,
+.event_facebook_share_btn_vanaheim img {
+    margin: 5px;
+    height: 22px;
+}
+.event_facebook_share_btn_episode0:hover {
+    border-radius: 3px;
+    background-color: var(--episode0_2);
+}
+.event_facebook_share_btn_malleus:hover {
+    border-radius: 3px;
+    background-color: var(--malleus);
+}
+.event_facebook_share_btn_vanaheim:hover {
+    border-radius: 3px;
+    background-color: var(--vanaheim);
 }

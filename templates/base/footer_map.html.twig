@@ -1,6 +1,10 @@
 <section id="footer_map">
     <div id="footer_map_left">
-        <p class="text-center">Dooz, c'est <span class="fs-4">3</span> adresses et <span class="fs-4">3</span> univers différents</p>
+        {% if app.request.locale == 'fr' %}
+            <p class="text-center">Dooz, c'est <span class="fs-4">3</span> adresses et <span class="fs-4">3</span> univers différents</p>
+        {% elseif app.request.locale == 'en' %}
+            <p class="text-center">Dooz, is <span class="fs-4">3</span> addresses and <span class="fs-4">3</span> different universes</p>
+        {% endif %}
         <img src="{{ asset('img/base/logos/univers-dooz.png') }}" alt="logos Dooz">
         <div class="footer_map_left_dotted"></div>
         <div class="footer_map_left_address">

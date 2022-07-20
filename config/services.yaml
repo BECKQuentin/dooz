@@ -8,6 +8,9 @@ parameters:
     email_admin: '%env(EMAIL_ADMIN)%'
     email_developer: '%env(EMAIL_DEVELOPER)%'
     app_env: '%env(APP_ENV)%'
+    facebook_access_token_episode0: '%env(FACEBOOK_ACCESS_TOKEN_EPISODE0)%'
+    facebook_access_token_malleus: '%env(FACEBOOK_ACCESS_TOKEN_MALLEUS)%'
+    facebook_access_token_vanaheim: '%env(FACEBOOK_ACCESS_TOKEN_VANAHEIM)%'
 
     # Repertoire général de téléchargement
     upload_directory: '%kernel.project_dir%/public/upload'
@@ -41,3 +44,8 @@ services:
             $emailAdmin: '%email_admin%'
             $emailDeveloper: '%email_developer%'
             $appEnv: '%app_env%'
+    App\Service\CallFacebookApiService:
+        arguments:
+            $facebookAccessTokenEpisode0: '%facebook_access_token_episode0%'
+            $facebookAccessTokenMalleus: '%facebook_access_token_malleus%'
+            $facebookAccessTokenVanaheim: '%facebook_access_token_vanaheim%'

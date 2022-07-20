@@ -203,7 +203,7 @@
       </trans-unit>
       <trans-unit id="yzMfaDi" resname="Escape Game à Strasbourg &amp; Vendenheim">
         <source>Escape Game à Strasbourg &amp; Vendenheim</source>
-        <target>Escape Game in Strasbourg &amp; Vendenheim</target>
+        <target><![CDATA[Escape Game in Strasbourg & Vendenheim]]></target>
       </trans-unit>
       <trans-unit id="CG7g_wq" resname="Bon cadeau">
         <source>Bon cadeau</source>
@@ -228,6 +228,230 @@
       <trans-unit id="HX91IEF" resname="Formulaire de Contact">
         <source>Formulaire de Contact</source>
         <target>Contact Form</target>
+      </trans-unit>
+      <trans-unit id="tAIqtdY" resname="Séléctionnez votre date :">
+        <source>Séléctionnez votre date :</source>
+        <target>Select your date :</target>
+      </trans-unit>
+      <trans-unit id="cR5fLhm" resname="Fermer">
+        <source>Fermer</source>
+        <target>Close</target>
+      </trans-unit>
+      <trans-unit id="a5q20bZ" resname="LANCER DE HACHES">
+        <source>LANCER DE HACHES</source>
+        <target>AXE THROWING</target>
+      </trans-unit>
+      <trans-unit id="HjqJZbu" resname="Erreur Serveur">
+        <source>Erreur Serveur</source>
+        <target>Server Error</target>
+      </trans-unit>
+      <trans-unit id="r2lcrNk" resname="Record d'abandon">
+        <source>Record d'abandon</source>
+        <target>Abandonment record</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="kyyY_d4" resname="Carnet des Voaygeurs">
+        <source>Carnet des Voaygeurs</source>
+        <target>Travelers notebook</target>
+      </trans-unit>
+      <trans-unit id="j6ET2JH" resname="C'est aussi plein d'activités :">
+        <source>C'est aussi plein d'activités :</source>
+        <target>It's also full of activities :</target>
+      </trans-unit>
+      <trans-unit id="77qTtOs" resname="7 salles d'escape">
+        <source>7 salles d'escape</source>
+        <target>7 escape rooms</target>
+      </trans-unit>
+      <trans-unit id="Hxk1NLM" resname="2 destroy room">
+        <source>2 destroy room</source>
+        <target>2 destroy room</target>
+      </trans-unit>
+      <trans-unit id="2p1ml.f" resname="Bar à jeux">
+        <source>Bar à jeux</source>
+        <target>Game bar</target>
+      </trans-unit>
+      <trans-unit id="wyzEwtw" resname="Bar à ambiance">
+        <source>Bar à ambiance</source>
+        <target>Atmosphere bar</target>
+      </trans-unit>
+      <trans-unit id="tSuPzyH" resname="Murder Party">
+        <source>Murder Party</source>
+        <target>Murder Party</target>
+      </trans-unit>
+      <trans-unit id="9a4V4u2" resname="Burger Quiz">
+        <source>Burger Quiz</source>
+        <target>Burger Quiz</target>
+      </trans-unit>
+      <trans-unit id="V93DSnf" resname="Loup-Garou">
+        <source>Loup-Garou</source>
+        <target>Werewolf</target>
+      </trans-unit>
+      <trans-unit id="HiBBVPa" resname="Tournois Magic">
+        <source>Tournois Magic</source>
+        <target>Magic Tournaments</target>
+      </trans-unit>
+      <trans-unit id="PvRG2Eg" resname="Jeu de rôle">
+        <source>Jeu de rôle</source>
+        <target>Roleplay</target>
+      </trans-unit>
+      <trans-unit id="CA.QduE" resname="Soirées Impro">
+        <source>Soirées Impro</source>
+        <target>Improv evenings</target>
+      </trans-unit>
+      <trans-unit id="zG9GuJR" resname="Et bien plus!">
+        <source>Et bien plus!</source>
+        <target>And more!</target>
+      </trans-unit>
+      <trans-unit id="_7OVtFU" resname="Choissiez l'enigme que vous voulez résoudre">
+        <source>Choissiez l'enigme que vous voulez résoudre</source>
+        <target>Choose the puzzle you want to solve</target>
+      </trans-unit>
+      <trans-unit id="hfnTrnf" resname="Choissiez le nombre de participants">
+        <source>Choissiez le nombre de participants</source>
+        <target>Choose the number of participants</target>
+      </trans-unit>
+      <trans-unit id="8wv6AXx" resname="Choissiez la date, l'heure et le défi">
+        <source>Choissiez la date, l'heure et le défi</source>
+        <target>Choose date, time and challenge</target>
+      </trans-unit>
+      <trans-unit id="1fjR.tV" resname="Payez directement en ligne">
+        <source>Payez directement en ligne</source>
+        <target>Pay directly online</target>
+      </trans-unit>
+      <trans-unit id="dKm1q03" resname="EVJF-EVG">
+        <source>EVJF-EVG</source>
+        <target>BACHELOR(ETTE) PARTY</target>
+      </trans-unit>
+      <trans-unit id="l.Frqy8" resname="Un grand choix d'armes">
+        <source>Un grand choix d'armes</source>
+        <target>A large selection of weapons</target>
+      </trans-unit>
+      <trans-unit id="YY0XaxC" resname="Du mobilier à détruire">
+        <source>Du mobilier à détruire</source>
+        <target>Furniture to destroy</target>
+      </trans-unit>
+      <trans-unit id="ZLT8.yg" resname="5 joueurs en simultanés">
+        <source>5 joueurs en simultanés</source>
+        <target>5 players simultaneously</target>
+      </trans-unit>
+      <trans-unit id="b4I9XmD" resname="Lancer de Haches">
+        <source>Lancer de Haches</source>
+        <target>Ax Throwing</target>
+      </trans-unit>
+      <trans-unit id="l5s4uhq" resname="Jeux de sociétes">
+        <source>Jeux de sociétes</source>
+        <target>Board games</target>
+      </trans-unit>
+      <trans-unit id="stzC3VD" resname="Carnet des Voyageurs">
+        <source>Carnet des Voyageurs</source>
+        <target>Travelers Notebook</target>
+      </trans-unit>
+      <trans-unit id="TPKnpxw" resname="Choissez vos armes">
+        <source>Choissez vos armes</source>
+        <target>Choose your weapons</target>
+      </trans-unit>
+      <trans-unit id="d4vekZr" resname="Choissez le nombre de participants">
+        <source>Choissez le nombre de participants</source>
+        <target>Choose the number of participants</target>
+      </trans-unit>
+      <trans-unit id="3Z9xTT4" resname="Choissez l'heure et la date">
+        <source>Choissez l'heure et la date</source>
+        <target>Choose time and date</target>
+      </trans-unit>
+      <trans-unit id="barlJmz" resname="Dooz va plus loin">
+        <source>Dooz va plus loin</source>
+        <target>Dooz goes further</target>
+      </trans-unit>
+      <trans-unit id="iKG2d56" resname="Nos offres">
+        <source>Nos offres</source>
+        <target>Our offers</target>
+      </trans-unit>
+      <trans-unit id="WBIO8zO" resname="Exemple pour 2 joueurs">
+        <source>Exemple pour 2 joueurs</source>
+        <target>Example for 2 players</target>
+      </trans-unit>
+      <trans-unit id="7.opJCv" resname="Exemple pour 1 joueur">
+        <source>Exemple pour 1 joueur</source>
+        <target>Example for 1 player</target>
+      </trans-unit>
+      <trans-unit id="K6XGV7_" resname="Choississez vos haches">
+        <source>Choississez vos haches</source>
+        <target>Choose your axes</target>
+      </trans-unit>
+      <trans-unit id="nx7lw0A" resname="Choississez le nombre de Vikings">
+        <source>Choississez le nombre de Vikings</source>
+        <target>Choose the number of Vikings</target>
+      </trans-unit>
+      <trans-unit id="LxMmbTD" resname="Choississez l'heure et la date">
+        <source>Choississez l'heure et la date</source>
+        <target>Choose time and date</target>
+      </trans-unit>
+      <trans-unit id="FNjbB.M" resname="Payez en ligne">
+        <source>Payez en ligne</source>
+        <target>Pay online</target>
+      </trans-unit>
+      <trans-unit id="5KEoHF0" resname="Les horaires du bar">
+        <source>Les horaires du bar</source>
+        <target>Bar hours</target>
+      </trans-unit>
+      <trans-unit id="oOEZVvR" resname="Bientôt de nouvelle salles !">
+        <source>Bientôt de nouvelle salles !</source>
+        <target>Soon new rooms !</target>
+      </trans-unit>
+      <trans-unit id="lbvHHUg" resname="Rencontrez-nous">
+        <source>Rencontrez-nous</source>
+        <target>Meet us</target>
+      </trans-unit>
+      <trans-unit id="2QexzD3" resname="Pour toute question :">
+        <source>Pour toute question :</source>
+        <target>For all questions :</target>
+      </trans-unit>
+      <trans-unit id="46oOL7W" resname="Pour un devis :">
+        <source>Pour un devis :</source>
+        <target>For a quote :</target>
+      </trans-unit>
+      <trans-unit id="4tOFJZq" resname="RÉSERVATION">
+        <source>RÉSERVATION</source>
+        <target>RESERVATION</target>
+      </trans-unit>
+      <trans-unit id="AlqpCIN" resname="VANAHEIM - Lançer de Haches">
+        <source>VANAHEIM - Lançer de Haches</source>
+        <target>VANAHEIM - Ax Throwing</target>
+      </trans-unit>
+      <trans-unit id="c5iDXay" resname="Nos Evenements">
+        <source>Nos Evenements</source>
+        <target>Ours Events</target>
+      </trans-unit>
+      <trans-unit id="0AM1la5" resname="Terrasse exterieur">
+        <source>Terrasse exterieur</source>
+        <target>Outdoor terrace</target>
+      </trans-unit>
+      <trans-unit id="Lqdr4TW" resname="Salle climatisée">
+        <source>Salle climatisée</source>
+        <target>Air-conditioned room</target>
+      </trans-unit>
+      <trans-unit id="96.Xn_3" resname="Jeux de sociétés">
+        <source>Jeux de sociétés</source>
+        <target>Board games</target>
+      </trans-unit>
+      <trans-unit id="nq1Slzi" resname="Voir notre carte">
+        <source>Voir notre carte</source>
+        <target>See our menu</target>
+      </trans-unit>
+      <trans-unit id="F.yQ4ug" resname="Lancer de haches">
+        <source>Lancer de haches</source>
+        <target>Ax throwing</target>
+      </trans-unit>
+      <trans-unit id="gk5DZIl" resname="Affrontez-vous entre amis sur 3 cibles pendant 1h !">
+        <source>Affrontez-vous entre amis sur 3 cibles pendant 1h !</source>
+        <target>Compete with friends on 3 targets for 1 hour!</target>
+      </trans-unit>
+      <trans-unit id="mrj2_rJ" resname="Détruisez tout dans le temps imparti !">
+        <source>Détruisez tout dans le temps imparti !</source>
+        <target>Destroy everything within the time limit!</target>
       </trans-unit>
     </body>
   </file>

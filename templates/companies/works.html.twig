@@ -19,23 +19,45 @@
     <div class="d-flex justify-content-center">
         <div class="companies_team_description">
 
-            <h5 class="text-center mb-5">Sortez du cadre professionnel et rejoignez l'une de nos missions en l'année 1846, 2021, 2207 ou en 2208, ...</h5>
-            <p>Afin de souder vos équipes, quoi de mieux que de se retrouver dans un laboratoire en quarantaine, dans une prison, dans l’appartement d’un tueur en série ou au sein du bunker d’une unité ennemie pour apprendre à faire connaissance avec les autres membres de son équipe ?</p>
+            {% if app.request.locale == 'fr' %}
+                <h5 class="text-center mb-5">Sortez du cadre professionnel et rejoignez l'une de nos missions en l'année 1846, 2021, 2207 ou en 2208, ...</h5>
+                <p>Afin de souder vos équipes, quoi de mieux que de se retrouver dans un laboratoire en quarantaine, dans une prison, dans l’appartement d’un tueur en série ou au sein du bunker d’une unité ennemie pour apprendre à faire connaissance avec les autres membres de son équipe ?</p>
 
-            <div class="companies_team_description_img">
-                <img class="companies_works_description_img" src="{{ asset('upload/companies/works_thumbnail.jpg') }}" alt="Image du comité d'entreprise">
-            </div>
+                <div class="companies_team_description_img">
+                    <img class="companies_works_description_img" src="{{ asset('upload/companies/works_thumbnail.jpg') }}" alt="Image du comité d'entreprise">
+                </div>
+
+                <h5 class="text-center mb-5">En plus de l’escape game, nous proposons tout un panel d’activité variées :</h5>
+                <ul>
+                    <li class="li_yes">Murder Party</li>
+                    <li class="li_yes">Jeux de rôle grandeur nature</li>
+                    <li class="li_yes">Formations dynamiques et sportives pour souder les équipes</li>
+                    <li class="li_yes">Location de notre espace séminaire</li>
+                </ul>
+
+                <p class="text-center">Nous pouvons également vous proposer notre formule tarte flambée + soft/bière à 10€/personne pour agrémenter votre moment de convivialité.</p>
+            {% elseif app.request.locale == 'en' %}
+                <h5 class="text-center mb-5">Leave the professional framework and join one of our missions in the year 1846, 2021, 2207 or in 2208, ...</h5>
+                <p>In order to unite your teams, what better than to find yourself in a laboratory in quarantine, in a prison, in the apartment of a serial killer or in the bunker of an enemy unit to learn to get to know the other team members?</p>
+
+                <div class="companies_team_description_img">
+                    <img class="companies_works_description_img" src="{{ asset('upload/companies/works_thumbnail.jpg') }}" alt="Image du comité d'entreprise">
+                </div>
+
+                <h5 class="text-center mb-5">
+                    In addition to the escape game, we offer a whole range of varied activities:</h5>
+                <ul>
+                    <li class="li_yes">Murder Party</li>
+                    <li class="li_yes">Life-size role-playing games</li>
+                    <li class="li_yes">Dynamic and sports training to unite teams</li>
+                    <li class="li_yes">
+                        Rental of our seminar space</li>
+                </ul>
+
+                <p class="text-center">We can also offer you our formula tarte flambée + soft/beer at 10€/person to enhance your moment of conviviality.</p>
+            {% endif %}
 
 
-            <h5 class="text-center mb-5">En plus de l’escape game, nous proposons tout un panel d’activité variées :</h5>
-            <ul>
-                <li class="li_yes">Murder Party</li>
-                <li class="li_yes">Jeux de rôle grandeur nature</li>
-                <li class="li_yes">Formations dynamiques et sportives pour souder les équipes</li>
-                <li class="li_yes">Location de notre espace séminaire</li>
-            </ul>
-
-            <p class="text-center">Nous pouvons également vous proposer notre formule tarte flambée + soft/bière à 10€/personne pour agrémenter votre moment de convivialité.</p>
         </div>
     </div>
 

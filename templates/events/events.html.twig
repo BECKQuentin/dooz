@@ -13,7 +13,7 @@
             <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
         </div>
 
-        <h1 class="carousel_title">Nos Evenements</h1>
+        <h1 class="carousel_title">{% trans %}Nos Evenements{% endtrans %}</h1>
 
         <div class="carousel-inner">
             <div class="filter_carousel">
@@ -40,28 +40,94 @@
         </button>
     </div>
 
+{#    <div class="py-5">#}
+{#        <h4 class="text-center">Nos évenements seront de nouveau consultable sur notre site très prochainement. En attendant vous pouvez les consultez sur notre page#}
+{#            <a href="https://www.facebook.com/DoOzEscape/" class="link_standard">FACEBOOK</a>. A très vite !</h4>#}
+{#    </div>#}
     <div class="py-5">
-        <h4 class="text-center">Nos évenements seront de nouveau consultable sur notre site très prochainement. En attendant vous pouvez les consultez sur notre page
-            <a href="https://www.facebook.com/DoOzEscape/" class="link_standard">FACEBOOK</a>. A très vite !</h4>
+        <h4 class="text-center">Voir nos évenements dans nos différents Bars</h4>
+        <div class="d-flex justify-content-center">
+            <a href="{{ path('events') }}">
+                <div class="btn-standard">Tous nos bars</div>
+            </a>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center">
+            <a href="{{ path('events_episode0') }}">
+                <div class="btn-episode0">Episode 0</div>
+            </a>
+            <a href="{{ path('events_malleus') }}">
+                <div class="btn-malleus">Malleus Malleficarum</div>
+            </a>
+            <a href="{{ path('events_vanaheim') }}">
+                <div class="btn-vanaheim">Vanaheim</div>
+            </a>
+        </div>
     </div>
 
 
-{#    <div class="d-flex justify-content-center flex-wrap px-3 py-2">#}
-{#        {% for event in events %}#}
-{#            <div class="d-flex flex-column my-3">#}
-{#                <a href="">#}
-{#                    <div class="event_card">#}
-{#                        <h4 class="event_card_title">{{ event.name }}</h4>#}
-{#                        <img class="event_card_img" src="{{ asset('upload/events/2022/04/tournoi_pioneer.png') }}" alt="">#}
-{#                        <div class="d-flex flex-column align-items-center p-2">#}
-{#                            {{ event.beginDate|date("H") }}H{{ event.beginDate|date("i") }}-{{ event.endDate|date("H") }}H{{ event.endDate|date("H") }} | {{ event.beginDate|date('d/m/Y') }}#}
-{#                            <p class="event_card_location m-0">MALLEUS MALLEFICARUM</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </a>#}
-{#            </div>#}
-{#        {% endfor %}#}
-{#    </div>#}
+    <div class="d-flex justify-content-center flex-wrap px-3 py-2">
+        {% for event in events|sort((a, b) => a.start_time <=> b.start_time) %}
+            {% if event.start_time|date("m/d/Y") >= 'now'|date("m/d/Y") %}
+                <a target="_blank" href="https://www.facebook.com/events/{{ event.id }}">
+                    <div class="event_card">
+                        <h3 class="event_card_title">{{ event.name }}</h3>
+                        {% if event.cover.source is defined %}
+                            <img class="event_card_img" src="{{ event.cover.source }}" alt="Image de l'event">
+                        {% else %}
+                            <img class="event_card_img" src="{{ asset('upload/design/default_image.jpg') }}" alt="Image par défault de l'event">
+                        {% endif %}
+                        <div class="event_card_description">
+                            <div class="event_card_horaries">
+                                {% if event.start_time is defined %}
+                                    <p class="m-0">{{ event.start_time|format_datetime(locale='fr', pattern='EEEE dd MMMM YYYY HH:mm') }}</p>
+                                {% endif %}
+                                {% if event.end_time is defined %}
+                                    <p class="event_card_horaries_separator">-</p>
+                                    <p class="m-0">{{ event.end_time|format_datetime(locale='fr', pattern='EEEE dd MMMM YYYY HH:mm') }}</p>
+                                {% endif %}
+                            </div>
+                            <p class="event_card_location m-0">{{ event.place.name ?? '' }}</p>
+                            <p class="text-center m-0">{{ event.place.location.street }} {{ event.place.location.zip }} {{ event.place.location.city|capitalize }}</p>
+                            {% if event.ticket_uri is defined %}
+                                <p>{{ dump(event.ticket_uri) }}</p>
+                            {% endif %}
+                            <div class="event_card_facebook_info">
+                                <p class="text-start m-0">{{ event.attending_count }} participe</p>
+                                <p class="text-start m-0">{{ event.interested_count }} sont intéressés</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div >
+                    <img src="{{ asset('img/base/share_icons/facbook.png') }}" alt="">
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% if events is empty %}
+        <hr>
+        <div class="d-flex flex-column align-items-center pt-5">
+            <h4 class="text-center py-3">Evenements à venir très prochainement !</h4>
+            <p>Rejoignez nos pages Facebook :</p>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center pb-5">
+            <a target="_blank" href="https://www.facebook.com/episode0barajeux/events/">
+                <div class="event_facebook_share_btn_episode0">
+                    Episode 0<img src="{{ asset('img/base/share_icons/facebook.png') }}" alt="Facebook">
+                </div>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/malleusbar/events">
+                <div class="event_facebook_share_btn_malleus">
+                    Malleus Malleficarum<img src="{{ asset('img/base/share_icons/facebook.png') }}" alt="Facebook">
+                </div>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/dooz.vanaheim/events">
+                <div class="event_facebook_share_btn_vanaheim">
+                    Vanaheim<img src="{{ asset('img/base/share_icons/facebook.png') }}" alt="Facebook">
+                </div>
+            </a>
+        </div>
+    {% endif %}
 
 
 

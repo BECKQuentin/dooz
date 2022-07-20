@@ -157,7 +157,6 @@ class Address
                 $event->setAddress(null);
             }
         }
-
         return $this;
     }
 

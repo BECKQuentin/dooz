@@ -5,6 +5,35 @@
 # to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
 DirectoryIndex index.php
 
+RedirectPermanent /en/board-game-bars/ https://www.doozescape.com/bars-a-jeux
+RedirectPermanent /en/be-part-of-the-brand/ https://www.doozescape.com/bars-a-jeux
+RedirectPermanent /en/agenda/evenements/soiree-jeu-time-stories-2/ https://www.doozescape.com/evenements
+RedirectPermanent /en/ https://www.doozescape.com/escape-game
+RedirectPermanent /dooz-createur-denigmes/ https://www.doozescape.com/escape-game
+RedirectPermanent /devenir-un-agent/ https://www.doozescape.com/escape-game
+RedirectPermanent /credits/ https://www.doozescape.com/escape-game
+RedirectPermanent /click-and-collect/ https://www.doozescape.com/escape-game
+RedirectPermanent /cgv-escape-game/ https://www.doozescape.com/escape-game
+RedirectPermanent /cgv-destroy-room/ https://www.doozescape.com/escape-game
+RedirectPermanent /carnet-du-voyageur-temporel-4-expedition-au-musee-vodou/ https://www.doozescape.com/carnet-du-voyageur
+RedirectPermanent /carnet-du-voyageur-temporel-2-la-chasse-aux-idees/ https://www.doozescape.com/carnet-du-voyageur
+RedirectPermanent /carnet-du-voyageur-temporel-2-concert-doutrage-gmbh/ https://www.doozescape.com/carnet-du-voyageur
+RedirectPermanent /carnet-du-voyageur-temporel-1-yakuza/ https://www.doozescape.com/carnet-du-voyageur
+RedirectPermanent /agent-sobeaut/ https://www.doozescape.com/escape-game
+RedirectPermanent /even-team/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/tournoi-mgta-magic/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/tournoi-mr5-yugioh/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/tournoi-magic-standard-win-a-box/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/tournoi-7-fallen-win-a-box/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/soiree-time-stories-2/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/spectacle-danse-burlesque-les-polissonnes/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/soiree-pulls-moches-de-noel/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/soiree-loup-garou/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/soiree-loup-garou-7/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/soiree-loup-garou-5/ https://www.doozescape.com/evenements
+RedirectPermanent /agenda/evenements/soiree-loup-garou-3/ https://www.doozescape.com/evenements
+RedirectPermanent /malleus-maleficarum/ https://www.doozescape.com/bars-a-jeux/malleus-maleficarum/
+
 # By default, Apache does not evaluate symbolic links if you did not enable this
 # feature in your server configuration. Uncomment the following line if you
 # install assets as symlinks or if you experience problems related to symlinks
